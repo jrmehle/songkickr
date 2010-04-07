@@ -1,6 +1,6 @@
 = songkickr
 
-Description goes here.
+A Ruby wrapper around the Songkick API. Visit www.songkick.com/developer for documentation on the Songkick API.
 
 == Note on Patches/Pull Requests
  
