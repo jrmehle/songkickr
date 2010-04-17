@@ -4,6 +4,7 @@ require 'httparty'
 
 dir = File.dirname(__FILE__)
 require dir + '/songkickr/artist'
+require dir + '/songkickr/location'
 require dir + '/songkickr/venue'
 require dir + '/songkickr/event'
 require dir + '/songkickr/result'
