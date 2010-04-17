@@ -1,7 +1,7 @@
 module Songkickr
   class Remote
     include HTTParty
-    base_uri 'api.songkick.com/api/3.0/'
+    base_uri 'api.songkick.com/api/3.0'
     format :json
     
     attr_reader :api_key
@@ -11,11 +11,25 @@ module Songkickr
       @api_key = api_key
       @api_key ||= Songkickr.api_key
       
-      @api_path = ''
+      self.class.default_params :apikey => @api_key
     end
     
-    def events(query={})
-      self.class.get('/events', :query => query['searchResults'].rubyify_keys!)
+    
+    # Parameters
+    #
+    #     type (concert or festival)
+    #     artists (events by any of the artists, comma-separated)
+    #     artist_name
+    #     artist_id
+    #     venue_id
+    #     setlist_item_name (name of a song which was played at the event – use with artist_id or artist_name)
+    #     min_date
+    #     max_date
+    #     location
+    def events(query = {})
+      result = self.class.get('/events.json', :query => query)
+      
+      Songkickr::Result.new(result)
     end
     
     
@@ -73,17 +87,13 @@ module Songkickr
     #     end
     
     protected
-    
-      def default_options
-        {:api_key => @api_key, :format => 'json'}
-      end
       
-      def scrub_query(query)
-        query[:sdate] = query[:start_date] unless query[:start_date].blank?
-        query[:edate] = query[:end_date] unless query[:end_date].blank?
-        query[:sort] = query[:sort].gsub('+', ' ') unless query[:sort].blank?
-        query.merge(self.default_options)
-      end
+      # def scrub_query(query)
+      #   query[:sdate] = query[:start_date] unless query[:start_date].blank?
+      #   query[:edate] = query[:end_date] unless query[:end_date].blank?
+      #   query[:sort] = query[:sort].gsub('+', ' ') unless query[:sort].blank?
+      #   query.merge(self.default_options)
+      # end
     
   end
 end

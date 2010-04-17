@@ -1,7 +1,13 @@
 require 'rubygems'
 gem 'httparty'
 require 'httparty'
-require File.dirname(__FILE__) + '/songkickr/remote'
+
+dir = File.dirname(__FILE__)
+require dir + '/songkickr/artist'
+require dir + '/songkickr/venue'
+require dir + '/songkickr/event'
+require dir + '/songkickr/result'
+require dir + '/songkickr/remote'
 
 class APIKeyNotSet < StandardError; end
 
