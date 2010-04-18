@@ -3,6 +3,7 @@ gem 'httparty'
 require 'httparty'
 
 dir = File.dirname(__FILE__)
+require dir + '/songkickr/performance'
 require dir + '/songkickr/artist'
 require dir + '/songkickr/location'
 require dir + '/songkickr/venue'
