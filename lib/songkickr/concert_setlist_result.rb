@@ -1,6 +1,6 @@
 module Songkickr
   class ConcertSetlistResult
-    attr_accessor :page, :total_entries, :results
+    attr_accessor :results
     
     def initialize(result_hash = {})
       
@@ -8,9 +8,7 @@ module Songkickr
         results_page = result_hash["resultsPage"]
       
         if results_page
-          @page          = results_page["page"]
-          @total_entries = results_page["totalEntries"]
-          @results       = parse_results results_page["results"]
+          @results = parse_results results_page["results"]
         end
       else
         result_hash
@@ -21,14 +19,14 @@ module Songkickr
     protected
     
       def parse_results(results = {})
-        events = []
-        if results.include?("event")
-          results["event"].each do |event|
-            events << Songkickr::Event.new(event)
+        setlists = []
+        if results.include?("setlist")
+          results["setlist"].each do |setlist|
+            setlists << Songkickr::Setlist.new(setlist)
           end
         end
         
-        events
+        setlists
       end
   end
 end

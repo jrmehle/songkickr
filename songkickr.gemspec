@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{songkickr}
-  s.version = "0.0.2"
+  s.version = "0.0.3"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Jared Mehle"]
@@ -31,6 +31,8 @@ Gem::Specification.new do |s|
      "lib/songkickr/location.rb",
      "lib/songkickr/performance.rb",
      "lib/songkickr/remote.rb",
+     "lib/songkickr/setlist.rb",
+     "lib/songkickr/setlist_item.rb",
      "lib/songkickr/venue.rb",
      "songkickr.gemspec",
      "test/fixtures/events.json",

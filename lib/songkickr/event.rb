@@ -12,13 +12,12 @@ module Songkickr
       @uri          = event_hash["uri"]
       @performance  = parse_performance event_hash["performance"]
       @id           = event_hash["id"]
-      @tickets_uri = event_hash["ticketsUri"]
+      @tickets_uri  = event_hash["ticketsUri"]
     end
     
     protected
     
       def start_hash_to_datetime(start_hash)
-        # "start":{"time":null,"date":"2010-04-17"},
         datetime = DateTime.parse("#{start_hash["date"]} #{start_hash["time"]}")
       end
       
