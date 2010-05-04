@@ -12,8 +12,8 @@ A Ruby wrapper around the Songkick API. Visit www.songkick.com/developer for doc
  
 = Usage Instructions
 
-require 'songkickr'
-remote = Songkickr::Remote.new API_KEY
+    require 'songkickr'
+    remote = Songkickr::Remote.new API_KEY
 
 Then call events, users_events(username), or concert_setlists(event_id)
 
