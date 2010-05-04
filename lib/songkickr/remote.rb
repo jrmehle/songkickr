@@ -29,8 +29,7 @@ module Songkickr
     
     def events(query = {})
       result = self.class.get('/events.json', :query => query)
-      
-      Songkickr::Result.new(result)
+      Songkickr::EventResult.new result
     end
     
     
@@ -47,8 +46,9 @@ module Songkickr
     #     max_date
     #     location - see the Songkick website for instructions on how to use the location parameter
     
-    def users_events
-      
+    def users_events(username, query = {})
+      result = self.class.get("/users/#{username}/events.json", :query => query)
+      Songkickr::EventResult.new result
     end
     
     

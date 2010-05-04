@@ -1,5 +1,5 @@
 module Songkickr
-  class Result
+  class EventResult
     attr_accessor :page, :total_entries, :results
     
     def initialize(result_hash = {})
