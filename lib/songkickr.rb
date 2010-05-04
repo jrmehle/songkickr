@@ -9,6 +9,7 @@ require dir + '/songkickr/location'
 require dir + '/songkickr/venue'
 require dir + '/songkickr/event'
 require dir + '/songkickr/event_result'
+require dir + '/songkickr/concert_setlist_result'
 require dir + '/songkickr/remote'
 
 class APIKeyNotSet < StandardError; 
