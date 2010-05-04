@@ -56,8 +56,9 @@ module Songkickr
     #
     #     event_id
     
-    def concert_setlists
-      
+    def concert_setlists(event_id)
+      result = self.class.get("/events/#{event_id}/setlists.json")
+      Songkickr::ConcertSetlistResult.new result
     end
   end
 end
