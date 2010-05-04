@@ -1,7 +1,10 @@
 require 'helper'
 
 class TestSongkickr < Test::Unit::TestCase
-  should "probably rename this file and start testing for real" do
-    flunk "hey buddy, you should probably rename this file and start testing for real"
+  should "have an api key if one is passed in" do
+    s = Songkickr
+    key = s.api_key = '123abc'
+    
+    assert_not_nil s.api_key
   end
 end

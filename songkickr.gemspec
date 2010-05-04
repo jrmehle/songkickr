@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Jared Mehle"]
-  s.date = %q{2010-04-18}
+  s.date = %q{2010-04-26}
   s.description = %q{A Ruby wrapper around the Songkick API. Visit www.songkick.com/developer for documentation on the Songkick API. }
   s.email = %q{jrmehle@gmail.com}
   s.extra_rdoc_files = [
@@ -42,6 +42,8 @@ Gem::Specification.new do |s|
   s.summary = %q{A Ruby wrapper around the Songkick API.}
   s.test_files = [
     "test/helper.rb",
+     "test/songkickr/test_artist.rb",
+     "test/songkickr/test_remote.rb",
      "test/test_songkickr.rb"
   ]
 
