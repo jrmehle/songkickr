@@ -12,18 +12,18 @@ A Ruby wrapper around the Songkick API. Visit www.songkick.com/developer for doc
  
 = Usage Instructions
 
-<pre>require 'songkickr'
-remote = Songkickr::Remote.new API_KEY</pre>
+require 'songkickr'
+remote = Songkickr::Remote.new API_KEY
 
 Then call events, users_events(username), or concert_setlists(event_id)
 
-<pre>results = remote.events(:artist_name => 'Iron Maiden')
-results = remote.events(:artist_name => 'As I Lay Dying')</pre>
+results = remote.events(:artist_name => 'Iron Maiden')
+results = remote.events(:artist_name => 'As I Lay Dying')
 
-<pre>results = remote.users_events('jrmehle')</pre>
+results = remote.users_events('jrmehle')
 
-<pre>results = remote.concert_setlists(2680726)
-results = remote.concert_setlists(2894471)</pre>
+results = remote.concert_setlists(2680726)
+results = remote.concert_setlists(2894471)
 
 
 == Note on Patches/Pull Requests
