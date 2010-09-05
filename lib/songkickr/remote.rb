@@ -28,7 +28,8 @@ module Songkickr
     #     location - see the Songkick website for instructions on how to use the location parameter
     
     def events(query = {})
-      result = self.class.get('/events.json', :query => query)
+      path = extract_path_from_query(query)
+      result = self.class.get("#{path}/events.json", :query => query)
       Songkickr::EventResult.new result
     end
     
@@ -59,6 +60,13 @@ module Songkickr
     def concert_setlists(event_id)
       result = self.class.get("/events/#{event_id}/setlists.json")
       Songkickr::ConcertSetlistResult.new result
+    end
+    
+    private
+    
+    def extract_path_from_query(query = {})
+      mbid = query.delete :mbid
+      "/artists/mbid:#{mbid}" if mbid
     end
   end
 end
