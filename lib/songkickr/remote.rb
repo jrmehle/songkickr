@@ -33,6 +33,18 @@ module Songkickr
       Songkickr::EventResult.new result
     end
     
+
+    def gigography (artist_id)
+
+    end
+
+    # Parameters - http://www.songkick.com/developer/artist-search
+    #   full_text (full text of a search)
+    # returns artist
+
+    def artist_search(query={}
+
+    end
     
     # Parameters - http://www.songkick.com/developer/events-for-user
     #
