@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
-
+# This is a simple comand line test to make sure everything is working
 
 $LOAD_PATH.unshift(File.join(File.dirname(__FILE__), 'lib'))
 $LOAD_PATH.unshift(File.dirname(__FILE__))
