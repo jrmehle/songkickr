@@ -32,7 +32,13 @@ module Songkickr
       result = self.class.get("#{path}/events.json", :query => query)
       Songkickr::EventResult.new result
     end
-    
+ 
+    # Parameters - http://groups.google.com/group/songkick-api/browse_thread/thread/af15b9a6ad3c3513#
+    #   artist_id - Songkick artist_id, use artist_search to get it
+    #   min_date
+    #   max_date
+    #   per_page
+    #   page
 
     def gigography (artist_id, query= {})
       result = self.class.get("/artists/#{artist_id}/gigography.json",:query=>query)
