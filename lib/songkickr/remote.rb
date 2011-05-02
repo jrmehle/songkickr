@@ -34,16 +34,18 @@ module Songkickr
     end
     
 
-    def gigography (artist_id)
-
+    def gigography (artist_id, query= {})
+      result = self.class.get("/artists/#{artist_id}/gigography.json",:query=>query)
+      Songkickr::EventResult.new result
     end
 
     # Parameters - http://www.songkick.com/developer/artist-search
     #   full_text (full text of a search)
     # returns artist
 
-    def artist_search(query={}
-
+    def artist_search(query={})
+        result = self.class.get("/search/artists.json?query=#{query[:artist_name]}", :query=>query)
+        Songkickr::ArtistResult.new result
     end
     
     # Parameters - http://www.songkick.com/developer/events-for-user
