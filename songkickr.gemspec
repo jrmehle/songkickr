@@ -25,6 +25,7 @@ Gem::Specification.new do |s|
      "VERSION",
      "lib/songkickr.rb",
      "lib/songkickr/artist.rb",
+     "lib/songkickr/artist_result.rb",
      "lib/songkickr/concert_setlist_result.rb",
      "lib/songkickr/event.rb",
      "lib/songkickr/event_result.rb",

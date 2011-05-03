@@ -13,6 +13,7 @@ require dir + '/songkickr/setlist'
 require dir + '/songkickr/event_result'
 require dir + '/songkickr/concert_setlist_result'
 require dir + '/songkickr/remote'
+require dir + '/songkickr/artist_result'
 
 class APIKeyNotSet < StandardError; 
   def to_s
