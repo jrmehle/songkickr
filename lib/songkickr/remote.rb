@@ -72,6 +72,12 @@ module Songkickr
       Songkickr::EventResult.new result
     end
     
+    # Metro Area Events (Upcoming) - http://www.songkick.com/developer/upcoming-events-for-metro-area
+    
+    def metro_areas_events(metro_area_id, query = {})
+      result = self.class.get("/metro_areas/#{metro_area_id}/calendar.json", :query => query)
+      Songkickr::EventResult.new result
+    end  
     
     # Parameters - http://www.songkick.com/developer/setlists
     #
