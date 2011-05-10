@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{songkickr}
-  s.version = "0.1.1"
+  s.version = "0.1.2"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Jared Mehle"]
-  s.date = %q{2011-05-03}
+  s.date = %q{2011-05-10}
   s.description = %q{A Ruby wrapper around the Songkick API. Visit www.songkick.com/developer for documentation on the Songkick API. }
   s.email = %q{jrmehle@gmail.com}
   s.extra_rdoc_files = [
