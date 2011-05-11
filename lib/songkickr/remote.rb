@@ -32,6 +32,16 @@ module Songkickr
       result = self.class.get("#{path}/events.json", :query => query)
       Songkickr::EventResult.new result
     end
+    
+    
+    # Getting detailed information of a single event
+    # http://www.songkick.com/developer/upcoming-events
+    
+    def event(event_id)
+      result = self.class.get("/events/#{event_id}.json")
+      # and now for some dirrty hack
+      Songkickr::Event.new result["resultsPage"]["results"]["event"]
+    end
  
     # Parameters - http://groups.google.com/group/songkick-api/browse_thread/thread/af15b9a6ad3c3513#
     #   artist_id - Songkick artist_id, use artist_search to get it
