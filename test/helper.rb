@@ -23,6 +23,10 @@ def fixture_file(filename)
   File.read(file_path)
 end
 
+def fixture_hash(filename)
+  Crack::JSON.parse(fixture_file(filename))
+end
+
 def stub_get(url, filename, status = nil)
   options = {:body => fixture_file(filename)}
   options.merge!({:status => status}) unless status.nil?
