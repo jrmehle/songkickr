@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{songkickr}
-  s.version = "0.1.3"
+  s.version = "0.1.4"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Jared Mehle"]
-  s.date = %q{2011-05-11}
+  s.date = %q{2011-05-17}
   s.description = %q{A Ruby wrapper around the Songkick API. Visit www.songkick.com/developer for documentation on the Songkick API. }
   s.email = %q{jrmehle@gmail.com}
   s.extra_rdoc_files = [
@@ -29,6 +29,7 @@ Gem::Specification.new do |s|
     "lib/songkickr/event.rb",
     "lib/songkickr/event_result.rb",
     "lib/songkickr/location.rb",
+    "lib/songkickr/location_result.rb",
     "lib/songkickr/performance.rb",
     "lib/songkickr/remote.rb",
     "lib/songkickr/setlist.rb",
@@ -39,10 +40,12 @@ Gem::Specification.new do |s|
     "test/fixtures/event_7391451.json",
     "test/fixtures/events.json",
     "test/fixtures/invalid_api_key.json",
+    "test/fixtures/locations_bar.json",
     "test/fixtures/no_events.json",
     "test/helper.rb",
     "test/songkickr/test_artist.rb",
     "test/songkickr/test_event.rb",
+    "test/songkickr/test_location.rb",
     "test/songkickr/test_remote.rb",
     "test/test_songkickr.rb"
   ]
@@ -54,6 +57,7 @@ Gem::Specification.new do |s|
     "test/helper.rb",
     "test/songkickr/test_artist.rb",
     "test/songkickr/test_event.rb",
+    "test/songkickr/test_location.rb",
     "test/songkickr/test_remote.rb",
     "test/test_songkickr.rb"
   ]
