@@ -50,7 +50,7 @@ module Songkickr
     #   per_page
     #   page
 
-    def gigography (artist_id, query= {})
+    def gigography(artist_id, query= {})
       result = self.class.get("/artists/#{artist_id}/gigography.json",:query=>query)
       Songkickr::EventResult.new result
     end
@@ -96,6 +96,16 @@ module Songkickr
     def concert_setlists(event_id)
       result = self.class.get("/events/#{event_id}/setlists.json")
       Songkickr::ConcertSetlistResult.new result
+    end
+    
+    # Parameters - http://www.songkick.com/developer/location-search
+    #
+    #     location - 'geo:{lat,lng}' string
+    #     query - name of location to search for
+    
+    def location_search(query = {})
+      result = self.class.get("/search/locations.json",:query=>query)
+      Songkickr::LocationResult.new result
     end
     
     private

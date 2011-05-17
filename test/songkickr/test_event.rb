@@ -3,8 +3,7 @@ require 'helper'
 class TestArtist < Test::Unit::TestCase
   context "Given an Event from fixture" do
     setup do
-      fixture_hash = Crack::JSON.parse(fixture_file('event_7391451.json')) # extract to helper?
-      @event = Songkickr::Event.new(fixture_hash["resultsPage"]["results"]["event"])
+      @event = Songkickr::Event.new(fixture_hash('event_7391451.json')["resultsPage"]["results"]["event"])
     end
 
     should "properly load data from JSON" do
