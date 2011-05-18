@@ -4,11 +4,11 @@ A Ruby wrapper around the Songkick API. Visit www.songkick.com/developer for doc
 
 = Install Instructions
 
-    gem install songkickr
+ gem install songkickr
  
- or if your environment requires
+or if your environment requires
  
-    sudo gem install songkickr
+ sudo gem install songkickr
  
 = Usage Instructions
 
@@ -38,4 +38,4 @@ Then call events, users_events(username), or concert_setlists(event_id)
 
 == Copyright
 
-Copyright (c) 2010 Jared Mehle. See LICENSE for details.
+Copyright (c) 2010-2011 Jared Mehle. See LICENSE for details.

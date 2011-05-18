@@ -1,0 +1,592 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Class: Songkickr::Remote</title>
+
+  <link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+  <script src="../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="class">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="../lib/songkickr/remote_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/songkickr/remote.rb">lib/songkickr/remote.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+      <!-- Parent Class -->
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link">Object</p>
+        
+      </div>
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-c-new">::new</a></li>
+          
+          <li><a href="#method-i-artist_search">#artist_search</a></li>
+          
+          <li><a href="#method-i-concert_setlists">#concert_setlists</a></li>
+          
+          <li><a href="#method-i-event">#event</a></li>
+          
+          <li><a href="#method-i-events">#events</a></li>
+          
+          <li><a href="#method-i-gigography">#gigography</a></li>
+          
+          <li><a href="#method-i-location_search">#location_search</a></li>
+          
+          <li><a href="#method-i-metro_areas_events">#metro_areas_events</a></li>
+          
+          <li><a href="#method-i-users_events">#users_events</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+      <!-- Included Modules -->
+      <div id="includes-section" class="section">
+        <h3 class="section-header">Included Modules</h3>
+        <ul class="link-list">
+        
+        
+          <li><span class="include">HTTParty</span></li>
+        
+        
+        </ul>
+      </div>
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+      <div id="fileindex-section" class="section project-section">
+        <h3 class="section-header">Files</h3>
+        <ul>
+        
+          <li class="file"><a href="../LICENSE.html">LICENSE</a></li>
+        
+          <li class="file"><a href="../README_rdoc.html">README.rdoc</a></li>
+        
+        </ul>
+      </div>
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="../Songkickr.html">Songkickr</a></li>
+        
+          <li><a href="../Songkickr/Artist.html">Songkickr::Artist</a></li>
+        
+          <li><a href="../Songkickr/ArtistResult.html">Songkickr::ArtistResult</a></li>
+        
+          <li><a href="../Songkickr/ConcertSetlistResult.html">Songkickr::ConcertSetlistResult</a></li>
+        
+          <li><a href="../Songkickr/Event.html">Songkickr::Event</a></li>
+        
+          <li><a href="../Songkickr/EventResult.html">Songkickr::EventResult</a></li>
+        
+          <li><a href="../Songkickr/Location.html">Songkickr::Location</a></li>
+        
+          <li><a href="../Songkickr/LocationResult.html">Songkickr::LocationResult</a></li>
+        
+          <li><a href="../Songkickr/Performance.html">Songkickr::Performance</a></li>
+        
+          <li><a href="../Songkickr/Remote.html">Songkickr::Remote</a></li>
+        
+          <li><a href="../Songkickr/Setlist.html">Songkickr::Setlist</a></li>
+        
+          <li><a href="../Songkickr/SetlistItem.html">Songkickr::SetlistItem</a></li>
+        
+          <li><a href="../Songkickr/Venue.html">Songkickr::Venue</a></li>
+        
+          <li><a href="../APIKeyNotSet.html">APIKeyNotSet</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="class">Songkickr::Remote</h1>
+
+    <div id="description" class="description">
+      
+    </div><!-- description -->
+
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+
+      
+      <!-- Attributes -->
+      <div id="attribute-method-details" class="method-section section">
+        <h3 class="section-header">Attributes</h3>
+
+        
+        <div id="api_key-attribute-method" class="method-detail">
+          <a name="api_key"></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">api_key</span><span
+              class="attribute-access-type">[R]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+      </div><!-- attribute-method-details -->
+      
+
+      <!-- Methods -->
+      
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="artist_search-method" class="method-detail ">
+          <a name="method-i-artist_search"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">artist_search</span><span
+              class="method-args">(query={})</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Parameters - <a
+href="http://www.songkick.com/developer/artist-search">www.songkick.com/developer/artist-search</a></p>
+
+<pre>full_text (full text of a search)</pre>
+
+<p>returns artist</p>
+            
+
+            
+            <div class="method-source-code" id="artist_search-source">
+<pre>
+<span class="ruby-comment"># File lib/songkickr/remote.rb, line 62</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">artist_search</span>(<span class="ruby-identifier">query</span>={})
+    <span class="ruby-identifier">result</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">get</span>(<span class="ruby-node">&quot;/search/artists.json?query=#{query[:artist_name]}&quot;</span>, <span class="ruby-value">:query=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">query</span>)
+    <span class="ruby-constant">Songkickr</span><span class="ruby-operator">::</span><span class="ruby-constant">ArtistResult</span>.<span class="ruby-identifier">new</span> <span class="ruby-identifier">result</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- artist_search-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- artist_search-method -->
+
+      
+        <div id="concert_setlists-method" class="method-detail ">
+          <a name="method-i-concert_setlists"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">concert_setlists</span><span
+              class="method-args">(event_id)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Parameters - <a
+href="http://www.songkick.com/developer/setlists">www.songkick.com/developer/setlists</a></p>
+
+<pre>event_id</pre>
+            
+
+            
+            <div class="method-source-code" id="concert_setlists-source">
+<pre>
+<span class="ruby-comment"># File lib/songkickr/remote.rb, line 96</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">concert_setlists</span>(<span class="ruby-identifier">event_id</span>)
+  <span class="ruby-identifier">result</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">get</span>(<span class="ruby-node">&quot;/events/#{event_id}/setlists.json&quot;</span>)
+  <span class="ruby-constant">Songkickr</span><span class="ruby-operator">::</span><span class="ruby-constant">ConcertSetlistResult</span>.<span class="ruby-identifier">new</span> <span class="ruby-identifier">result</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- concert_setlists-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- concert_setlists-method -->
+
+      
+        <div id="event-method" class="method-detail ">
+          <a name="method-i-event"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">event</span><span
+              class="method-args">(event_id)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Getting detailed information of a single event <a
+href="http://www.songkick.com/developer/upcoming-events">www.songkick.com/developer/upcoming-events</a></p>
+            
+
+            
+            <div class="method-source-code" id="event-source">
+<pre>
+<span class="ruby-comment"># File lib/songkickr/remote.rb, line 40</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">event</span>(<span class="ruby-identifier">event_id</span>)
+  <span class="ruby-identifier">result</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">get</span>(<span class="ruby-node">&quot;/events/#{event_id}.json&quot;</span>)
+  <span class="ruby-comment"># and now for some dirrty hack</span>
+  <span class="ruby-constant">Songkickr</span><span class="ruby-operator">::</span><span class="ruby-constant">Event</span>.<span class="ruby-identifier">new</span> <span class="ruby-identifier">result</span>[<span class="ruby-string">&quot;resultsPage&quot;</span>][<span class="ruby-string">&quot;results&quot;</span>][<span class="ruby-string">&quot;event&quot;</span>]
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- event-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- event-method -->
+
+      
+        <div id="events-method" class="method-detail ">
+          <a name="method-i-events"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">events</span><span
+              class="method-args">(query = {})</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Parameters - <a
+href="http://www.songkick.com/developer/event-search">www.songkick.com/developer/event-search</a></p>
+
+<pre>type (concert or festival)
+artists (events by any of the artists, comma-separated)
+artist_name
+artist_id
+venue_id
+setlist_item_name (name of a song which was played at the event – use with artist_id or artist_name)
+min_date
+max_date
+location - see the Songkick website for instructions on how to use the location parameter</pre>
+            
+
+            
+            <div class="method-source-code" id="events-source">
+<pre>
+<span class="ruby-comment"># File lib/songkickr/remote.rb, line 30</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">events</span>(<span class="ruby-identifier">query</span> = {})
+  <span class="ruby-identifier">path</span> = <span class="ruby-identifier">extract_path_from_query</span>(<span class="ruby-identifier">query</span>)
+  <span class="ruby-identifier">result</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">get</span>(<span class="ruby-node">&quot;#{path}/events.json&quot;</span>, <span class="ruby-value">:query</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">query</span>)
+  <span class="ruby-constant">Songkickr</span><span class="ruby-operator">::</span><span class="ruby-constant">EventResult</span>.<span class="ruby-identifier">new</span> <span class="ruby-identifier">result</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- events-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- events-method -->
+
+      
+        <div id="gigography-method" class="method-detail ">
+          <a name="method-i-gigography"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">gigography</span><span
+              class="method-args">(artist_id, query= {})</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Parameters - <a
+href="http://groups.google.com/group/songkick-api/browse_thread/thread/af15b9a6ad3c3513">groups.google.com/group/songkick-api/browse_thread/thread/af15b9a6ad3c3513</a>#</p>
+
+<pre>artist_id - Songkick artist_id, use artist_search to get it
+min_date
+max_date
+per_page
+page</pre>
+            
+
+            
+            <div class="method-source-code" id="gigography-source">
+<pre>
+<span class="ruby-comment"># File lib/songkickr/remote.rb, line 53</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">gigography</span>(<span class="ruby-identifier">artist_id</span>, <span class="ruby-identifier">query</span>= {})
+  <span class="ruby-identifier">result</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">get</span>(<span class="ruby-node">&quot;/artists/#{artist_id}/gigography.json&quot;</span>,<span class="ruby-value">:query=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">query</span>)
+  <span class="ruby-constant">Songkickr</span><span class="ruby-operator">::</span><span class="ruby-constant">EventResult</span>.<span class="ruby-identifier">new</span> <span class="ruby-identifier">result</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- gigography-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- gigography-method -->
+
+      
+        <div id="location_search-method" class="method-detail ">
+          <a name="method-i-location_search"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">location_search</span><span
+              class="method-args">(query = {})</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Parameters - <a
+href="http://www.songkick.com/developer/location-search">www.songkick.com/developer/location-search</a></p>
+
+<pre>location - 'geo:{lat,lng}' string
+query - name of location to search for</pre>
+            
+
+            
+            <div class="method-source-code" id="location_search-source">
+<pre>
+<span class="ruby-comment"># File lib/songkickr/remote.rb, line 106</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">location_search</span>(<span class="ruby-identifier">query</span> = {})
+  <span class="ruby-identifier">result</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">get</span>(<span class="ruby-string">&quot;/search/locations.json&quot;</span>,<span class="ruby-value">:query=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">query</span>)
+  <span class="ruby-constant">Songkickr</span><span class="ruby-operator">::</span><span class="ruby-constant">LocationResult</span>.<span class="ruby-identifier">new</span> <span class="ruby-identifier">result</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- location_search-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- location_search-method -->
+
+      
+        <div id="metro_areas_events-method" class="method-detail ">
+          <a name="method-i-metro_areas_events"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">metro_areas_events</span><span
+              class="method-args">(metro_area_id, query = {})</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Metro Area Events (Upcoming) - <a
+href="http://www.songkick.com/developer/upcoming-events-for-metro-area">www.songkick.com/developer/upcoming-events-for-metro-area</a></p>
+            
+
+            
+            <div class="method-source-code" id="metro_areas_events-source">
+<pre>
+<span class="ruby-comment"># File lib/songkickr/remote.rb, line 87</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">metro_areas_events</span>(<span class="ruby-identifier">metro_area_id</span>, <span class="ruby-identifier">query</span> = {})
+  <span class="ruby-identifier">result</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">get</span>(<span class="ruby-node">&quot;/metro_areas/#{metro_area_id}/calendar.json&quot;</span>, <span class="ruby-value">:query</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">query</span>)
+  <span class="ruby-constant">Songkickr</span><span class="ruby-operator">::</span><span class="ruby-constant">EventResult</span>.<span class="ruby-identifier">new</span> <span class="ruby-identifier">result</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- metro_areas_events-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- metro_areas_events-method -->
+
+      
+        <div id="users_events-method" class="method-detail ">
+          <a name="method-i-users_events"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">users_events</span><span
+              class="method-args">(username, query = {})</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Parameters - <a
+href="http://www.songkick.com/developer/events-for-user">www.songkick.com/developer/events-for-user</a></p>
+
+<pre>attendance (all, im_going, i_might_go) - defaults to im_going
+type (concert or festival)
+artists (events by any of the artists, comma-separated)
+artist_name
+artist_id
+venue_id
+setlist_item_name (name of a song which was played at the event – use with artist_id or artist_name)
+min_date
+max_date
+location - see the Songkick website for instructions on how to use the location parameter</pre>
+            
+
+            
+            <div class="method-source-code" id="users_events-source">
+<pre>
+<span class="ruby-comment"># File lib/songkickr/remote.rb, line 80</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">users_events</span>(<span class="ruby-identifier">username</span>, <span class="ruby-identifier">query</span> = {})
+  <span class="ruby-identifier">result</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">get</span>(<span class="ruby-node">&quot;/users/#{username}/events.json&quot;</span>, <span class="ruby-value">:query</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">query</span>)
+  <span class="ruby-constant">Songkickr</span><span class="ruby-operator">::</span><span class="ruby-constant">EventResult</span>.<span class="ruby-identifier">new</span> <span class="ruby-identifier">result</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- users_events-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- users_events-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+      <div id="public-class-method-details" class="method-section section">
+        <h3 class="section-header">Public Class Methods</h3>
+
+      
+        <div id="new-method" class="method-detail ">
+          <a name="method-c-new"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">new</span><span
+              class="method-args">(api_key = nil)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Get your <a href="Remote.html#attribute-i-api_key">api_key</a> found here
+<a href="http://developer.songkick.com">developer.songkick.com</a></p>
+            
+
+            
+            <div class="method-source-code" id="new-source">
+<pre>
+<span class="ruby-comment"># File lib/songkickr/remote.rb, line 10</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">api_key</span> = <span class="ruby-keyword">nil</span>)
+  <span class="ruby-ivar">@api_key</span> = <span class="ruby-identifier">api_key</span>
+  <span class="ruby-ivar">@api_key</span> <span class="ruby-operator">||=</span> <span class="ruby-constant">Songkickr</span>.<span class="ruby-identifier">api_key</span>
+  
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">default_params</span> <span class="ruby-value">:apikey</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@api_key</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- new-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- new-method -->
+
+      
+      </div><!-- public-class-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

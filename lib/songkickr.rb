@@ -24,13 +24,14 @@ end
 
 module Songkickr
   
-  # Get your API key from http://developer.songkick.com/
+  # Get an API key for your app from http://developer.songkick.com/
   def self.api_key
     raise APIKeyNotSet if @api_key.nil?
 
     @api_key
   end
 
+  # Set the API key
   def self.api_key=(api_key)
     @api_key = api_key
   end
