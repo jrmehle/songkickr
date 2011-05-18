@@ -20,3 +20,8 @@ pkg
 
 ## PROJECT::SPECIFIC
 *.rbc # Rubinius files
+lib/*.rbc
+lib/songkickr/*.rbc
+test/*.rbc
+test/songkickr/*.rbc
+rakefile.compiled.rbc
