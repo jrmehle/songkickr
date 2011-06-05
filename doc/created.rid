@@ -1,16 +1,16 @@
-Wed, 18 May 2011 16:35:42 -0400
-./lib/songkickr/venue.rb	Sat, 17 Apr 2010 01:13:01 -0400
-./LICENSE	Tue, 03 May 2011 12:10:27 -0400
-./lib/songkickr/location.rb	Tue, 17 May 2011 13:50:54 -0400
-./lib/songkickr/setlist_item.rb	Tue, 03 May 2011 12:10:27 -0400
-./lib/songkickr/concert_setlist_result.rb	Tue, 03 May 2011 12:10:27 -0400
-./lib/songkickr/artist.rb	Tue, 03 May 2011 12:10:27 -0400
-./README.rdoc	Wed, 18 May 2011 16:32:39 -0400
-./lib/songkickr/location_result.rb	Tue, 17 May 2011 13:50:54 -0400
-./lib/songkickr.rb	Wed, 18 May 2011 16:35:38 -0400
-./lib/songkickr/artist_result.rb	Tue, 03 May 2011 12:10:27 -0400
-./lib/songkickr/event_result.rb	Mon, 03 May 2010 21:44:06 -0400
-./lib/songkickr/setlist.rb	Tue, 03 May 2011 12:10:27 -0400
-./lib/songkickr/event.rb	Tue, 03 May 2011 12:10:27 -0400
-./lib/songkickr/performance.rb	Sun, 18 Apr 2010 14:54:18 -0400
-./lib/songkickr/remote.rb	Tue, 17 May 2011 13:50:54 -0400
+Sun, 05 Jun 2011 14:38:34 -0500
+./lib/songkickr/venue.rb	Sat, 17 Apr 2010 00:13:01 -0500
+./LICENSE	Wed, 18 May 2011 19:17:09 -0500
+./lib/songkickr/location.rb	Tue, 17 May 2011 12:50:54 -0500
+./lib/songkickr/setlist_item.rb	Tue, 03 May 2011 11:10:27 -0500
+./lib/songkickr/concert_setlist_result.rb	Tue, 03 May 2011 11:10:27 -0500
+./lib/songkickr/artist.rb	Wed, 18 May 2011 15:53:05 -0500
+./README.rdoc	Tue, 24 May 2011 08:57:05 -0500
+./lib/songkickr/location_result.rb	Tue, 17 May 2011 12:50:54 -0500
+./lib/songkickr.rb	Sun, 05 Jun 2011 14:15:35 -0500
+./lib/songkickr/artist_result.rb	Tue, 03 May 2011 11:10:27 -0500
+./lib/songkickr/event_result.rb	Mon, 03 May 2010 20:44:06 -0500
+./lib/songkickr/setlist.rb	Tue, 03 May 2011 11:10:27 -0500
+./lib/songkickr/event.rb	Tue, 03 May 2011 11:10:27 -0500
+./lib/songkickr/performance.rb	Sun, 18 Apr 2010 13:54:18 -0500
+./lib/songkickr/remote.rb	Sun, 05 Jun 2011 14:38:30 -0500

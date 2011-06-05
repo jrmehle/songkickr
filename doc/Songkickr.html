@@ -238,14 +238,22 @@
 
           <div class="method-description">
             
-            <p>Get an API key for your app from <a
-href="http://developer.songkick.com/">developer.songkick.com/</a></p>
+            <p>Returns the Songkick API key In order to use the Songkick API, you must
+have a Songkick API (their rule, not mine). Get an API key for your app
+from <a href="http://developer.songkick.com/">developer.songkick.com/</a></p>
+
+<h4>Example</h4>
+
+<pre>require 'songkickr'
+remote = Songkickr::Remote.new XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+remote.api_key
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</pre>
             
 
             
             <div class="method-source-code" id="api_key-source">
 <pre>
-<span class="ruby-comment"># File lib/songkickr.rb, line 28</span>
+<span class="ruby-comment"># File lib/songkickr.rb, line 37</span>
 <span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">api_key</span>
   <span class="ruby-identifier">raise</span> <span class="ruby-constant">APIKeyNotSet</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@api_key</span>.<span class="ruby-identifier">nil?</span>
 
@@ -274,13 +282,21 @@ href="http://developer.songkick.com/">developer.songkick.com/</a></p>
 
           <div class="method-description">
             
-            <p>Set the API key</p>
+            <p>Set the API key. In the event you need to set the API key after
+initializing the the remote.</p>
+
+<h3>Parameters</h3>
+<ul><li>
+<p><tt><a href="Songkickr.html#method-c-api_key">api_key</a></tt> - A
+developer key from Songkick. Get an API key for your app from <a
+href="http://developer.songkick.com/">developer.songkick.com/</a></p>
+</li></ul>
             
 
             
             <div class="method-source-code" id="api_key-3D-source">
 <pre>
-<span class="ruby-comment"># File lib/songkickr.rb, line 35</span>
+<span class="ruby-comment"># File lib/songkickr.rb, line 47</span>
 <span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">api_key=</span>(<span class="ruby-identifier">api_key</span>)
   <span class="ruby-ivar">@api_key</span> = <span class="ruby-identifier">api_key</span>
 <span class="ruby-keyword">end</span></pre>

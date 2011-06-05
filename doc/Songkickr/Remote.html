@@ -226,21 +226,31 @@
 
           <div class="method-description">
             
-            <p>Parameters - <a
+            <h4><a href="Artist.html">Artist</a> Search API</h4>
+
+<p><a
 href="http://www.songkick.com/developer/artist-search">www.songkick.com/developer/artist-search</a></p>
 
-<pre>full_text (full text of a search)</pre>
+<h3>Parameters</h3>
+<ul><li>
+<p><tt>query</tt> - Search for artists by name using full text search. Results
+from <a href="../Songkickr.html">Songkickr</a> are returned by relevancy.</p>
+</li></ul>
 
-<p>returns artist</p>
+<h4>Query Parameters</h4>
+<ul><li>
+<p><tt>artist_name</tt> - Name of an artist. <em>Ex. ‘Lady Gaga’,
+‘Slayer’, ‘Atmosphere’</em></p>
+</li></ul>
             
 
             
             <div class="method-source-code" id="artist_search-source">
 <pre>
-<span class="ruby-comment"># File lib/songkickr/remote.rb, line 62</span>
+<span class="ruby-comment"># File lib/songkickr/remote.rb, line 80</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">artist_search</span>(<span class="ruby-identifier">query</span>={})
-    <span class="ruby-identifier">result</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">get</span>(<span class="ruby-node">&quot;/search/artists.json?query=#{query[:artist_name]}&quot;</span>, <span class="ruby-value">:query=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">query</span>)
-    <span class="ruby-constant">Songkickr</span><span class="ruby-operator">::</span><span class="ruby-constant">ArtistResult</span>.<span class="ruby-identifier">new</span> <span class="ruby-identifier">result</span>
+  <span class="ruby-identifier">result</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">get</span>(<span class="ruby-string">&quot;/search/artists.json?&quot;</span>, <span class="ruby-value">:query</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">query</span>)
+  <span class="ruby-constant">Songkickr</span><span class="ruby-operator">::</span><span class="ruby-constant">ArtistResult</span>.<span class="ruby-identifier">new</span> <span class="ruby-identifier">result</span>
 <span class="ruby-keyword">end</span></pre>
             </div><!-- artist_search-source -->
             
@@ -265,16 +275,22 @@ href="http://www.songkick.com/developer/artist-search">www.songkick.com/develope
 
           <div class="method-description">
             
-            <p>Parameters - <a
+            <h4>Concert Setlists API</h4>
+
+<p><a
 href="http://www.songkick.com/developer/setlists">www.songkick.com/developer/setlists</a></p>
 
-<pre>event_id</pre>
+<h3>Parameters</h3>
+<ul><li>
+<p><tt>event_id</tt> - Songkick event ID. Extract the event ID either from a
+previous API call or from the URL of the event page on the website.</p>
+</li></ul>
             
 
             
             <div class="method-source-code" id="concert_setlists-source">
 <pre>
-<span class="ruby-comment"># File lib/songkickr/remote.rb, line 96</span>
+<span class="ruby-comment"># File lib/songkickr/remote.rb, line 124</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">concert_setlists</span>(<span class="ruby-identifier">event_id</span>)
   <span class="ruby-identifier">result</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">get</span>(<span class="ruby-node">&quot;/events/#{event_id}/setlists.json&quot;</span>)
   <span class="ruby-constant">Songkickr</span><span class="ruby-operator">::</span><span class="ruby-constant">ConcertSetlistResult</span>.<span class="ruby-identifier">new</span> <span class="ruby-identifier">result</span>
@@ -302,14 +318,24 @@ href="http://www.songkick.com/developer/setlists">www.songkick.com/developer/set
 
           <div class="method-description">
             
-            <p>Getting detailed information of a single event <a
+            <h4><a href="Event.html">Event</a> API</h4>
+
+<p><a
 href="http://www.songkick.com/developer/upcoming-events">www.songkick.com/developer/upcoming-events</a></p>
+
+<p>Getting detailed information of a single event.</p>
+
+<h3>Parameters</h3>
+<ul><li>
+<p><tt>event_id</tt> - Songkick event ID. Extract the event ID either from a
+previous API call or from the URL of the event page on the website.</p>
+</li></ul>
             
 
             
             <div class="method-source-code" id="event-source">
 <pre>
-<span class="ruby-comment"># File lib/songkickr/remote.rb, line 40</span>
+<span class="ruby-comment"># File lib/songkickr/remote.rb, line 49</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">event</span>(<span class="ruby-identifier">event_id</span>)
   <span class="ruby-identifier">result</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">get</span>(<span class="ruby-node">&quot;/events/#{event_id}.json&quot;</span>)
   <span class="ruby-comment"># and now for some dirrty hack</span>
@@ -338,24 +364,49 @@ href="http://www.songkick.com/developer/upcoming-events">www.songkick.com/develo
 
           <div class="method-description">
             
-            <p>Parameters - <a
+            <h4><a href="Event.html">Event</a> Search API</h4>
+
+<p><a
 href="http://www.songkick.com/developer/event-search">www.songkick.com/developer/event-search</a></p>
 
-<pre>type (concert or festival)
-artists (events by any of the artists, comma-separated)
-artist_name
-artist_id
-venue_id
-setlist_item_name (name of a song which was played at the event – use with artist_id or artist_name)
-min_date
-max_date
-location - see the Songkick website for instructions on how to use the location parameter</pre>
+<h3>Parameters</h3>
+<ul><li>
+<p><tt>query</tt> - A hash of query parameters, see below for options.</p>
+</li></ul>
+
+<p><em>Example:</em> <tt>{ :type =&gt; 'concert', :artists =&gt; 'Coolio'
+}</tt></p>
+
+<h4>Query Parameters</h4>
+<ul><li>
+<p><tt>type</tt> - valid types: concert or festival</p>
+</li><li>
+<p><tt>artists</tt> - events by any of the artists, comma-separated</p>
+</li><li>
+<p><tt>artist_name</tt> - plain text name of artist ex. ‘As I Lay Dying’,
+‘Parkway Drive’, ‘Animals As Leaders’</p>
+</li><li>
+<p><tt>artist_id</tt> - Songkick unique ID for an artist</p>
+</li><li>
+<p><tt>venue_id</tt> - Songkick unique ID for a venue</p>
+</li><li>
+<p><tt>setlist_item_name</tt> - name of a song which was played at the event
+– use with artist_id or artist_name</p>
+</li><li>
+<p><tt>min_date</tt> - Oldest date for which you want to look for events</p>
+</li><li>
+<p><tt>max_date</tt> - Most recent date for which you want to look for events</p>
+</li><li>
+<p><tt>location</tt> - See the Songkick website for instructions on how to use
+the location parameter <a
+href="http://www.songkick.com/developer/location-search">www.songkick.com/developer/location-search</a></p>
+</li></ul>
             
 
             
             <div class="method-source-code" id="events-source">
 <pre>
-<span class="ruby-comment"># File lib/songkickr/remote.rb, line 30</span>
+<span class="ruby-comment"># File lib/songkickr/remote.rb, line 36</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">events</span>(<span class="ruby-identifier">query</span> = {})
   <span class="ruby-identifier">path</span> = <span class="ruby-identifier">extract_path_from_query</span>(<span class="ruby-identifier">query</span>)
   <span class="ruby-identifier">result</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">get</span>(<span class="ruby-node">&quot;#{path}/events.json&quot;</span>, <span class="ruby-value">:query</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">query</span>)
@@ -384,20 +435,35 @@ location - see the Songkick website for instructions on how to use the location 
 
           <div class="method-description">
             
-            <p>Parameters - <a
+            <h4>Gigography API</h4>
+
+<p><a
 href="http://groups.google.com/group/songkick-api/browse_thread/thread/af15b9a6ad3c3513">groups.google.com/group/songkick-api/browse_thread/thread/af15b9a6ad3c3513</a>#</p>
 
-<pre>artist_id - Songkick artist_id, use artist_search to get it
-min_date
-max_date
-per_page
-page</pre>
+<h3>Parameters</h3>
+<ul><li>
+<p><tt>artist_id</tt> - Songkick artist_id, use <a
+href="Remote.html#method-i-artist_search">artist_search</a> to get it</p>
+</li><li>
+<p><tt>query</tt> - A hash of query parameters, see below for options.</p>
+</li></ul>
+
+<h4>Query Parameters</h4>
+<ul><li>
+<p><tt>min_date</tt> - Oldest date for which you want to look for events</p>
+</li><li>
+<p><tt>max_date</tt> - Most recent date for which you want to look for events</p>
+</li><li>
+<p><tt>per_page</tt> - Number of items on a page</p>
+</li><li>
+<p><tt>page</tt> - Number of page</p>
+</li></ul>
             
 
             
             <div class="method-source-code" id="gigography-source">
 <pre>
-<span class="ruby-comment"># File lib/songkickr/remote.rb, line 53</span>
+<span class="ruby-comment"># File lib/songkickr/remote.rb, line 67</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">gigography</span>(<span class="ruby-identifier">artist_id</span>, <span class="ruby-identifier">query</span>= {})
   <span class="ruby-identifier">result</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">get</span>(<span class="ruby-node">&quot;/artists/#{artist_id}/gigography.json&quot;</span>,<span class="ruby-value">:query=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">query</span>)
   <span class="ruby-constant">Songkickr</span><span class="ruby-operator">::</span><span class="ruby-constant">EventResult</span>.<span class="ruby-identifier">new</span> <span class="ruby-identifier">result</span>
@@ -425,19 +491,29 @@ page</pre>
 
           <div class="method-description">
             
-            <p>Parameters - <a
+            <h4><a href="Location.html">Location</a> Search API</h4>
+
+<p><a
 href="http://www.songkick.com/developer/location-search">www.songkick.com/developer/location-search</a></p>
 
-<pre>location - 'geo:{lat,lng}' string
-query - name of location to search for</pre>
+<h3>Parameters</h3>
+<ul><li>
+<p><tt>query</tt> - A hash of query parameters, see below for options.</p>
+</li></ul>
+
+<h4>Query Parameters</h4>
+<ul><li>
+<p><tt>location</tt> - ‘geo:{lat,lng}’ string <em>Ex.
+‘geo:{-0.128,51.5078}’</em></p>
+</li></ul>
             
 
             
             <div class="method-source-code" id="location_search-source">
 <pre>
-<span class="ruby-comment"># File lib/songkickr/remote.rb, line 106</span>
+<span class="ruby-comment"># File lib/songkickr/remote.rb, line 137</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">location_search</span>(<span class="ruby-identifier">query</span> = {})
-  <span class="ruby-identifier">result</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">get</span>(<span class="ruby-string">&quot;/search/locations.json&quot;</span>,<span class="ruby-value">:query=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">query</span>)
+  <span class="ruby-identifier">result</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">get</span>(<span class="ruby-string">&quot;/search/locations.json&quot;</span>, <span class="ruby-value">:query</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">query</span>)
   <span class="ruby-constant">Songkickr</span><span class="ruby-operator">::</span><span class="ruby-constant">LocationResult</span>.<span class="ruby-identifier">new</span> <span class="ruby-identifier">result</span>
 <span class="ruby-keyword">end</span></pre>
             </div><!-- location_search-source -->
@@ -463,14 +539,25 @@ query - name of location to search for</pre>
 
           <div class="method-description">
             
-            <p>Metro Area Events (Upcoming) - <a
+            <h4>Metro Area Events (Upcoming)</h4>
+
+<p><a
 href="http://www.songkick.com/developer/upcoming-events-for-metro-area">www.songkick.com/developer/upcoming-events-for-metro-area</a></p>
+
+<h3>Parameters</h3>
+<ul><li>
+<p><tt>metro_area_id</tt> - Songkick unique ID for metro areas. Use <a
+href="Remote.html#method-i-location_search">location_search</a> to find a
+metro area ID.</p>
+</li><li>
+<p><tt>query</tt> - Any additional params to pass.</p>
+</li></ul>
             
 
             
             <div class="method-source-code" id="metro_areas_events-source">
 <pre>
-<span class="ruby-comment"># File lib/songkickr/remote.rb, line 87</span>
+<span class="ruby-comment"># File lib/songkickr/remote.rb, line 113</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">metro_areas_events</span>(<span class="ruby-identifier">metro_area_id</span>, <span class="ruby-identifier">query</span> = {})
   <span class="ruby-identifier">result</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">get</span>(<span class="ruby-node">&quot;/metro_areas/#{metro_area_id}/calendar.json&quot;</span>, <span class="ruby-value">:query</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">query</span>)
   <span class="ruby-constant">Songkickr</span><span class="ruby-operator">::</span><span class="ruby-constant">EventResult</span>.<span class="ruby-identifier">new</span> <span class="ruby-identifier">result</span>
@@ -498,25 +585,46 @@ href="http://www.songkick.com/developer/upcoming-events-for-metro-area">www.song
 
           <div class="method-description">
             
-            <p>Parameters - <a
-href="http://www.songkick.com/developer/events-for-user">www.songkick.com/developer/events-for-user</a></p>
+            <h4>User Events API</h4>
 
-<pre>attendance (all, im_going, i_might_go) - defaults to im_going
-type (concert or festival)
-artists (events by any of the artists, comma-separated)
-artist_name
-artist_id
-venue_id
-setlist_item_name (name of a song which was played at the event – use with artist_id or artist_name)
-min_date
-max_date
-location - see the Songkick website for instructions on how to use the location parameter</pre>
+<p><a
+href="http://www.songkick.com/developer/upcoming-events-for-user">www.songkick.com/developer/upcoming-events-for-user</a></p>
+
+<h3>Parameters</h3>
+<ul><li>
+<p><tt>username</tt> - A Songkick username.</p>
+</li><li>
+<p><tt>query</tt> - A hash of query parameters, see below for options.</p>
+</li></ul>
+
+<h4>Query Parameters</h4>
+<ul><li>
+<p><tt>attendance</tt> (all, im_going, i_might_go) - defaults to im_going</p>
+</li><li>
+<p><tt>type</tt> (concert or festival)</p>
+</li><li>
+<p><tt>artists</tt> (events by any of the artists, comma-separated)</p>
+</li><li>
+<p><tt>artist_id</tt> - Songkick unique ID for an artist</p>
+</li><li>
+<p><tt>venue_id</tt> - Songkick unique ID for a venue</p>
+</li><li>
+<p><tt>setlist_item_name</tt> (name of a song which was played at the event
+– use with artist_id or artist_name)</p>
+</li><li>
+<p><tt>min_date</tt> - Oldest date for which you want to look for events</p>
+</li><li>
+<p><tt>max_date</tt> - Most recent date for which you want to look for events</p>
+</li><li>
+<p><tt>location</tt> - see the Songkick website for instructions on how to use
+the location parameter</p>
+</li></ul>
             
 
             
             <div class="method-source-code" id="users_events-source">
 <pre>
-<span class="ruby-comment"># File lib/songkickr/remote.rb, line 80</span>
+<span class="ruby-comment"># File lib/songkickr/remote.rb, line 102</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">users_events</span>(<span class="ruby-identifier">username</span>, <span class="ruby-identifier">query</span> = {})
   <span class="ruby-identifier">result</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">get</span>(<span class="ruby-node">&quot;/users/#{username}/events.json&quot;</span>, <span class="ruby-value">:query</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">query</span>)
   <span class="ruby-constant">Songkickr</span><span class="ruby-operator">::</span><span class="ruby-constant">EventResult</span>.<span class="ruby-identifier">new</span> <span class="ruby-identifier">result</span>
@@ -550,14 +658,16 @@ location - see the Songkick website for instructions on how to use the location 
 
           <div class="method-description">
             
-            <p>Get your <a href="Remote.html#attribute-i-api_key">api_key</a> found here
-<a href="http://developer.songkick.com">developer.songkick.com</a></p>
+            <h4>Create a new instance of the remote class to talk to Songkick</h4>
+
+<p>Get an API key for your app from <a
+href="http://developer.songkick.com/">developer.songkick.com/</a></p>
             
 
             
             <div class="method-source-code" id="new-source">
 <pre>
-<span class="ruby-comment"># File lib/songkickr/remote.rb, line 10</span>
+<span class="ruby-comment"># File lib/songkickr/remote.rb, line 11</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">api_key</span> = <span class="ruby-keyword">nil</span>)
   <span class="ruby-ivar">@api_key</span> = <span class="ruby-identifier">api_key</span>
   <span class="ruby-ivar">@api_key</span> <span class="ruby-operator">||=</span> <span class="ruby-constant">Songkickr</span>.<span class="ruby-identifier">api_key</span>
