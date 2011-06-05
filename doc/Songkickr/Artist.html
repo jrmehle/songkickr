@@ -145,6 +145,18 @@
 
     <div id="description" class="description">
       
+<p>A single artist</p>
+
+<pre>{ 
+ &quot;uri&quot;:&quot;http://www.songkick.com/artists/253846-radiohead&quot;,
+ &quot;displayName&quot;:&quot;Radiohead&quot;,
+ &quot;id&quot;:253846,
+ &quot;onTourUntil&quot;:&quot;2010-01-01&quot;
+}</pre>
+
+<p><a
+href="http://www.songkick.com/developer/artist-search">www.songkick.com/developer/artist-search</a></p>
+
     </div><!-- description -->
 
     
@@ -178,23 +190,6 @@
           </div>
         </div>
         
-        <div id="href-attribute-method" class="method-detail">
-          <a name="href"></a>
-          
-          <a name="href="></a>
-          
-          <div class="method-heading attribute-method-heading">
-            <span class="method-name">href</span><span
-              class="attribute-access-type">[RW]</span>
-          </div>
-
-          <div class="method-description">
-          
-          
-          
-          </div>
-        </div>
-        
         <div id="id-attribute-method" class="method-detail">
           <a name="id"></a>
           
@@ -212,13 +207,13 @@
           </div>
         </div>
         
-        <div id="onTourUntil-attribute-method" class="method-detail">
-          <a name="onTourUntil"></a>
+        <div id="on_tour_until-attribute-method" class="method-detail">
+          <a name="on_tour_until"></a>
           
-          <a name="onTourUntil="></a>
+          <a name="on_tour_until="></a>
           
           <div class="method-heading attribute-method-heading">
-            <span class="method-name">onTourUntil</span><span
+            <span class="method-name">on_tour_until</span><span
               class="attribute-access-type">[RW]</span>
           </div>
 
@@ -268,19 +263,19 @@
 
           <div class="method-description">
             
-            
+            <p>Accepts a hash of artist attributes.</p>
             
 
             
             <div class="method-source-code" id="new-source">
 <pre>
-<span class="ruby-comment"># File lib/songkickr/artist.rb, line 5</span>
+<span class="ruby-comment"># File lib/songkickr/artist.rb, line 16</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">artist_hash</span> = {})
-  <span class="ruby-ivar">@href</span>         = <span class="ruby-identifier">artist_hash</span>[<span class="ruby-string">&quot;href&quot;</span>]
-  <span class="ruby-ivar">@display_name</span> = <span class="ruby-identifier">artist_hash</span>[<span class="ruby-string">&quot;displayName&quot;</span>]
-  <span class="ruby-ivar">@id</span>           = <span class="ruby-identifier">artist_hash</span>[<span class="ruby-string">&quot;id&quot;</span>]
-  <span class="ruby-ivar">@uri</span>          = <span class="ruby-identifier">artist_hash</span>[<span class="ruby-string">&quot;uri&quot;</span>]
-  <span class="ruby-ivar">@onTourUntil</span>  = <span class="ruby-identifier">artist_hash</span>[<span class="ruby-string">&quot;onTourUntil&quot;</span>]
+  <span class="ruby-ivar">@uri</span>           = <span class="ruby-identifier">artist_hash</span>[<span class="ruby-string">&quot;uri&quot;</span>]
+  <span class="ruby-ivar">@display_name</span>  = <span class="ruby-identifier">artist_hash</span>[<span class="ruby-string">&quot;displayName&quot;</span>]
+  <span class="ruby-ivar">@id</span>            = <span class="ruby-identifier">artist_hash</span>[<span class="ruby-string">&quot;id&quot;</span>]
+  <span class="ruby-ivar">@uri</span>           = <span class="ruby-identifier">artist_hash</span>[<span class="ruby-string">&quot;uri&quot;</span>]
+  <span class="ruby-ivar">@on_tour_until</span> = <span class="ruby-identifier">artist_hash</span>[<span class="ruby-string">&quot;onTourUntil&quot;</span>]
 <span class="ruby-keyword">end</span></pre>
             </div><!-- new-source -->
             

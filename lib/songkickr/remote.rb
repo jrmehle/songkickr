@@ -70,15 +70,17 @@ module Songkickr
     end
 
     # ==== Artist Search API
+    # Returns Artist objects.
+    #
     # http://www.songkick.com/developer/artist-search
     #
     # === Parameters
-    # * +query+ - Search for artists by name using full text search. Results from Songkickr are returned by relevancy.
+    # * +query+ - Search for artists by name using full text search. Results from Songkick are returned by relevancy.
     #
     # ==== Query Parameters
     # * +artist_name+ - Name of an artist. <em>Ex. 'Lady Gaga', 'Slayer', 'Atmosphere'</em>
     def artist_search(query={})
-      result = self.class.get("/search/artists.json?", :query => query)
+      result = self.class.get("/search/artists.json", :query => query)
       Songkickr::ArtistResult.new result
     end
     
