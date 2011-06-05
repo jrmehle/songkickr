@@ -147,6 +147,9 @@
 
     <div id="description" class="description">
       
+<p>TODO: very similar to concert_setlist_result, event_result, and
+artist_result, extract common stuff to module/superclass</p>
+
     </div><!-- description -->
 
     
@@ -175,8 +178,7 @@
 
           <div class="method-description">
           
-          <p>TODO: very similar to event_result and artist_result, extract common stuff
-to module/superclass</p>
+          
           
           </div>
         </div>
@@ -193,8 +195,7 @@ to module/superclass</p>
 
           <div class="method-description">
           
-          <p>TODO: very similar to event_result and artist_result, extract common stuff
-to module/superclass</p>
+          
           
           </div>
         </div>
@@ -211,8 +212,7 @@ to module/superclass</p>
 
           <div class="method-description">
           
-          <p>TODO: very similar to event_result and artist_result, extract common stuff
-to module/superclass</p>
+          
           
           </div>
         </div>
@@ -239,13 +239,16 @@ to module/superclass</p>
 
           <div class="method-description">
             
-            
+            <p>Take the results hash directly and parse the locations into <a
+href="Location.html">Location</a> objects.</p>
+
+<p>Returns an array of Locations.</p>
             
 
             
             <div class="method-source-code" id="parse_results-source">
 <pre>
-<span class="ruby-comment"># File lib/songkickr/location_result.rb, line 20</span>
+<span class="ruby-comment"># File lib/songkickr/location_result.rb, line 25</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">parse_results</span>(<span class="ruby-identifier">results</span> = {})
   <span class="ruby-identifier">locations</span> = []
   <span class="ruby-keyword">if</span> <span class="ruby-identifier">results</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-string">&quot;location&quot;</span>)
@@ -285,13 +288,16 @@ to module/superclass</p>
 
           <div class="method-description">
             
-            
+            <p>Takes the result hash directly and parses out the page and total entries
+and finally passes off to the <a
+href="LocationResult.html#method-i-parse_results">parse_results</a> method
+to get the results.</p>
             
 
             
             <div class="method-source-code" id="new-source">
 <pre>
-<span class="ruby-comment"># File lib/songkickr/location_result.rb, line 7</span>
+<span class="ruby-comment"># File lib/songkickr/location_result.rb, line 9</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">result_hash</span> = {})
   <span class="ruby-identifier">results_page</span> = <span class="ruby-identifier">result_hash</span>[<span class="ruby-string">&quot;resultsPage&quot;</span>]
   

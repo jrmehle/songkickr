@@ -147,6 +147,9 @@
 
     <div id="description" class="description">
       
+<p>A class to represent the result hash of an <a href="Event.html">Event</a>
+search.</p>
+
     </div><!-- description -->
 
     
@@ -242,7 +245,7 @@
             
             <div class="method-source-code" id="parse_results-source">
 <pre>
-<span class="ruby-comment"># File lib/songkickr/event_result.rb, line 18</span>
+<span class="ruby-comment"># File lib/songkickr/event_result.rb, line 20</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">parse_results</span>(<span class="ruby-identifier">results</span> = {})
   <span class="ruby-identifier">events</span> = []
   <span class="ruby-keyword">if</span> <span class="ruby-identifier">results</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-string">&quot;event&quot;</span>)
@@ -282,13 +285,16 @@
 
           <div class="method-description">
             
-            
+            <p>Takes the result hash directly and parses out the page and total entries
+and finally passes off to the <a
+href="EventResult.html#method-i-parse_results">parse_results</a> method to
+get the results.</p>
             
 
             
             <div class="method-source-code" id="new-source">
 <pre>
-<span class="ruby-comment"># File lib/songkickr/event_result.rb, line 5</span>
+<span class="ruby-comment"># File lib/songkickr/event_result.rb, line 7</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">result_hash</span> = {})
   <span class="ruby-identifier">results_page</span> = <span class="ruby-identifier">result_hash</span>[<span class="ruby-string">&quot;resultsPage&quot;</span>]
   

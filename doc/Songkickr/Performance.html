@@ -145,6 +145,21 @@
 
     <div id="description" class="description">
       
+<p>A single performance by an artist.</p>
+
+<pre>{
+  &quot;artist&quot;: {
+    &quot;uri&quot;: &quot;http://www.songkick.com/artists/288696-vampire-weekend&quot;,
+    &quot;displayName&quot;: &quot;Vampire Weekend&quot;,
+    &quot;id&quot;: 288696,
+    &quot;identifier&quot;: [{&quot;mbid&quot;: &quot;af37c51c-0790-4a29-b995-456f98a6b8c9&quot;}]
+  }
+  &quot;displayName&quot;: &quot;Vampire Weekend&quot;,
+  &quot;billingIndex&quot;: 1,
+  &quot;id&quot;: 5380281,
+  &quot;billing&quot;: &quot;headline&quot;
+}</pre>
+
     </div><!-- description -->
 
     
@@ -168,6 +183,40 @@
           
           <div class="method-heading attribute-method-heading">
             <span class="method-name">artist</span><span
+              class="attribute-access-type">[RW]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+        <div id="billing-attribute-method" class="method-detail">
+          <a name="billing"></a>
+          
+          <a name="billing="></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">billing</span><span
+              class="attribute-access-type">[RW]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+        <div id="billing_index-attribute-method" class="method-detail">
+          <a name="billing_index"></a>
+          
+          <a name="billing_index="></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">billing_index</span><span
               class="attribute-access-type">[RW]</span>
           </div>
 
@@ -234,17 +283,20 @@
 
           <div class="method-description">
             
-            
+            <p>Takes a the hash of the performance. Parses out an <a
+href="Artist.html">Artist</a> object for the artist.</p>
             
 
             
             <div class="method-source-code" id="new-source">
 <pre>
-<span class="ruby-comment"># File lib/songkickr/performance.rb, line 5</span>
+<span class="ruby-comment"># File lib/songkickr/performance.rb, line 19</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">performance_hash</span>)
-  <span class="ruby-ivar">@artist</span>       = <span class="ruby-constant">Songkickr</span><span class="ruby-operator">::</span><span class="ruby-constant">Artist</span>.<span class="ruby-identifier">new</span> <span class="ruby-identifier">performance_hash</span>[<span class="ruby-string">&quot;artist&quot;</span>]
-  <span class="ruby-ivar">@display_name</span> = <span class="ruby-identifier">performance_hash</span>[<span class="ruby-string">&quot;displayName&quot;</span>]
-  <span class="ruby-ivar">@id</span>           = <span class="ruby-identifier">performance_hash</span>[<span class="ruby-string">&quot;id&quot;</span>]
+  <span class="ruby-ivar">@artist</span>        = <span class="ruby-constant">Songkickr</span><span class="ruby-operator">::</span><span class="ruby-constant">Artist</span>.<span class="ruby-identifier">new</span> <span class="ruby-identifier">performance_hash</span>[<span class="ruby-string">&quot;artist&quot;</span>]
+  <span class="ruby-ivar">@display_name</span>  = <span class="ruby-identifier">performance_hash</span>[<span class="ruby-string">&quot;displayName&quot;</span>]
+  <span class="ruby-ivar">@id</span>            = <span class="ruby-identifier">performance_hash</span>[<span class="ruby-string">&quot;id&quot;</span>]
+  <span class="ruby-ivar">@billing_index</span> = <span class="ruby-identifier">performance_hash</span>[<span class="ruby-string">'billingIndex'</span>]
+  <span class="ruby-ivar">@billin</span>        = <span class="ruby-identifier">performance_hash</span>[<span class="ruby-string">'billing'</span>]
 <span class="ruby-keyword">end</span></pre>
             </div><!-- new-source -->
             

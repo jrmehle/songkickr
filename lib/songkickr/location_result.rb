@@ -1,9 +1,11 @@
 module Songkickr
+  # A class to represent the result hash of a Location search.
+  
+  #TODO: very similar to concert_setlist_result, event_result, and artist_result, extract common stuff to module/superclass
   class LocationResult
-    # TODO: very similar to event_result and artist_result,
-    # extract common stuff to module/superclass
     attr_accessor :page, :total_entries, :results
     
+    # Takes the result hash directly and parses out the page and total entries and finally passes off to the parse_results method to get the results.
     def initialize(result_hash = {})
       results_page = result_hash["resultsPage"]
       
@@ -16,7 +18,10 @@ module Songkickr
     
     
     protected
-    
+      
+      # Take the results hash directly and parse the locations into Location objects.
+      #
+      # Returns an array of Locations.
       def parse_results(results = {})
         locations = []
         if results.include?("location")

@@ -173,6 +173,8 @@
 
     <div id="description" class="description">
       
+<p>Create an instance of the remote class to interact with the Songkick API.</p>
+
     </div><!-- description -->
 
     
@@ -249,7 +251,7 @@ from Songkick are returned by relevancy.</p>
             
             <div class="method-source-code" id="artist_search-source">
 <pre>
-<span class="ruby-comment"># File lib/songkickr/remote.rb, line 82</span>
+<span class="ruby-comment"># File lib/songkickr/remote.rb, line 83</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">artist_search</span>(<span class="ruby-identifier">query</span>={})
   <span class="ruby-identifier">result</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">get</span>(<span class="ruby-string">&quot;/search/artists.json&quot;</span>, <span class="ruby-value">:query</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">query</span>)
   <span class="ruby-constant">Songkickr</span><span class="ruby-operator">::</span><span class="ruby-constant">ArtistResult</span>.<span class="ruby-identifier">new</span> <span class="ruby-identifier">result</span>
@@ -292,7 +294,7 @@ previous API call or from the URL of the event page on the website.</p>
             
             <div class="method-source-code" id="concert_setlists-source">
 <pre>
-<span class="ruby-comment"># File lib/songkickr/remote.rb, line 126</span>
+<span class="ruby-comment"># File lib/songkickr/remote.rb, line 133</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">concert_setlists</span>(<span class="ruby-identifier">event_id</span>)
   <span class="ruby-identifier">result</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">get</span>(<span class="ruby-node">&quot;/events/#{event_id}/setlists.json&quot;</span>)
   <span class="ruby-constant">Songkickr</span><span class="ruby-operator">::</span><span class="ruby-constant">ConcertSetlistResult</span>.<span class="ruby-identifier">new</span> <span class="ruby-identifier">result</span>
@@ -337,7 +339,7 @@ previous API call or from the URL of the event page on the website.</p>
             
             <div class="method-source-code" id="event-source">
 <pre>
-<span class="ruby-comment"># File lib/songkickr/remote.rb, line 49</span>
+<span class="ruby-comment"># File lib/songkickr/remote.rb, line 50</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">event</span>(<span class="ruby-identifier">event_id</span>)
   <span class="ruby-identifier">result</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">get</span>(<span class="ruby-node">&quot;/events/#{event_id}.json&quot;</span>)
   <span class="ruby-comment"># and now for some dirrty hack</span>
@@ -408,7 +410,7 @@ href="http://www.songkick.com/developer/location-search">www.songkick.com/develo
             
             <div class="method-source-code" id="events-source">
 <pre>
-<span class="ruby-comment"># File lib/songkickr/remote.rb, line 36</span>
+<span class="ruby-comment"># File lib/songkickr/remote.rb, line 37</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">events</span>(<span class="ruby-identifier">query</span> = {})
   <span class="ruby-identifier">path</span> = <span class="ruby-identifier">extract_path_from_query</span>(<span class="ruby-identifier">query</span>)
   <span class="ruby-identifier">result</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">get</span>(<span class="ruby-node">&quot;#{path}/events.json&quot;</span>, <span class="ruby-value">:query</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">query</span>)
@@ -465,7 +467,7 @@ href="Remote.html#method-i-artist_search">artist_search</a> to get it</p>
             
             <div class="method-source-code" id="gigography-source">
 <pre>
-<span class="ruby-comment"># File lib/songkickr/remote.rb, line 67</span>
+<span class="ruby-comment"># File lib/songkickr/remote.rb, line 68</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">gigography</span>(<span class="ruby-identifier">artist_id</span>, <span class="ruby-identifier">query</span>= {})
   <span class="ruby-identifier">result</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">get</span>(<span class="ruby-node">&quot;/artists/#{artist_id}/gigography.json&quot;</span>,<span class="ruby-value">:query=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">query</span>)
   <span class="ruby-constant">Songkickr</span><span class="ruby-operator">::</span><span class="ruby-constant">EventResult</span>.<span class="ruby-identifier">new</span> <span class="ruby-identifier">result</span>
@@ -513,7 +515,7 @@ href="http://www.songkick.com/developer/location-search">www.songkick.com/develo
             
             <div class="method-source-code" id="location_search-source">
 <pre>
-<span class="ruby-comment"># File lib/songkickr/remote.rb, line 139</span>
+<span class="ruby-comment"># File lib/songkickr/remote.rb, line 146</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">location_search</span>(<span class="ruby-identifier">query</span> = {})
   <span class="ruby-identifier">result</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">get</span>(<span class="ruby-string">&quot;/search/locations.json&quot;</span>, <span class="ruby-value">:query</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">query</span>)
   <span class="ruby-constant">Songkickr</span><span class="ruby-operator">::</span><span class="ruby-constant">LocationResult</span>.<span class="ruby-identifier">new</span> <span class="ruby-identifier">result</span>
@@ -543,6 +545,8 @@ href="http://www.songkick.com/developer/location-search">www.songkick.com/develo
             
             <h4>Metro Area Events (Upcoming)</h4>
 
+<p>Returns an array of Events.</p>
+
 <p><a
 href="http://www.songkick.com/developer/upcoming-events-for-metro-area">www.songkick.com/developer/upcoming-events-for-metro-area</a></p>
 
@@ -552,14 +556,21 @@ href="http://www.songkick.com/developer/upcoming-events-for-metro-area">www.song
 href="Remote.html#method-i-location_search">location_search</a> to find a
 metro area ID.</p>
 </li><li>
-<p><tt>query</tt> - Any additional params to pass.</p>
+<p><tt>query</tt> - A hash of query parameters, see below for options.</p>
+</li></ul>
+
+<h4>Query Parameters</h4>
+<ul><li>
+<p><tt>page</tt> - Page number</p>
+</li><li>
+<p><tt>per_page</tt> - Number of results per page, max 50.</p>
 </li></ul>
             
 
             
             <div class="method-source-code" id="metro_areas_events-source">
 <pre>
-<span class="ruby-comment"># File lib/songkickr/remote.rb, line 115</span>
+<span class="ruby-comment"># File lib/songkickr/remote.rb, line 122</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">metro_areas_events</span>(<span class="ruby-identifier">metro_area_id</span>, <span class="ruby-identifier">query</span> = {})
   <span class="ruby-identifier">result</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">get</span>(<span class="ruby-node">&quot;/metro_areas/#{metro_area_id}/calendar.json&quot;</span>, <span class="ruby-value">:query</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">query</span>)
   <span class="ruby-constant">Songkickr</span><span class="ruby-operator">::</span><span class="ruby-constant">EventResult</span>.<span class="ruby-identifier">new</span> <span class="ruby-identifier">result</span>
@@ -626,7 +637,7 @@ the location parameter</p>
             
             <div class="method-source-code" id="users_events-source">
 <pre>
-<span class="ruby-comment"># File lib/songkickr/remote.rb, line 104</span>
+<span class="ruby-comment"># File lib/songkickr/remote.rb, line 105</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">users_events</span>(<span class="ruby-identifier">username</span>, <span class="ruby-identifier">query</span> = {})
   <span class="ruby-identifier">result</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">get</span>(<span class="ruby-node">&quot;/users/#{username}/events.json&quot;</span>, <span class="ruby-value">:query</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">query</span>)
   <span class="ruby-constant">Songkickr</span><span class="ruby-operator">::</span><span class="ruby-constant">EventResult</span>.<span class="ruby-identifier">new</span> <span class="ruby-identifier">result</span>
@@ -669,7 +680,7 @@ href="http://developer.songkick.com/">developer.songkick.com/</a></p>
             
             <div class="method-source-code" id="new-source">
 <pre>
-<span class="ruby-comment"># File lib/songkickr/remote.rb, line 11</span>
+<span class="ruby-comment"># File lib/songkickr/remote.rb, line 12</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">api_key</span> = <span class="ruby-keyword">nil</span>)
   <span class="ruby-ivar">@api_key</span> = <span class="ruby-identifier">api_key</span>
   <span class="ruby-ivar">@api_key</span> <span class="ruby-operator">||=</span> <span class="ruby-constant">Songkickr</span>.<span class="ruby-identifier">api_key</span>

@@ -147,6 +147,27 @@
 
     <div id="description" class="description">
       
+<p>A single set list by an artist.</p>
+
+<p>{</p>
+
+<pre>&quot;displayName&quot;: &quot;N.E.R.D. at Glastonbury Festival 2009&quot;,
+&quot;artist&quot;: {
+  &quot;uri&quot;: &quot;http://www.songkick.com/artists/387012-nerd?utm_source=791&amp;utm_medium=partner&quot;
+  &quot;identifier&quot;: [
+    {
+      &quot;href&quot;: &quot;http://api.songkick.com/api/3.0/artists/mbid:3fb49f5a-fdc0-4789-9c84-22b38b3f3cb5.json&quot;
+      &quot;mbid&quot;: &quot;3fb49f5a-fdc0-4789-9c84-22b38b3f3cb5&quot;
+    }
+  ]
+  &quot;displayName&quot;: &quot;N.E.R.D.&quot;
+  &quot;id&quot;: 387012
+},
+&quot;id&quot;: 9511,
+&quot;setlistItem&quot;: []</pre>
+
+<p>}</p>
+
     </div><!-- description -->
 
     
@@ -287,13 +308,13 @@
 
           <div class="method-description">
             
-            
+            <p>Takes the array of setlist items and create SetLists</p>
             
 
             
             <div class="method-source-code" id="parse_setlist_items-source">
 <pre>
-<span class="ruby-comment"># File lib/songkickr/setlist.rb, line 16</span>
+<span class="ruby-comment"># File lib/songkickr/setlist.rb, line 36</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">parse_setlist_items</span>(<span class="ruby-identifier">setlist_item_array</span> = <span class="ruby-keyword">nil</span>)
   <span class="ruby-identifier">setlist_items</span> = []
   <span class="ruby-keyword">if</span> <span class="ruby-identifier">setlist_item_array</span>
@@ -333,13 +354,14 @@
 
           <div class="method-description">
             
-            
+            <p>Takes the setlist hash and parses out an <a href="Event.html">Event</a> and
+<a href="Artist.html">Artist</a> and an array of SetlistItems.</p>
             
 
             
             <div class="method-source-code" id="new-source">
 <pre>
-<span class="ruby-comment"># File lib/songkickr/setlist.rb, line 5</span>
+<span class="ruby-comment"># File lib/songkickr/setlist.rb, line 24</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">setlist_hash</span>)
   <span class="ruby-ivar">@event</span>         = <span class="ruby-constant">Songkickr</span><span class="ruby-operator">::</span><span class="ruby-constant">Event</span>.<span class="ruby-identifier">new</span> <span class="ruby-identifier">setlist_hash</span>[<span class="ruby-string">&quot;event&quot;</span>]
   <span class="ruby-ivar">@setlist_items</span> = <span class="ruby-identifier">parse_setlist_items</span> <span class="ruby-identifier">setlist_hash</span>[<span class="ruby-string">&quot;setlistItem&quot;</span>]

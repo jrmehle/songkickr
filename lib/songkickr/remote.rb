@@ -1,4 +1,5 @@
 module Songkickr
+  # Create an instance of the remote class to interact with the Songkick API.
   class Remote
     include HTTParty
     base_uri 'api.songkick.com/api/3.0'
@@ -107,11 +108,17 @@ module Songkickr
     end
 
     # ==== Metro Area Events (Upcoming)
+    # Returns an array of Events.
+    #
     # http://www.songkick.com/developer/upcoming-events-for-metro-area
     #
     # === Parameters
     # * +metro_area_id+ - Songkick unique ID for metro areas. Use location_search to find a metro area ID.
-    # * +query+ - Any additional params to pass.
+    # * +query+ - A hash of query parameters, see below for options.
+    #
+    # ==== Query Parameters
+    # * +page+ - Page number
+    # * +per_page+ - Number of results per page, max 50.
     def metro_areas_events(metro_area_id, query = {})
       result = self.class.get("/metro_areas/#{metro_area_id}/calendar.json", :query => query)
       Songkickr::EventResult.new result

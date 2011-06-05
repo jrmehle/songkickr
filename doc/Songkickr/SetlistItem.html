@@ -145,6 +145,13 @@
 
     <div id="description" class="description">
       
+<p>A single set list item.</p>
+
+<pre>{
+  encore: 0
+  name: &quot;Anti Matter &quot;
+}</pre>
+
     </div><!-- description -->
 
     
@@ -217,13 +224,13 @@
 
           <div class="method-description">
             
-            
+            <p>Takes the set list item hash and parses a boolean out for encore.</p>
             
 
             
             <div class="method-source-code" id="new-source">
 <pre>
-<span class="ruby-comment"># File lib/songkickr/setlist_item.rb, line 5</span>
+<span class="ruby-comment"># File lib/songkickr/setlist_item.rb, line 11</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">setlist_item_hash</span>)
   <span class="ruby-ivar">@encore</span> = <span class="ruby-operator">!</span><span class="ruby-operator">!</span><span class="ruby-identifier">setlist_item_hash</span>[<span class="ruby-string">&quot;encore&quot;</span>]
   <span class="ruby-ivar">@name</span>   = <span class="ruby-identifier">setlist_item_hash</span>[<span class="ruby-string">&quot;name&quot;</span>]

@@ -1,7 +1,26 @@
 module Songkickr
+  #   A single set list by an artist.
+  #
+  #   {
+  #     "displayName": "N.E.R.D. at Glastonbury Festival 2009",
+  #     "artist": {
+  #       "uri": "http://www.songkick.com/artists/387012-nerd?utm_source=791&utm_medium=partner"
+  #       "identifier": [
+  #         {
+  #           "href": "http://api.songkick.com/api/3.0/artists/mbid:3fb49f5a-fdc0-4789-9c84-22b38b3f3cb5.json"
+  #           "mbid": "3fb49f5a-fdc0-4789-9c84-22b38b3f3cb5"
+  #         }
+  #       ]
+  #       "displayName": "N.E.R.D."
+  #       "id": 387012
+  #     },
+  #     "id": 9511,
+  #     "setlistItem": []
+  #   }
   class Setlist
     attr_accessor :event, :setlist_items, :artist, :playlist_uri, :display_name, :id
     
+    # Takes the setlist hash and parses out an Event and Artist and an array of SetlistItems.
     def initialize(setlist_hash)
       @event         = Songkickr::Event.new setlist_hash["event"]
       @setlist_items = parse_setlist_items setlist_hash["setlistItem"]
@@ -13,6 +32,7 @@ module Songkickr
     
     protected
       
+      # Takes the array of setlist items and create SetLists
       def parse_setlist_items(setlist_item_array = nil)
         setlist_items = []
         if setlist_item_array

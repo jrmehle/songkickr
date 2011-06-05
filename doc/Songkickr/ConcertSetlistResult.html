@@ -147,6 +147,12 @@
 
     <div id="description" class="description">
       
+<p>A class to represent the result hash of an <a
+href="Setlist.html">Setlist</a> search.</p>
+
+<p><a
+href="http://www.songkick.com/developer/setlists">www.songkick.com/developer/setlists</a></p>
+
     </div><!-- description -->
 
     
@@ -202,13 +208,13 @@
 
           <div class="method-description">
             
-            
+            <p>Parses the setlist items into an array of SetlistItems</p>
             
 
             
             <div class="method-source-code" id="parse_results-source">
 <pre>
-<span class="ruby-comment"># File lib/songkickr/concert_setlist_result.rb, line 21</span>
+<span class="ruby-comment"># File lib/songkickr/concert_setlist_result.rb, line 25</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">parse_results</span>(<span class="ruby-identifier">results</span> = {})
   <span class="ruby-identifier">setlists</span> = []
   <span class="ruby-keyword">if</span> <span class="ruby-identifier">results</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-string">&quot;setlist&quot;</span>)
@@ -248,15 +254,15 @@
 
           <div class="method-description">
             
-            
+            <p>Takes the result ash and passes it to <a
+href="ConcertSetlistResult.html#method-i-parse_results">parse_results</a></p>
             
 
             
             <div class="method-source-code" id="new-source">
 <pre>
-<span class="ruby-comment"># File lib/songkickr/concert_setlist_result.rb, line 5</span>
+<span class="ruby-comment"># File lib/songkickr/concert_setlist_result.rb, line 9</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">result_hash</span> = {})
-  
   <span class="ruby-keyword">if</span> <span class="ruby-identifier">result_hash</span>[<span class="ruby-string">&quot;resultsPage&quot;</span>]
     <span class="ruby-identifier">results_page</span> = <span class="ruby-identifier">result_hash</span>[<span class="ruby-string">&quot;resultsPage&quot;</span>]
   

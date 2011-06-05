@@ -145,6 +145,30 @@
 
     <div id="description" class="description">
       
+<p>A class to represent the hash of a <a href="Location.html">Location</a>.</p>
+
+<pre>{
+  &quot;city&quot;:{
+    &quot;displayName&quot;:&quot;London&quot;,
+    &quot;country&quot;:{
+      &quot;displayName&quot;:&quot;UK&quot;},
+      &quot;lng&quot;:-0.128,
+      &quot;lat&quot;:51.5078
+    },
+    &quot;metroArea&quot;:{
+      &quot;uri&quot;:&quot;http://www.songkick.com/metro_areas/24426-uk-london&quot;,
+      &quot;displayName&quot;:&quot;London&quot;,
+      &quot;country&quot;:{  &quot;displayName&quot;:&quot;UK&quot; },
+      &quot;id&quot;:24426,
+      &quot;lng&quot;:-0.128,
+      &quot;lat&quot;:51.5078
+    }
+  }
+}</pre>
+
+<p><a
+href="http://www.songkick.com/developer/location-search">www.songkick.com/developer/location-search</a></p>
+
     </div><!-- description -->
 
     
@@ -212,6 +236,23 @@
           </div>
         </div>
         
+        <div id="metro_area-attribute-method" class="method-detail">
+          <a name="metro_area"></a>
+          
+          <a name="metro_area="></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">metro_area</span><span
+              class="attribute-access-type">[RW]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
       </div><!-- attribute-method-details -->
       
 
@@ -234,25 +275,28 @@
 
           <div class="method-description">
             
-            
+            <p>Takes a location hash. Handles the different city hashes from <a
+href="Event.html">Event</a> and <a href="Location.html">Location</a></p>
             
 
             
             <div class="method-source-code" id="new-source">
 <pre>
-<span class="ruby-comment"># File lib/songkickr/location.rb, line 5</span>
+<span class="ruby-comment"># File lib/songkickr/location.rb, line 28</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">location_hash</span>)
-  <span class="ruby-keyword">if</span>(<span class="ruby-identifier">location_hash</span>[<span class="ruby-string">&quot;city&quot;</span>].<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">String</span>)) <span class="ruby-comment"># location in Event</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">location_hash</span>[<span class="ruby-string">&quot;city&quot;</span>].<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">String</span>) <span class="ruby-comment"># location in Event</span>
     <span class="ruby-ivar">@city</span> = <span class="ruby-identifier">location_hash</span>[<span class="ruby-string">&quot;city&quot;</span>]
     <span class="ruby-ivar">@lat</span>  = <span class="ruby-identifier">location_hash</span>[<span class="ruby-string">&quot;lat&quot;</span>]
     <span class="ruby-ivar">@lng</span>  = <span class="ruby-identifier">location_hash</span>[<span class="ruby-string">&quot;lng&quot;</span>]
-  <span class="ruby-keyword">elsif</span>(<span class="ruby-identifier">location_hash</span>[<span class="ruby-string">&quot;city&quot;</span>].<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Hash</span>)) <span class="ruby-comment"># stand-alone Location</span>
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">location_hash</span>[<span class="ruby-string">&quot;city&quot;</span>].<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Hash</span>) <span class="ruby-comment"># stand-alone Location</span>
     <span class="ruby-identifier">city_hash</span> = <span class="ruby-identifier">location_hash</span>[<span class="ruby-string">&quot;city&quot;</span>]
     <span class="ruby-ivar">@city</span> = <span class="ruby-identifier">city_hash</span>[<span class="ruby-string">&quot;displayName&quot;</span>]
     <span class="ruby-comment"># some locations have a null lng, lat in city hash, but have non-null in metroArea hash</span>
     <span class="ruby-ivar">@lat</span>  = <span class="ruby-identifier">city_hash</span>[<span class="ruby-string">&quot;lat&quot;</span>]
     <span class="ruby-ivar">@lng</span>  = <span class="ruby-identifier">city_hash</span>[<span class="ruby-string">&quot;lng&quot;</span>]
   <span class="ruby-keyword">end</span>
+  
+  <span class="ruby-ivar">@metro_area</span> = <span class="ruby-identifier">location_hash</span>[<span class="ruby-string">'metro_area'</span>]
 <span class="ruby-keyword">end</span></pre>
             </div><!-- new-source -->
             

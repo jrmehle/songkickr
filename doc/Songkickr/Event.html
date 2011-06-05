@@ -149,6 +149,45 @@
 
     <div id="description" class="description">
       
+<p>A single event</p>
+
+<pre>{
+  &quot;displayName&quot;: &quot;Vampire Weekend at O2 Academy Brixton (February 16, 2010)&quot;,
+  &quot;type&quot;: &quot;Concert&quot;,
+  &quot;uri&quot;: &quot;http://www.songkick.com/concerts/3037536-vampire-weekend-at-o2-academy-brixton?utm_medium=partner&amp;utm_source=131&quot;,
+  &quot;venue&quot;: {
+    &quot;lng&quot;: -0.1187418,
+    &quot;displayName&quot;: &quot;O2 Academy Brixton&quot;,
+    &quot;lat&quot;: 51.4681089,
+    &quot;id&quot;: 17522
+  },
+  &quot;location&quot;: {
+    &quot;lng&quot;: -0.1187418,
+    &quot;city&quot;: &quot;London, UK&quot;,
+    &quot;lat&quot;: 51.4681089
+  },
+  &quot;start&quot;: {
+    &quot;time&quot;: &quot;19:30:00&quot;,
+    &quot;date&quot;: &quot;2010-02-16&quot;
+  },
+  &quot;performance&quot;: [{
+    &quot;artist&quot;: {
+      &quot;uri&quot;: &quot;http://www.songkick.com/artists/288696-vampire-weekend&quot;,
+      &quot;displayName&quot;: &quot;Vampire Weekend&quot;,
+      &quot;id&quot;: 288696,
+      &quot;identifier&quot;: [{&quot;mbid&quot;: &quot;af37c51c-0790-4a29-b995-456f98a6b8c9&quot;}]
+    }
+    &quot;displayName&quot;: &quot;Vampire Weekend&quot;,
+    &quot;billingIndex&quot;: 1,
+    &quot;id&quot;: 5380281,
+    &quot;billing&quot;: &quot;headline&quot;
+  }],
+  &quot;id&quot;: 3037536
+}</pre>
+
+<p><a
+href="http://www.songkick.com/developer/artist-search">www.songkick.com/developer/artist-search</a></p>
+
     </div><!-- description -->
 
     
@@ -250,13 +289,13 @@
           </div>
         </div>
         
-        <div id="performance-attribute-method" class="method-detail">
-          <a name="performance"></a>
+        <div id="performances-attribute-method" class="method-detail">
+          <a name="performances"></a>
           
-          <a name="performance="></a>
+          <a name="performances="></a>
           
           <div class="method-heading attribute-method-heading">
-            <span class="method-name">performance</span><span
+            <span class="method-name">performances</span><span
               class="attribute-access-type">[RW]</span>
           </div>
 
@@ -391,13 +430,13 @@
 
           <div class="method-description">
             
-            
+            <p>Builds a list of <a href="Performance.html">Performance</a> objects.</p>
             
 
             
             <div class="method-source-code" id="parse_performance-source">
 <pre>
-<span class="ruby-comment"># File lib/songkickr/event.rb, line 24</span>
+<span class="ruby-comment"># File lib/songkickr/event.rb, line 63</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">parse_performance</span>(<span class="ruby-identifier">performance_array</span> = <span class="ruby-keyword">nil</span>)
   <span class="ruby-identifier">performances</span> = []
   <span class="ruby-keyword">if</span> <span class="ruby-identifier">performance_array</span>
@@ -431,13 +470,13 @@
 
           <div class="method-description">
             
-            
+            <p>Takes the start hash and turns in into a DateTime object.</p>
             
 
             
             <div class="method-source-code" id="start_hash_to_datetime-source">
 <pre>
-<span class="ruby-comment"># File lib/songkickr/event.rb, line 20</span>
+<span class="ruby-comment"># File lib/songkickr/event.rb, line 58</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">start_hash_to_datetime</span>(<span class="ruby-identifier">start_hash</span>)
   <span class="ruby-identifier">datetime</span> = <span class="ruby-constant">DateTime</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-node">&quot;#{start_hash[&quot;date&quot;]} #{start_hash[&quot;time&quot;]}&quot;</span>)
 <span class="ruby-keyword">end</span></pre>
@@ -476,7 +515,7 @@
             
             <div class="method-source-code" id="new-source">
 <pre>
-<span class="ruby-comment"># File lib/songkickr/event.rb, line 5</span>
+<span class="ruby-comment"># File lib/songkickr/event.rb, line 42</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">event_hash</span>)
   <span class="ruby-ivar">@type</span>         = <span class="ruby-identifier">event_hash</span>[<span class="ruby-string">&quot;type&quot;</span>]
   <span class="ruby-ivar">@location</span>     = <span class="ruby-constant">Songkickr</span><span class="ruby-operator">::</span><span class="ruby-constant">Location</span>.<span class="ruby-identifier">new</span> <span class="ruby-identifier">event_hash</span>[<span class="ruby-string">&quot;location&quot;</span>]
@@ -485,7 +524,7 @@
   <span class="ruby-ivar">@venue</span>        = <span class="ruby-constant">Songkickr</span><span class="ruby-operator">::</span><span class="ruby-constant">Venue</span>.<span class="ruby-identifier">new</span> <span class="ruby-identifier">event_hash</span>[<span class="ruby-string">&quot;venue&quot;</span>]
   <span class="ruby-ivar">@start</span>        = <span class="ruby-identifier">start_hash_to_datetime</span> <span class="ruby-identifier">event_hash</span>[<span class="ruby-string">&quot;start&quot;</span>]
   <span class="ruby-ivar">@uri</span>          = <span class="ruby-identifier">event_hash</span>[<span class="ruby-string">&quot;uri&quot;</span>]
-  <span class="ruby-ivar">@performance</span>  = <span class="ruby-identifier">parse_performance</span> <span class="ruby-identifier">event_hash</span>[<span class="ruby-string">&quot;performance&quot;</span>]
+  <span class="ruby-ivar">@performances</span> = <span class="ruby-identifier">parse_performance</span> <span class="ruby-identifier">event_hash</span>[<span class="ruby-string">&quot;performance&quot;</span>]
   <span class="ruby-ivar">@id</span>           = <span class="ruby-identifier">event_hash</span>[<span class="ruby-string">&quot;id&quot;</span>]
   <span class="ruby-ivar">@tickets_uri</span>  = <span class="ruby-identifier">event_hash</span>[<span class="ruby-string">&quot;ticketsUri&quot;</span>]
 <span class="ruby-keyword">end</span></pre>
