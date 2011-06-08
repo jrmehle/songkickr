@@ -3,14 +3,14 @@ require 'helper'
 class TestArtist < Test::Unit::TestCase
   context "Given a new Artist" do
     setup do
-      @href = 'http://jrmehle.com/'
+      @uri = 'http://jrmehle.com/'
       @display_name = 'Artist Name'
-      @artist = Songkickr::Artist.new({'href' => @href, 'displayName' => @display_name})
+      @artist = Songkickr::Artist.new({'uri' => @uri, 'displayName' => @display_name})
     end
 
-    should "init href" do
+    should "init uri" do
       assert_not_nil @artist
-      assert_equal @href, @artist.href
+      assert_equal @uri, @artist.uri
     end
     
     should "init display_name" do

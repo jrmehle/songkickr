@@ -11,6 +11,8 @@ begin
     gem.homepage = "http://github.com/jrmehle/songkickr"
     gem.authors = ["Jared Mehle"]
     gem.add_development_dependency "shoulda", ">= 2.11.0"
+    gem.add_development_dependency "fakeweb", ">= 1.3.0"
+    gem.add_development_dependency "redgreen", ">= 1.2.2"
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
   end
   Jeweler::GemcutterTasks.new
