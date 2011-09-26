@@ -222,54 +222,6 @@ search.</p>
 
       <!-- Methods -->
       
-      <div id="protected-instance-method-details" class="method-section section">
-        <h3 class="section-header">Protected Instance Methods</h3>
-
-      
-        <div id="parse_results-method" class="method-detail ">
-          <a name="method-i-parse_results"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">parse_results</span><span
-              class="method-args">(results = {})</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            <p>Take the results hash directly and parse the artists into <a
-href="Artist.html">Artist</a> objects.</p>
-
-<p>Returns an array of Artists.</p>
-            
-
-            
-            <div class="method-source-code" id="parse_results-source">
-<pre>
-<span class="ruby-comment"># File lib/songkickr/artist_result.rb, line 22</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">parse_results</span>(<span class="ruby-identifier">results</span> = {})
-  <span class="ruby-identifier">artists</span> = []
-  <span class="ruby-keyword">if</span> <span class="ruby-identifier">results</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-string">&quot;artist&quot;</span>)
-    <span class="ruby-identifier">results</span>[<span class="ruby-string">&quot;artist&quot;</span>].<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">artist</span><span class="ruby-operator">|</span>
-      <span class="ruby-identifier">artists</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-constant">Songkickr</span><span class="ruby-operator">::</span><span class="ruby-constant">Artist</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">artist</span>)
-    <span class="ruby-keyword">end</span>
-  <span class="ruby-keyword">end</span>
-  <span class="ruby-identifier">artists</span>
-<span class="ruby-keyword">end</span></pre>
-            </div><!-- parse_results-source -->
-            
-          </div>
-
-          
-
-          
-        </div><!-- parse_results-method -->
-
-      
-      </div><!-- protected-instance-method-details -->
-    
       <div id="public-class-method-details" class="method-section section">
         <h3 class="section-header">Public Class Methods</h3>
 
@@ -317,6 +269,54 @@ get the results.</p>
 
       
       </div><!-- public-class-method-details -->
+    
+      <div id="protected-instance-method-details" class="method-section section">
+        <h3 class="section-header">Protected Instance Methods</h3>
+
+      
+        <div id="parse_results-method" class="method-detail ">
+          <a name="method-i-parse_results"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">parse_results</span><span
+              class="method-args">(results = {})</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Take the results hash directly and parse the artists into <a
+href="Artist.html">Artist</a> objects.</p>
+
+<p>Returns an array of Artists.</p>
+            
+
+            
+            <div class="method-source-code" id="parse_results-source">
+<pre>
+<span class="ruby-comment"># File lib/songkickr/artist_result.rb, line 22</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">parse_results</span>(<span class="ruby-identifier">results</span> = {})
+  <span class="ruby-identifier">artists</span> = []
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">results</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-string">&quot;artist&quot;</span>)
+    <span class="ruby-identifier">results</span>[<span class="ruby-string">&quot;artist&quot;</span>].<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">artist</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">artists</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-constant">Songkickr</span><span class="ruby-operator">::</span><span class="ruby-constant">Artist</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">artist</span>)
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">artists</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- parse_results-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- parse_results-method -->
+
+      
+      </div><!-- protected-instance-method-details -->
     
     </div><!-- 5Buntitled-5D -->
   

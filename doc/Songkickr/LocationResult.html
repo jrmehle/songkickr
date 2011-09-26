@@ -222,6 +222,54 @@ artist_result, extract common stuff to module/superclass</p>
 
       <!-- Methods -->
       
+      <div id="public-class-method-details" class="method-section section">
+        <h3 class="section-header">Public Class Methods</h3>
+
+      
+        <div id="new-method" class="method-detail ">
+          <a name="method-c-new"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">new</span><span
+              class="method-args">(result_hash = {})</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Takes the result hash directly and parses out the page and total entries
+and finally passes off to the <a
+href="LocationResult.html#method-i-parse_results">parse_results</a> method
+to get the results.</p>
+            
+
+            
+            <div class="method-source-code" id="new-source">
+<pre>
+<span class="ruby-comment"># File lib/songkickr/location_result.rb, line 9</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">result_hash</span> = {})
+  <span class="ruby-identifier">results_page</span> = <span class="ruby-identifier">result_hash</span>[<span class="ruby-string">&quot;resultsPage&quot;</span>]
+  
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">results_page</span>
+    <span class="ruby-ivar">@page</span>          = <span class="ruby-identifier">results_page</span>[<span class="ruby-string">&quot;page&quot;</span>]
+    <span class="ruby-ivar">@total_entries</span> = <span class="ruby-identifier">results_page</span>[<span class="ruby-string">&quot;totalEntries&quot;</span>]
+    <span class="ruby-ivar">@results</span>       = <span class="ruby-identifier">parse_results</span> <span class="ruby-identifier">results_page</span>[<span class="ruby-string">&quot;results&quot;</span>]
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- new-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- new-method -->
+
+      
+      </div><!-- public-class-method-details -->
+    
       <div id="protected-instance-method-details" class="method-section section">
         <h3 class="section-header">Protected Instance Methods</h3>
 
@@ -270,54 +318,6 @@ href="Location.html">Location</a> objects.</p>
 
       
       </div><!-- protected-instance-method-details -->
-    
-      <div id="public-class-method-details" class="method-section section">
-        <h3 class="section-header">Public Class Methods</h3>
-
-      
-        <div id="new-method" class="method-detail ">
-          <a name="method-c-new"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">new</span><span
-              class="method-args">(result_hash = {})</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            <p>Takes the result hash directly and parses out the page and total entries
-and finally passes off to the <a
-href="LocationResult.html#method-i-parse_results">parse_results</a> method
-to get the results.</p>
-            
-
-            
-            <div class="method-source-code" id="new-source">
-<pre>
-<span class="ruby-comment"># File lib/songkickr/location_result.rb, line 9</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">result_hash</span> = {})
-  <span class="ruby-identifier">results_page</span> = <span class="ruby-identifier">result_hash</span>[<span class="ruby-string">&quot;resultsPage&quot;</span>]
-  
-  <span class="ruby-keyword">if</span> <span class="ruby-identifier">results_page</span>
-    <span class="ruby-ivar">@page</span>          = <span class="ruby-identifier">results_page</span>[<span class="ruby-string">&quot;page&quot;</span>]
-    <span class="ruby-ivar">@total_entries</span> = <span class="ruby-identifier">results_page</span>[<span class="ruby-string">&quot;totalEntries&quot;</span>]
-    <span class="ruby-ivar">@results</span>       = <span class="ruby-identifier">parse_results</span> <span class="ruby-identifier">results_page</span>[<span class="ruby-string">&quot;results&quot;</span>]
-  <span class="ruby-keyword">end</span>
-<span class="ruby-keyword">end</span></pre>
-            </div><!-- new-source -->
-            
-          </div>
-
-          
-
-          
-        </div><!-- new-method -->
-
-      
-      </div><!-- public-class-method-details -->
     
     </div><!-- 5Buntitled-5D -->
   

@@ -211,6 +211,51 @@
 
       <!-- Methods -->
       
+      <div id="public-class-method-details" class="method-section section">
+        <h3 class="section-header">Public Class Methods</h3>
+
+      
+        <div id="new-method" class="method-detail ">
+          <a name="method-c-new"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">new</span><span
+              class="method-args">(api_key = nil)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <h4>Create a new instance of the remote class to talk to Songkick</h4>
+
+<p>Get an API key for your app from <a
+href="http://developer.songkick.com/">developer.songkick.com/</a></p>
+            
+
+            
+            <div class="method-source-code" id="new-source">
+<pre>
+<span class="ruby-comment"># File lib/songkickr/remote.rb, line 12</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">api_key</span> = <span class="ruby-keyword">nil</span>)
+  <span class="ruby-ivar">@api_key</span> = <span class="ruby-identifier">api_key</span>
+  <span class="ruby-ivar">@api_key</span> <span class="ruby-operator">||=</span> <span class="ruby-constant">Songkickr</span>.<span class="ruby-identifier">api_key</span>
+  
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">default_params</span> <span class="ruby-value">:apikey</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@api_key</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- new-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- new-method -->
+
+      
+      </div><!-- public-class-method-details -->
+    
       <div id="public-instance-method-details" class="method-section section">
         <h3 class="section-header">Public Instance Methods</h3>
 
@@ -653,51 +698,6 @@ the location parameter</p>
 
       
       </div><!-- public-instance-method-details -->
-    
-      <div id="public-class-method-details" class="method-section section">
-        <h3 class="section-header">Public Class Methods</h3>
-
-      
-        <div id="new-method" class="method-detail ">
-          <a name="method-c-new"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">new</span><span
-              class="method-args">(api_key = nil)</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            <h4>Create a new instance of the remote class to talk to Songkick</h4>
-
-<p>Get an API key for your app from <a
-href="http://developer.songkick.com/">developer.songkick.com/</a></p>
-            
-
-            
-            <div class="method-source-code" id="new-source">
-<pre>
-<span class="ruby-comment"># File lib/songkickr/remote.rb, line 12</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">api_key</span> = <span class="ruby-keyword">nil</span>)
-  <span class="ruby-ivar">@api_key</span> = <span class="ruby-identifier">api_key</span>
-  <span class="ruby-ivar">@api_key</span> <span class="ruby-operator">||=</span> <span class="ruby-constant">Songkickr</span>.<span class="ruby-identifier">api_key</span>
-  
-  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">default_params</span> <span class="ruby-value">:apikey</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@api_key</span>
-<span class="ruby-keyword">end</span></pre>
-            </div><!-- new-source -->
-            
-          </div>
-
-          
-
-          
-        </div><!-- new-method -->
-
-      
-      </div><!-- public-class-method-details -->
     
     </div><!-- 5Buntitled-5D -->
   

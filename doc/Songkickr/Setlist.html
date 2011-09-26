@@ -291,6 +291,51 @@
 
       <!-- Methods -->
       
+      <div id="public-class-method-details" class="method-section section">
+        <h3 class="section-header">Public Class Methods</h3>
+
+      
+        <div id="new-method" class="method-detail ">
+          <a name="method-c-new"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">new</span><span
+              class="method-args">(setlist_hash)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Takes the setlist hash and parses out an <a href="Event.html">Event</a> and
+<a href="Artist.html">Artist</a> and an array of SetlistItems.</p>
+            
+
+            
+            <div class="method-source-code" id="new-source">
+<pre>
+<span class="ruby-comment"># File lib/songkickr/setlist.rb, line 24</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">setlist_hash</span>)
+  <span class="ruby-ivar">@event</span>         = <span class="ruby-constant">Songkickr</span><span class="ruby-operator">::</span><span class="ruby-constant">Event</span>.<span class="ruby-identifier">new</span> <span class="ruby-identifier">setlist_hash</span>[<span class="ruby-string">&quot;event&quot;</span>]
+  <span class="ruby-ivar">@setlist_items</span> = <span class="ruby-identifier">parse_setlist_items</span> <span class="ruby-identifier">setlist_hash</span>[<span class="ruby-string">&quot;setlistItem&quot;</span>]
+  <span class="ruby-ivar">@artist</span>        = <span class="ruby-constant">Songkickr</span><span class="ruby-operator">::</span><span class="ruby-constant">Artist</span>.<span class="ruby-identifier">new</span> <span class="ruby-identifier">setlist_hash</span>[<span class="ruby-string">&quot;artist&quot;</span>]
+  <span class="ruby-ivar">@playlist_uri</span>  = <span class="ruby-identifier">setlist_hash</span>[<span class="ruby-string">&quot;playlistUri&quot;</span>]
+  <span class="ruby-ivar">@display_name</span>  = <span class="ruby-identifier">setlist_hash</span>[<span class="ruby-string">&quot;displayName&quot;</span>]
+  <span class="ruby-ivar">@id</span>            = <span class="ruby-identifier">setlist_hash</span>[<span class="ruby-string">&quot;id&quot;</span>]
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- new-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- new-method -->
+
+      
+      </div><!-- public-class-method-details -->
+    
       <div id="protected-instance-method-details" class="method-section section">
         <h3 class="section-header">Protected Instance Methods</h3>
 
@@ -336,51 +381,6 @@
 
       
       </div><!-- protected-instance-method-details -->
-    
-      <div id="public-class-method-details" class="method-section section">
-        <h3 class="section-header">Public Class Methods</h3>
-
-      
-        <div id="new-method" class="method-detail ">
-          <a name="method-c-new"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">new</span><span
-              class="method-args">(setlist_hash)</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            <p>Takes the setlist hash and parses out an <a href="Event.html">Event</a> and
-<a href="Artist.html">Artist</a> and an array of SetlistItems.</p>
-            
-
-            
-            <div class="method-source-code" id="new-source">
-<pre>
-<span class="ruby-comment"># File lib/songkickr/setlist.rb, line 24</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">setlist_hash</span>)
-  <span class="ruby-ivar">@event</span>         = <span class="ruby-constant">Songkickr</span><span class="ruby-operator">::</span><span class="ruby-constant">Event</span>.<span class="ruby-identifier">new</span> <span class="ruby-identifier">setlist_hash</span>[<span class="ruby-string">&quot;event&quot;</span>]
-  <span class="ruby-ivar">@setlist_items</span> = <span class="ruby-identifier">parse_setlist_items</span> <span class="ruby-identifier">setlist_hash</span>[<span class="ruby-string">&quot;setlistItem&quot;</span>]
-  <span class="ruby-ivar">@artist</span>        = <span class="ruby-constant">Songkickr</span><span class="ruby-operator">::</span><span class="ruby-constant">Artist</span>.<span class="ruby-identifier">new</span> <span class="ruby-identifier">setlist_hash</span>[<span class="ruby-string">&quot;artist&quot;</span>]
-  <span class="ruby-ivar">@playlist_uri</span>  = <span class="ruby-identifier">setlist_hash</span>[<span class="ruby-string">&quot;playlistUri&quot;</span>]
-  <span class="ruby-ivar">@display_name</span>  = <span class="ruby-identifier">setlist_hash</span>[<span class="ruby-string">&quot;displayName&quot;</span>]
-  <span class="ruby-ivar">@id</span>            = <span class="ruby-identifier">setlist_hash</span>[<span class="ruby-string">&quot;id&quot;</span>]
-<span class="ruby-keyword">end</span></pre>
-            </div><!-- new-source -->
-            
-          </div>
-
-          
-
-          
-        </div><!-- new-method -->
-
-      
-      </div><!-- public-class-method-details -->
     
     </div><!-- 5Buntitled-5D -->
   
