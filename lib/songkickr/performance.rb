@@ -14,7 +14,7 @@ module Songkickr
   #   }
   class Performance
     attr_accessor :artist, :display_name, :id, :billing_index, :billing
-    
+
     # Takes a the hash of the performance. Parses out an Artist object for the artist.
     def initialize(performance_hash)
       @artist        = Songkickr::Artist.new performance_hash["artist"]

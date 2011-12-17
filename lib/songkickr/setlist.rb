@@ -19,7 +19,7 @@ module Songkickr
   #   }
   class Setlist
     attr_accessor :event, :setlist_items, :artist, :playlist_uri, :display_name, :id
-    
+
     # Takes the setlist hash and parses out an Event and Artist and an array of SetlistItems.
     def initialize(setlist_hash)
       @event         = Songkickr::Event.new setlist_hash["event"]
@@ -29,9 +29,9 @@ module Songkickr
       @display_name  = setlist_hash["displayName"]
       @id            = setlist_hash["id"]
     end
-    
+
     protected
-      
+
       # Takes the array of setlist items and create SetLists
       def parse_setlist_items(setlist_item_array = nil)
         setlist_items = []
@@ -40,7 +40,7 @@ module Songkickr
             setlist_items << Songkickr::SetlistItem.new(item)
           end
         end
-        
+
         setlist_items
       end
   end
