@@ -27,7 +27,7 @@ module Songkickr
   # Returns the Songkick API key
   # In order to use the Songkick API, you must have a Songkick API (their rule, not mine).
   # Get an API key for your app from http://developer.songkick.com/
-  # 
+  #
   # ==== Example
   #
   #   require 'songkickr'

@@ -11,8 +11,8 @@ class TestArtist < Test::Unit::TestCase
       assert_equal "Munich, Germany", @event.location.city
       assert_equal "Muffathalle", @event.venue.display_name
       assert_equal 1, @event.performances.size
-      assert_equal "17 Hippies", @event.performances.first.display_name 
+      assert_equal "17 Hippies", @event.performances.first.display_name
     end
-    
-  end  
+
+  end
 end

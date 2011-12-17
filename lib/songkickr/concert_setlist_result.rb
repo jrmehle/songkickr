@@ -4,12 +4,12 @@ module Songkickr
   # http://www.songkick.com/developer/setlists
   class ConcertSetlistResult
     attr_accessor :results
-    
+
     # Takes the result ash and passes it to parse_results
     def initialize(result_hash = {})
       if result_hash["resultsPage"]
         results_page = result_hash["resultsPage"]
-      
+
         if results_page
           @results = parse_results results_page["results"]
         end
@@ -17,10 +17,10 @@ module Songkickr
         result_hash
       end
     end
-    
-    
+
+
     protected
-      
+
       # Parses the setlist items into an array of SetlistItems
       def parse_results(results = {})
         setlists = []
@@ -29,7 +29,7 @@ module Songkickr
             setlists << Songkickr::Setlist.new(setlist)
           end
         end
-        
+
         setlists
       end
   end

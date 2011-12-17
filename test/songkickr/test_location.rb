@@ -9,12 +9,12 @@ class TestLocation < Test::Unit::TestCase
     should "properly load data from JSON" do
       assert_equal 8, @locations.results.size
       assert_equal 8, @locations.total_entries
-      
+
       potters_bar = @locations.results.first
       assert_equal "Potters Bar", potters_bar.city
       assert_equal 51.6833, potters_bar.lat
-      assert_equal -0.166667, potters_bar.lng 
+      assert_equal -0.166667, potters_bar.lng
     end
-    
-  end  
+
+  end
 end

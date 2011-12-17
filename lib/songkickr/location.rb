@@ -23,7 +23,7 @@ module Songkickr
   # http://www.songkick.com/developer/location-search
   class Location
     attr_accessor :city, :lat, :lng, :metro_area
-    
+
     # Takes a location hash. Handles the different city hashes from Event and Location
     def initialize(location_hash)
       if location_hash["city"].is_a?(String) # location in Event
@@ -37,7 +37,7 @@ module Songkickr
         @lat  = city_hash["lat"]
         @lng  = city_hash["lng"]
       end
-      
+
       @metro_area = location_hash['metro_area']
     end
   end
