@@ -1,5 +1,7 @@
 = songkickr
 
+{<img src="https://travis-ci.org/jrmehle/songkickr.png?branch=master" alt="Build Status" />}[https://travis-ci.org/jrmehle/songkickr]
+
 A Ruby wrapper around the Songkick API. Visit www.songkick.com/developer for documentation on the Songkick API.
 
 = Install Instructions
@@ -44,5 +46,5 @@ Copyright (c) 2010-2013 Jared Mehle. See LICENSE for details.
 
 Thanks to Andrew Chen, Akshay Dodeja, Tomasz Stachewicz, and Dave Knapik for submitting code and pull requests.
 
-A special thank you to Jon Nunemaker for the httparty which is used extensively within this
+A special thank you to Jon Nunemaker for httparty which is used extensively within this
 gem and for the twitter gem as inspiration.
