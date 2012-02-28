@@ -4,18 +4,18 @@ module Songkickr
     include HTTParty
     base_uri 'api.songkick.com/api/3.0'
     format :json
-    
+
     attr_reader :api_key
-    
+
     # ==== Create a new instance of the remote class to talk to Songkick
     # Get an API key for your app from http://developer.songkick.com/
     def initialize(api_key = nil)
       @api_key = api_key
       @api_key ||= Songkickr.api_key
-      
+
       self.class.default_params :apikey => @api_key
     end
-    
+
     # ==== Event Search API
     # http://www.songkick.com/developer/event-search
     #
@@ -39,10 +39,10 @@ module Songkickr
       result = self.class.get("#{path}/events.json", :query => query)
       Songkickr::EventResult.new result
     end
-    
+
     # ==== Event API
     # http://www.songkick.com/developer/upcoming-events
-    # 
+    #
     # Getting detailed information of a single event.
     #
     # === Parameters
@@ -59,7 +59,7 @@ module Songkickr
     # === Parameters
     # * +artist_id+ - Songkick artist_id, use artist_search to get it
     # * +query+ - A hash of query parameters, see below for options.
-    # 
+    #
     # ==== Query Parameters
     # * +min_date+ - Oldest date for which you want to look for events
     # * +max_date+ - Most recent date for which you want to look for events
@@ -84,7 +84,24 @@ module Songkickr
       result = self.class.get("/search/artists.json", :query => query)
       Songkickr::ArtistResult.new result
     end
-    
+
+    # ==== Artist calendar (Upcoming)
+    # Returns an array of Events.
+    #
+    # http://www.songkick.com/developer/upcoming-events-for-artist
+    #
+    # === Parameters
+    # * +artist_id+ - Songkick unique ID for artist. Use artist_search to find an artist ID.
+    # * +query+ - A hash of query parameters, see below for options.
+    #
+    # ==== Query Parameters
+    # * +page+ - Page number
+    # * +per_page+ - Number of results per page, max 50.
+    def artist_events(artist_id, query = {})
+      result = self.class.get("/artists/#{artist_id}/calendar.json", :query => query)
+      Songkickr::EventResult.new result
+    end
+
     # ==== User Events API
     # http://www.songkick.com/developer/upcoming-events-for-user
     #
@@ -123,7 +140,7 @@ module Songkickr
       result = self.class.get("/metro_areas/#{metro_area_id}/calendar.json", :query => query)
       Songkickr::EventResult.new result
     end
-    
+
     # ==== Concert Setlists API
     # http://www.songkick.com/developer/setlists
     #
@@ -134,7 +151,7 @@ module Songkickr
       result = self.class.get("/events/#{event_id}/setlists.json")
       Songkickr::ConcertSetlistResult.new result
     end
-    
+
     # ==== Location Search API
     # http://www.songkick.com/developer/location-search
     #
@@ -147,10 +164,21 @@ module Songkickr
       result = self.class.get("/search/locations.json", :query => query)
       Songkickr::LocationResult.new result
     end
-    
-    
+
+    # ==== Venue Search
+    # http://www.songkick.com/developer/venue-details
+    #
+    # === Parameters
+    #
+    # * +venue_id+ - Songkick venue ID.
+    def venue(venue_id)
+      result = self.class.get("/venues/#{venue_id}.json")
+      Songkickr::Venue.new result['resultsPage']['results']['venue']
+    end
+
+
     private
-      
+
       # Given a query, look for an mbid key and return a path to access it.
       def extract_path_from_query(query = {})
         mbid = query.delete :mbid
