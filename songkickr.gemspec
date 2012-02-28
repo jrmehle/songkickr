@@ -110,6 +110,8 @@ Gem::Specification.new do |s|
   s.rubygems_version = %q{1.5.2}
   s.summary = %q{A Ruby wrapper around the Songkick API.}
 
+  s.add_dependency 'httparty'
+
   if s.respond_to? :specification_version then
     s.specification_version = 3
 
