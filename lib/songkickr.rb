@@ -23,6 +23,12 @@ class APIKeyNotSet < StandardError;
   end
 end
 
+class ResouceNotFound < StandardError;
+  def to_s
+    "Resource not found"
+  end
+end
+
 module Songkickr
   # Returns the Songkick API key
   # In order to use the Songkick API, you must have a Songkick API (their rule, not mine).
