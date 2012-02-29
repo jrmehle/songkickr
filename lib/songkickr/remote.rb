@@ -50,6 +50,7 @@ module Songkickr
     def event(event_id)
       result = self.class.get("/events/#{event_id}.json")
       # and now for some dirrty hack
+      return result['resultsPage']['error'] if result['resultsPage']['error']
       Songkickr::Event.new result["resultsPage"]["results"]["event"]
     end
 
@@ -173,6 +174,7 @@ module Songkickr
     # * +venue_id+ - Songkick venue ID.
     def venue(venue_id)
       result = self.class.get("/venues/#{venue_id}.json")
+      return result['resultsPage']['error'] if result['resultsPage']['error']
       Songkickr::Venue.new result['resultsPage']['results']['venue']
     end
 
