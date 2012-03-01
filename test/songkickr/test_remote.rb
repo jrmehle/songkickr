@@ -8,7 +8,27 @@ class TestRemote < Test::Unit::TestCase
       end
     end
   end
-  
+
+  context "Given an invalid Resource" do
+    setup do
+      FakeWeb.register_uri(:get, 'http://api.songkick.com/api/3.0/events/123.json?apikey=omgwtfbbq_fake_key', :body => fixture_file('resource_not_found.json'))
+      FakeWeb.register_uri(:get, 'http://api.songkick.com/api/3.0/venues/123.json?apikey=omgwtfbbq_fake_key', :body => fixture_file('resource_not_found.json'))
+      @remote = Songkickr::Remote.new 'omgwtfbbq_fake_key'
+    end
+
+    should "raise an ResouceNotFound exception when search a songkick event id doesn't exist" do
+      assert_raise ResouceNotFound do
+        @remote.event(123)
+      end
+    end
+
+    should "raise an ResouceNotFound exception when search a songkick venue id doesn't exist" do
+      assert_raise ResouceNotFound do
+        @remote.venue(123)
+      end
+    end
+  end
+
 # TODO: Fix this later
   context "Given a remote with an invalid api key" do
     setup do
