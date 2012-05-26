@@ -18,7 +18,9 @@ Gem::Specification.new do |gem|
 
   gem.add_dependency "httparty", "~> 0.8.3"
 
-  gem.add_development_dependency "rspec",   "~> 2.10.0"
-  gem.add_development_dependency "fakeweb", "~> 1.3.0"
-  gem.add_development_dependency "shoulda", "~> 3.0.1"
+  gem.add_development_dependency "rspec",       "~> 2.10.0"
+  gem.add_development_dependency "fakeweb",     "~> 1.3.0"
+  gem.add_development_dependency "shoulda",     "~> 3.0.1"
+  gem.add_development_dependency "guard",       "~> 1.0.3"
+  gem.add_development_dependency "guard-rspec", "~> 0.4.5"
 end
