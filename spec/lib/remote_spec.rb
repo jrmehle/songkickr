@@ -18,7 +18,7 @@ describe Songkickr::Remote do
   end
 
   describe "given an invalid resource" do
-    before(:each) do
+    before(:all) do
       FakeWeb.register_uri(:get, 'http://api.songkick.com/api/3.0/events/123.json?apikey=omgwtfbbq_fake_key', :body => fixture_file('resource_not_found.json'))
       FakeWeb.register_uri(:get, 'http://api.songkick.com/api/3.0/venues/123.json?apikey=omgwtfbbq_fake_key', :body => fixture_file('resource_not_found.json'))
       @remote = Songkickr::Remote.new 'omgwtfbbq_fake_key'
@@ -34,12 +34,12 @@ describe Songkickr::Remote do
   end
 
   describe "given a remote with an invalid api key" do
-    before(:each) do
+    before(:all) do
       stub_get('http://api.songkick.com/api/3.0/events.json', 'events.json')
       @remote = Songkickr::Remote.new 'omgwtfbbq_fake_key'
     end
 
-    it "should generate a remote" do
+    it "should generate a valid remote" do
       @remote.should_not be_nil
     end
   end
