@@ -25,4 +25,5 @@ Gem::Specification.new do |gem|
   gem.add_development_dependency "shoulda",     "~> 3.0.1"
   gem.add_development_dependency "guard",       "~> 1.0.3"
   gem.add_development_dependency "guard-rspec", "~> 0.4.5"
+  gem.add_development_dependency "rdoc",        "~> 3.12"
 end
