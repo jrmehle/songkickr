@@ -124,6 +124,17 @@ module Songkickr
       result = self.class.get("/users/#{username}/events.json", :query => query)
       Songkickr::EventResult.new result
     end
+    
+    # ==== User Tracked Artists
+    # http://www.songkick.com/developer/trackings
+    #
+    # === Parameters
+    # * +username+ - A Songkick username.
+    # * +query+ - A hash of query parameters, see below for options.
+    def users_tracked_artists(username, query = {})
+      result = self.class.get("/users/#{username}/artists/tracked.json", :query => query)
+      Songkickr::ArtistResult.new result
+    end
 
     # ==== Metro Area Events (Upcoming)
     # Returns an array of Events.
