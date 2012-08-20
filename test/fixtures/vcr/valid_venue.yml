@@ -1,0 +1,53 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.songkick.com/api/3.0/venues/17522.json?apikey=hFYxiInE4DBpH5KL
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Mon, 20 Aug 2012 17:47:22 GMT
+      server:
+      - thin 1.2.4 codename Flaming Astroboy
+      content-type:
+      - application/json
+      expires:
+      - Mon, 20 Aug 2012 18:47:22 GMT
+      cache-control:
+      - private, max-age=3600
+      vary:
+      - Accept-Encoding
+      connection:
+      - close
+      transfer-encoding:
+      - chunked
+    body:
+      encoding: US-ASCII
+      string: ! '{"resultsPage":{"results":{"venue":{"city":{"uri":"http:\/\/www.songkick.com\/metro_areas\/24426-uk-london?utm_source=4791&utm_medium=partner","country":{"displayName":"UK"},"displayName":"London","id":24426},"uri":"http:\/\/www.songkick.com\/venues\/17522-o2-academy-brixton?utm_source=4791&utm_medium=partner","zip":"SW9
+        9SL","displayName":"O2 Academy Brixton","id":17522,"street":"211 Stockwell
+        Road","lng":-0.1148897,"phone":"020 7771 3000","website":"http:\/\/www.brixton-academy.co.uk\/","capacity":4921,"metroArea":{"uri":"http:\/\/www.songkick.com\/metro_areas\/24426-uk-london?utm_source=4791&utm_medium=partner","country":{"displayName":"UK"},"displayName":"London","id":24426},"description":"Brixton
+        Academy is an award winning music venue situated in the heart of Brixton,
+        South London. The venue has played host to many notable shows and reunions,
+        welcoming a wide variety of artists, from Bob Dylan to Eminem, to the stage.
+        It attracts over half a million visitors per year, accommodating over one
+        hundred events.\n\nBuilt in 1929, the site started life as one of the four
+        state of the art\n Astoria Theaters, screening a variety of motion pictures
+        and shows. In 1972 the venue was transformed into a rock venue and re-branded
+        as The Sundown Centre. With limited success the venue closed it''s doors in
+        1974 and was not re-opened as a music venue again until 1983, when it became
+        The Brixton Academy.\n\nFeaturing a beautiful Art Deco interior, the venue
+        is now known as the 02 Academy Brixton, and hosts a diverse range of club
+        nights and live performances, as well as seated events. The venue has an upstairs
+        balcony as well as the main floor downstairs. There is disabled access and
+        facilities, a bar and a cloakroom. Club night events are for over 18s, for
+        live music under 14s must be accompanied by an adult.","lat":51.4651204}},"status":"ok"}}'
+    http_version: '1.1'
+  recorded_at: Mon, 20 Aug 2012 17:47:22 GMT
+recorded_with: VCR 2.2.4

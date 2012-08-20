@@ -23,17 +23,31 @@ class APIKeyNotSet < StandardError;
   end
 end
 
-class ResouceNotFound < StandardError;
+class APIError < StandardError;
+
+  def initialize(message = "API Error")
+    @message = message
+  end
+
+  def to_s
+    @message
+  end
+end
+
+class ResourceNotFound < APIError;
   def to_s
     "Resource not found"
   end
 end
 
+
+
+
 module Songkickr
   # Returns the Songkick API key
   # In order to use the Songkick API, you must have a Songkick API (their rule, not mine).
   # Get an API key for your app from http://developer.songkick.com/
-  # 
+  #
   # ==== Example
   #
   #   require 'songkickr'

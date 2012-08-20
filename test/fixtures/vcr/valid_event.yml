@@ -1,0 +1,52 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.songkick.com/api/3.0/events/17522.json?apikey=hFYxiInE4DBpH5KL
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Mon, 20 Aug 2012 17:39:30 GMT
+      server:
+      - thin 1.2.4 codename Flaming Astroboy
+      content-type:
+      - application/json
+      expires:
+      - Mon, 20 Aug 2012 18:39:30 GMT
+      cache-control:
+      - private, max-age=3600
+      vary:
+      - Accept-Encoding
+      connection:
+      - close
+      transfer-encoding:
+      - chunked
+    body:
+      encoding: US-ASCII
+      string: ! '{"resultsPage":{"results":{"event":{"location":{"city":"Chicago,
+        IL, US","lng":-87.7137611,"lat":41.9501484},"popularity":0.008473,"uri":"http:\/\/www.songkick.com\/concerts\/17522-bang-bang-at-abbey-pub?utm_source=4791&utm_medium=partner","displayName":"Bang
+        Bang with Imperial Teen at Abbey Pub (October 4, 2007)","id":17522,"type":"Concert","start":{"time":"21:00:00","date":"2007-10-04","datetime":"2007-10-04T21:00:00-0600"},"performance":[{"artist":{"uri":"http:\/\/www.songkick.com\/artists\/495332-bang-bang?utm_source=4791&utm_medium=partner","displayName":"Bang
+        Bang","id":495332,"identifier":[{"href":"http:\/\/api.songkick.com\/api\/3.0\/artists\/mbid:c888d780-565c-4719-ab20-a1da73796228.json","mbid":"c888d780-565c-4719-ab20-a1da73796228"},{"href":"http:\/\/api.songkick.com\/api\/3.0\/artists\/mbid:4f4d6d1e-dd8f-4b4b-a4a5-4a324c7512ec.json","mbid":"4f4d6d1e-dd8f-4b4b-a4a5-4a324c7512ec"},{"href":"http:\/\/api.songkick.com\/api\/3.0\/artists\/mbid:a7f8b3ad-d0e0-4f95-85e1-9e73dd55bd49.json","mbid":"a7f8b3ad-d0e0-4f95-85e1-9e73dd55bd49"},{"href":"http:\/\/api.songkick.com\/api\/3.0\/artists\/mbid:4cba75fd-de31-4a38-aa50-9b1f5bacdd4d.json","mbid":"4cba75fd-de31-4a38-aa50-9b1f5bacdd4d"},{"href":"http:\/\/api.songkick.com\/api\/3.0\/artists\/mbid:a5b03e5e-4eb3-44cd-b0c0-cb93d5acf107.json","mbid":"a5b03e5e-4eb3-44cd-b0c0-cb93d5acf107"}]},"displayName":"Bang
+        Bang","billingIndex":1,"id":5768921,"billing":"headline"},{"artist":{"uri":"http:\/\/www.songkick.com\/artists\/397631-imperial-teen?utm_source=4791&utm_medium=partner","displayName":"Imperial
+        Teen","id":397631,"identifier":[{"href":"http:\/\/api.songkick.com\/api\/3.0\/artists\/mbid:7d478bd2-d228-46a8-8a7c-ef68a61fd339.json","mbid":"7d478bd2-d228-46a8-8a7c-ef68a61fd339"}]},"displayName":"Imperial
+        Teen","billingIndex":2,"id":22526,"billing":"support"}],"venue":{"city":{"uri":"http:\/\/www.songkick.com\/metro_areas\/9426-us-chicago?utm_source=4791&utm_medium=partner","displayName":"Chicago","country":{"displayName":"US"},"id":9426,"state":{"displayName":"IL"}},"zip":"60618","uri":"http:\/\/www.songkick.com\/venues\/546756-abbey-pub?utm_source=4791&utm_medium=partner","displayName":"Abbey
+        Pub","street":"3420 W. Grace St.","lng":-87.7137611,"id":546756,"website":"http:\/\/www.abbeypub.com","phone":"773
+        478 4408","capacity":550,"description":"Since 1973, The Abbey has been Chicago\u2019s
+        home for live music, good food and great times.  The Abbey has live music
+        most nights, featuring local, regional and national acts from indie rock to
+        traditional Irish music.  The Abbey serves  dinner nightly and brunch on Saturday
+        and Sunday featuring Irish and American food.  Make a dinner reservation before
+        any show and get preferred VIP seating!  Watch all major sporting events on
+        our 15-foot projector and on 14 flat screens. We feature live international
+        sports telecasts (rugby, soccer, Gaelic) as well as all major American sporting
+        events.\r\n\r\nCall 773.478.4408 today to make your reservation!","metroArea":{"uri":"http:\/\/www.songkick.com\/metro_areas\/9426-us-chicago?utm_source=4791&utm_medium=partner","displayName":"Chicago","country":{"displayName":"US"},"id":9426,"state":{"displayName":"IL"}},"lat":41.9501484},"status":"ok"}},"status":"ok"}}'
+    http_version: '1.1'
+  recorded_at: Mon, 20 Aug 2012 17:39:30 GMT
+recorded_with: VCR 2.2.4

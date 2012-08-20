@@ -36,7 +36,7 @@ module Songkickr
     # * +location+ - See the Songkick website for instructions on how to use the location parameter http://www.songkick.com/developer/location-search
     def events(query = {})
       path = extract_path_from_query(query)
-      result = self.class.get("#{path}/events.json", :query => query)
+      result = get("#{path}/events.json", :query => query)
       Songkickr::EventResult.new result
     end
 
@@ -48,9 +48,7 @@ module Songkickr
     # === Parameters
     # * +event_id+ - Songkick event ID. Extract the event ID either from a previous API call or from the URL of the event page on the website.
     def event(event_id)
-      result = self.class.get("/events/#{event_id}.json")
-      # and now for some dirrty hack
-      raise ResouceNotFound if result['resultsPage']['error']
+      result = get("/events/#{event_id}.json")
       Songkickr::Event.new result["resultsPage"]["results"]["event"]
     end
 
@@ -67,7 +65,7 @@ module Songkickr
     # * +per_page+ - Number of items on a page
     # * +page+ - Number of page
     def gigography(artist_id, query= {})
-      result = self.class.get("/artists/#{artist_id}/gigography.json",:query=>query)
+      result = get("/artists/#{artist_id}/gigography.json",:query=>query)
       Songkickr::EventResult.new result
     end
 
@@ -82,7 +80,7 @@ module Songkickr
     # ==== Query Parameters
     # * +artist_name+ - Name of an artist. <em>Ex. 'Lady Gaga', 'Slayer', 'Atmosphere'</em>
     def artist_search(query={})
-      result = self.class.get("/search/artists.json", :query => query)
+      result = get("/search/artists.json", :query => query)
       Songkickr::ArtistResult.new result
     end
 
@@ -99,7 +97,7 @@ module Songkickr
     # * +page+ - Page number
     # * +per_page+ - Number of results per page, max 50.
     def artist_events(artist_id, query = {})
-      result = self.class.get("/artists/#{artist_id}/calendar.json", :query => query)
+      result = get("/artists/#{artist_id}/calendar.json", :query => query)
       Songkickr::EventResult.new result
     end
 
@@ -121,10 +119,10 @@ module Songkickr
     # * +max_date+ - Most recent date for which you want to look for events
     # * +location+ - see the Songkick website for instructions on how to use the location parameter
     def users_events(username, query = {})
-      result = self.class.get("/users/#{username}/events.json", :query => query)
+      result = get("/users/#{username}/events.json", :query => query)
       Songkickr::EventResult.new result
     end
-    
+
     # ==== User Tracked Artists
     # http://www.songkick.com/developer/trackings
     #
@@ -132,7 +130,7 @@ module Songkickr
     # * +username+ - A Songkick username.
     # * +query+ - A hash of query parameters, see below for options.
     def users_tracked_artists(username, query = {})
-      result = self.class.get("/users/#{username}/artists/tracked.json", :query => query)
+      result = get("/users/#{username}/artists/tracked.json", :query => query)
       Songkickr::ArtistResult.new result
     end
 
@@ -149,7 +147,7 @@ module Songkickr
     # * +page+ - Page number
     # * +per_page+ - Number of results per page, max 50.
     def metro_areas_events(metro_area_id, query = {})
-      result = self.class.get("/metro_areas/#{metro_area_id}/calendar.json", :query => query)
+      result = get("/metro_areas/#{metro_area_id}/calendar.json", :query => query)
       Songkickr::EventResult.new result
     end
 
@@ -160,7 +158,7 @@ module Songkickr
     #
     # * +event_id+ - Songkick event ID. Extract the event ID either from a previous API call or from the URL of the event page on the website.
     def concert_setlists(event_id)
-      result = self.class.get("/events/#{event_id}/setlists.json")
+      result = get("/events/#{event_id}/setlists.json")
       Songkickr::ConcertSetlistResult.new result
     end
 
@@ -173,7 +171,7 @@ module Songkickr
     # ==== Query Parameters
     # * +location+ - 'geo:{lat,lng}' string <em>Ex. 'geo:{-0.128,51.5078}'</em>
     def location_search(query = {})
-      result = self.class.get("/search/locations.json", :query => query)
+      result = get("/search/locations.json", :query => query)
       Songkickr::LocationResult.new result
     end
 
@@ -184,9 +182,19 @@ module Songkickr
     #
     # * +venue_id+ - Songkick venue ID.
     def venue(venue_id)
-      result = self.class.get("/venues/#{venue_id}.json")
-      raise ResouceNotFound if result['resultsPage']['error']
+      result = get("/venues/#{venue_id}.json")
       Songkickr::Venue.new result['resultsPage']['results']['venue']
+    end
+
+    def get(location, query_params = {})
+      result = self.class.get(location, query_params)
+      # FIXME: this is shit. should be based on on http response.
+      if result['resultsPage']['error']
+        msg = result['resultsPage']['error']['message']
+        raise ResourceNotFound if msg =~ /not found/
+        raise APIError.new(msg)
+      end
+      result
     end
 
 
