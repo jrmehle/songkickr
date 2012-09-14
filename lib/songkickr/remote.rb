@@ -129,6 +129,10 @@ module Songkickr
     # === Parameters
     # * +username+ - A Songkick username.
     # * +query+ - A hash of query parameters, see below for options.
+    #
+    # ==== Query Parameters
+    # * +page+ - Page number
+    # * +per_page+ - Number of results per page, max 50.
     def users_tracked_artists(username, query = {})
       result = get("/users/#{username}/artists/tracked.json", :query => query)
       Songkickr::ArtistResult.new result
