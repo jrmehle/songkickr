@@ -1,7 +1,7 @@
 require 'vcr'
 
-VCR.config do |c|
-  c.stub_with :fakeweb
+VCR.configure do |c|
+  c.hook_into :fakeweb
   c.cassette_library_dir = 'test/fixtures/vcr'
   c.default_cassette_options = { :record => :new_episodes }
 end
