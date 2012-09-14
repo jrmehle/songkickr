@@ -8,7 +8,7 @@ require 'httparty'
 
 
 remote = Songkickr::Remote.new 'hFYxiInE4DBpH5KL'
-@results = remote.artist_search(:artist_name => "Muse", :per_page=>'10' ).results
+@results = remote.artist_search(:query => "Muse", :per_page=>'10' ).results
 @results.each do |result|
   print result.display_name + "\n"
 end

@@ -4,7 +4,7 @@
 <head>
 <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
 
-<title>README - RDoc Documentation</title>
+<title>class ResourceNotFound - RDoc Documentation</title>
 
 <link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
 
@@ -20,7 +20,7 @@
 <script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
 
 
-<body class="file">
+<body id="top" class="class">
 <nav id="metadata">
   <nav id="home-section" class="section">
   <h3 class="section-header">
@@ -42,6 +42,40 @@
   <ul id="search-results" class="initially-hidden"></ul>
 </nav>
 
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>lib/songkickr.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link"><a href="APIError.html">APIError</a>
+  
+</nav>
+
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li><a href="#method-i-to_s">#to_s</a>
+    
+  </ul>
+</nav>
+
+  </div>
 
   <div id="project-metadata">
     <nav id="fileindex-section" class="section project-section">
@@ -99,70 +133,66 @@
   </div>
 </nav>
 
-<div id="documentation" class="description">
+<div id="documentation">
+  <h1 class="class">class ResourceNotFound</h1>
+
+  <div id="description" class="description">
+    
+  </div><!-- description -->
+
   
-<h1 id="label-songkickr">songkickr</h1>
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
 
-<p>A Ruby wrapper around the Songkick API. Visit <a
-href="http://www.songkick.com/developer">www.songkick.com/developer</a> for
-documentation on the Songkick API.</p>
+    
 
-<h1 id="label-Install+Instructions">Install Instructions</h1>
+    
 
-<pre>gem install songkickr</pre>
+    
 
-<p>or if your environment requires</p>
+    <!-- Methods -->
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
 
-<pre>sudo gem install songkickr</pre>
+    
+      <div id="method-i-to_s" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">to_s</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
 
-<h1 id="label-Usage+Instructions">Usage Instructions</h1>
+        <div class="method-description">
+          
+          
+          
 
-<pre class="ruby"><span class="ruby-identifier">require</span> <span class="ruby-string">'songkickr'</span>
-<span class="ruby-identifier">remote</span> = <span class="ruby-constant">Songkickr</span><span class="ruby-operator">::</span><span class="ruby-constant">Remote</span>.<span class="ruby-identifier">new</span> <span class="ruby-constant">API_KEY</span>
-</pre>
+          
+          <div class="method-source-code" id="to_s-source">
+            <pre><span class="ruby-comment"># File lib/songkickr.rb, line 38</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">to_s</span>
+  <span class="ruby-string">&quot;Resource not found&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- to_s-source -->
+          
+        </div>
 
-<p>Then call events, users_events(username), or concert_setlists(event_id)</p>
+        
 
-<pre class="ruby"><span class="ruby-identifier">results</span> = <span class="ruby-identifier">remote</span>.<span class="ruby-identifier">events</span>(:<span class="ruby-identifier">query</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'Iron Maiden'</span>)
-<span class="ruby-identifier">results</span> = <span class="ruby-identifier">remote</span>.<span class="ruby-identifier">events</span>(:<span class="ruby-identifier">query</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'As I Lay Dying'</span>)
+        
+      </div><!-- to_s-method -->
 
-<span class="ruby-identifier">results</span> = <span class="ruby-identifier">remote</span>.<span class="ruby-identifier">users_events</span>(<span class="ruby-string">'jrmehle'</span>)
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
 
-<span class="ruby-identifier">results</span> = <span class="ruby-identifier">remote</span>.<span class="ruby-identifier">concert_setlists</span>(<span class="ruby-value">2680726</span>)
-<span class="ruby-identifier">results</span> = <span class="ruby-identifier">remote</span>.<span class="ruby-identifier">concert_setlists</span>(<span class="ruby-value">2894471</span>)
-</pre>
-
-<h2 id="label-Note+on+Patches%2FPull+Requests">Note on Patches/Pull Requests</h2>
-<ul><li>
-<p>Fork the project.</p>
-</li><li>
-<p>Make your feature addition or bug fix.</p>
-</li><li>
-<p>Add tests for it. This is important so I don’t break it in a future version
-unintentionally.</p>
-</li><li>
-<p>Commit, do not mess with rakefile, version, or history. (if you want to
-have your own version, that is fine but bump version in a commit by itself
-I can ignore when I pull)</p>
-</li><li>
-<p>Send me a pull request. Bonus points for topic branches.</p>
-</li></ul>
-
-<h2 id="label-Copyright">Copyright</h2>
-
-<p>Copyright © 2010-2011 Jared Mehle. See <a href="LICENSE.html">LICENSE</a>
-for details.</p>
-
-<h2 id="label-Thanks">Thanks</h2>
-
-<p>Thanks to Akshay Dodeja and Tomasz Stachewicz for submitting code and pull
-requests.</p>
-
-<p>A special thank you to Jon Nunemaker for the httparty which is used
-extensively within this gem and for the twitter gem as inspiration.</p>
-
-</div>
-
+</div><!-- documentation -->
 
 
 <footer id="validator-badges">
