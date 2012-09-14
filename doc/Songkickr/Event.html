@@ -1,154 +1,147 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!DOCTYPE html>
+
+<html>
 <head>
-  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
 
-  <title>Class: Songkickr::Event</title>
+<title>class Songkickr::Event - RDoc Documentation</title>
 
-  <link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+<link type="text/css" media="screen" href="../rdoc.css" rel="stylesheet">
 
-  <script src="../js/jquery.js" type="text/javascript" charset="utf-8"></script>
-  <script src="../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
-  <script src="../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
-  <script src="../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../";
+</script>
 
-</head>
+<script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/darkfish.js"></script>
+
+
 <body id="top" class="class">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="../index.html">Home</a>
+    <a href="../table_of_contents.html#classes">Classes</a>
+    <a href="../table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
 
-  <div id="metadata">
-    <div id="home-metadata">
-      <div id="home-section" class="section">
-        <h3 class="section-header">
-          <a href="../index.html">Home</a>
-          <a href="../index.html#classes">Classes</a>
-          <a href="../index.html#methods">Methods</a>
-        </h3>
-      </div>
-    </div>
 
-    <div id="file-metadata">
-      <div id="file-list-section" class="section">
-        <h3 class="section-header">In Files</h3>
-        <div class="section-body">
-          <ul>
-          
-            <li><a href="../lib/songkickr/event_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
-              class="thickbox" title="lib/songkickr/event.rb">lib/songkickr/event.rb</a></li>
-          
-          </ul>
-        </div>
-      </div>
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
 
-      
-    </div>
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
 
-    <div id="class-metadata">
-      
-      <!-- Parent Class -->
-      <div id="parent-class-section" class="section">
-        <h3 class="section-header">Parent</h3>
-        
-        <p class="link">Object</p>
-        
-      </div>
-      
 
-      
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>lib/songkickr/event.rb
+  </ul>
+</nav>
 
-      
-
-      
-      <!-- Method Quickref -->
-      <div id="method-list-section" class="section">
-        <h3 class="section-header">Methods</h3>
-        <ul class="link-list">
-          
-          <li><a href="#method-c-new">::new</a></li>
-          
-          <li><a href="#method-i-parse_performance">#parse_performance</a></li>
-          
-          <li><a href="#method-i-start_hash_to_datetime">#start_hash_to_datetime</a></li>
-          
-        </ul>
-      </div>
-      
-
-      
-    </div>
-
-    <div id="project-metadata">
-      
-      
-      <div id="fileindex-section" class="section project-section">
-        <h3 class="section-header">Files</h3>
-        <ul>
-        
-          <li class="file"><a href="../LICENSE.html">LICENSE</a></li>
-        
-          <li class="file"><a href="../README_rdoc.html">README.rdoc</a></li>
-        
-        </ul>
-      </div>
-      
-
-      <div id="classindex-section" class="section project-section">
-        <h3 class="section-header">Class/Module Index
-          <span class="search-toggle"><img src="../images/find.png"
-            height="16" width="16" alt="[+]"
-            title="show/hide quicksearch" /></span></h3>
-        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
-        <fieldset>
-          <legend>Quicksearch</legend>
-          <input type="text" name="quicksearch" value=""
-            class="quicksearch-field" />
-        </fieldset>
-        </form>
-
-        <ul class="link-list">
-        
-          <li><a href="../Songkickr.html">Songkickr</a></li>
-        
-          <li><a href="../Songkickr/Artist.html">Songkickr::Artist</a></li>
-        
-          <li><a href="../Songkickr/ArtistResult.html">Songkickr::ArtistResult</a></li>
-        
-          <li><a href="../Songkickr/ConcertSetlistResult.html">Songkickr::ConcertSetlistResult</a></li>
-        
-          <li><a href="../Songkickr/Event.html">Songkickr::Event</a></li>
-        
-          <li><a href="../Songkickr/EventResult.html">Songkickr::EventResult</a></li>
-        
-          <li><a href="../Songkickr/Location.html">Songkickr::Location</a></li>
-        
-          <li><a href="../Songkickr/LocationResult.html">Songkickr::LocationResult</a></li>
-        
-          <li><a href="../Songkickr/Performance.html">Songkickr::Performance</a></li>
-        
-          <li><a href="../Songkickr/Remote.html">Songkickr::Remote</a></li>
-        
-          <li><a href="../Songkickr/Setlist.html">Songkickr::Setlist</a></li>
-        
-          <li><a href="../Songkickr/SetlistItem.html">Songkickr::SetlistItem</a></li>
-        
-          <li><a href="../Songkickr/Venue.html">Songkickr::Venue</a></li>
-        
-          <li><a href="../APIKeyNotSet.html">APIKeyNotSet</a></li>
-        
-        </ul>
-        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
-      </div>
-
-      
-    </div>
+    
   </div>
 
-  <div id="documentation">
-    <h1 class="class">Songkickr::Event</h1>
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link">Object
+  
+</nav>
 
-    <div id="description" class="description">
-      
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li><a href="#method-c-new">::new</a>
+    
+    <li><a href="#method-i-parse_performance">#parse_performance</a>
+    
+    <li><a href="#method-i-start_hash_to_datetime">#start_hash_to_datetime</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="../LICENSE.html">LICENSE</a>
+  
+    <li class="file"><a href="../README_rdoc.html">README</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="../Songkickr.html">Songkickr</a>
+  
+    <li><a href="../Songkickr/Artist.html">Songkickr::Artist</a>
+  
+    <li><a href="../Songkickr/ArtistResult.html">Songkickr::ArtistResult</a>
+  
+    <li><a href="../Songkickr/ConcertSetlistResult.html">Songkickr::ConcertSetlistResult</a>
+  
+    <li><a href="../Songkickr/Event.html">Songkickr::Event</a>
+  
+    <li><a href="../Songkickr/EventResult.html">Songkickr::EventResult</a>
+  
+    <li><a href="../Songkickr/Location.html">Songkickr::Location</a>
+  
+    <li><a href="../Songkickr/LocationResult.html">Songkickr::LocationResult</a>
+  
+    <li><a href="../Songkickr/Performance.html">Songkickr::Performance</a>
+  
+    <li><a href="../Songkickr/Remote.html">Songkickr::Remote</a>
+  
+    <li><a href="../Songkickr/Setlist.html">Songkickr::Setlist</a>
+  
+    <li><a href="../Songkickr/SetlistItem.html">Songkickr::SetlistItem</a>
+  
+    <li><a href="../Songkickr/Venue.html">Songkickr::Venue</a>
+  
+    <li><a href="../APIError.html">APIError</a>
+  
+    <li><a href="../APIKeyNotSet.html">APIKeyNotSet</a>
+  
+    <li><a href="../ResourceNotFound.html">ResourceNotFound</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="class">class Songkickr::Event</h1>
+
+  <div id="description" class="description">
+    
 <p>A single event</p>
 
 <pre>{
@@ -188,255 +181,206 @@
 <p><a
 href="http://www.songkick.com/developer/artist-search">www.songkick.com/developer/artist-search</a></p>
 
-    </div><!-- description -->
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
 
     
-    <div id="5Buntitled-5D" class="documentation-section">
-      
+
+    
+
+    
+    <!-- Attributes -->
+    <section id="attribute-method-details" class="method-section section">
+      <h3 class="section-header">Attributes</h3>
 
       
+      <div id="attribute-i-display_name" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">display_name</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
 
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
       
+      <div id="attribute-i-id" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">id</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
 
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
       
-      <!-- Attributes -->
-      <div id="attribute-method-details" class="method-section section">
-        <h3 class="section-header">Attributes</h3>
-
-        
-        <div id="display_name-attribute-method" class="method-detail">
-          <a name="display_name"></a>
-          
-          <a name="display_name="></a>
-          
-          <div class="method-heading attribute-method-heading">
-            <span class="method-name">display_name</span><span
-              class="attribute-access-type">[RW]</span>
-          </div>
-
-          <div class="method-description">
-          
-          
-          
-          </div>
+      <div id="attribute-i-lat" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">lat</span><span
+            class="attribute-access-type">[RW]</span>
         </div>
-        
-        <div id="id-attribute-method" class="method-detail">
-          <a name="id"></a>
-          
-          <a name="id="></a>
-          
-          <div class="method-heading attribute-method-heading">
-            <span class="method-name">id</span><span
-              class="attribute-access-type">[RW]</span>
-          </div>
 
-          <div class="method-description">
-          
-          
-          
-          </div>
-        </div>
+        <div class="method-description">
         
-        <div id="lat-attribute-method" class="method-detail">
-          <a name="lat"></a>
-          
-          <a name="lat="></a>
-          
-          <div class="method-heading attribute-method-heading">
-            <span class="method-name">lat</span><span
-              class="attribute-access-type">[RW]</span>
-          </div>
-
-          <div class="method-description">
-          
-          
-          
-          </div>
-        </div>
         
-        <div id="lng-attribute-method" class="method-detail">
-          <a name="lng"></a>
-          
-          <a name="lng="></a>
-          
-          <div class="method-heading attribute-method-heading">
-            <span class="method-name">lng</span><span
-              class="attribute-access-type">[RW]</span>
-          </div>
-
-          <div class="method-description">
-          
-          
-          
-          </div>
-        </div>
         
-        <div id="location-attribute-method" class="method-detail">
-          <a name="location"></a>
-          
-          <a name="location="></a>
-          
-          <div class="method-heading attribute-method-heading">
-            <span class="method-name">location</span><span
-              class="attribute-access-type">[RW]</span>
-          </div>
-
-          <div class="method-description">
-          
-          
-          
-          </div>
         </div>
-        
-        <div id="performances-attribute-method" class="method-detail">
-          <a name="performances"></a>
-          
-          <a name="performances="></a>
-          
-          <div class="method-heading attribute-method-heading">
-            <span class="method-name">performances</span><span
-              class="attribute-access-type">[RW]</span>
-          </div>
-
-          <div class="method-description">
-          
-          
-          
-          </div>
-        </div>
-        
-        <div id="start-attribute-method" class="method-detail">
-          <a name="start"></a>
-          
-          <a name="start="></a>
-          
-          <div class="method-heading attribute-method-heading">
-            <span class="method-name">start</span><span
-              class="attribute-access-type">[RW]</span>
-          </div>
-
-          <div class="method-description">
-          
-          
-          
-          </div>
-        </div>
-        
-        <div id="status-attribute-method" class="method-detail">
-          <a name="status"></a>
-          
-          <a name="status="></a>
-          
-          <div class="method-heading attribute-method-heading">
-            <span class="method-name">status</span><span
-              class="attribute-access-type">[RW]</span>
-          </div>
-
-          <div class="method-description">
-          
-          
-          
-          </div>
-        </div>
-        
-        <div id="tickets_uri-attribute-method" class="method-detail">
-          <a name="tickets_uri"></a>
-          
-          <a name="tickets_uri="></a>
-          
-          <div class="method-heading attribute-method-heading">
-            <span class="method-name">tickets_uri</span><span
-              class="attribute-access-type">[RW]</span>
-          </div>
-
-          <div class="method-description">
-          
-          
-          
-          </div>
-        </div>
-        
-        <div id="type-attribute-method" class="method-detail">
-          <a name="type"></a>
-          
-          <a name="type="></a>
-          
-          <div class="method-heading attribute-method-heading">
-            <span class="method-name">type</span><span
-              class="attribute-access-type">[RW]</span>
-          </div>
-
-          <div class="method-description">
-          
-          
-          
-          </div>
-        </div>
-        
-        <div id="uri-attribute-method" class="method-detail">
-          <a name="uri"></a>
-          
-          <a name="uri="></a>
-          
-          <div class="method-heading attribute-method-heading">
-            <span class="method-name">uri</span><span
-              class="attribute-access-type">[RW]</span>
-          </div>
-
-          <div class="method-description">
-          
-          
-          
-          </div>
-        </div>
-        
-        <div id="venue-attribute-method" class="method-detail">
-          <a name="venue"></a>
-          
-          <a name="venue="></a>
-          
-          <div class="method-heading attribute-method-heading">
-            <span class="method-name">venue</span><span
-              class="attribute-access-type">[RW]</span>
-          </div>
-
-          <div class="method-description">
-          
-          
-          
-          </div>
-        </div>
-        
-      </div><!-- attribute-method-details -->
+      </div>
       
+      <div id="attribute-i-lng" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">lng</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
 
-      <!-- Methods -->
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
       
-      <div id="public-class-method-details" class="method-section section">
-        <h3 class="section-header">Public Class Methods</h3>
+      <div id="attribute-i-location" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">location</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
 
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
       
-        <div id="new-method" class="method-detail ">
-          <a name="method-c-new"></a>
+      <div id="attribute-i-performances" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">performances</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
+      
+      <div id="attribute-i-start" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">start</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
+      
+      <div id="attribute-i-status" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">status</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
+      
+      <div id="attribute-i-tickets_uri" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">tickets_uri</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
+      
+      <div id="attribute-i-type" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">type</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
+      
+      <div id="attribute-i-uri" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">uri</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
+      
+      <div id="attribute-i-venue" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">venue</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
+      
+    </section><!-- attribute-method-details -->
+    
+
+    <!-- Methods -->
+    
+     <section id="public-class-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Class Methods</h3>
+
+    
+      <div id="method-c-new" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">new</span><span
+            class="method-args">(event_hash)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
 
           
-          <div class="method-heading">
-            <span class="method-name">new</span><span
-              class="method-args">(event_hash)</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="new-source">
-<pre>
-<span class="ruby-comment"># File lib/songkickr/event.rb, line 42</span>
+          <div class="method-source-code" id="new-source">
+            <pre><span class="ruby-comment"># File lib/songkickr/event.rb, line 42</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">event_hash</span>)
   <span class="ruby-ivar">@type</span>         = <span class="ruby-identifier">event_hash</span>[<span class="ruby-string">&quot;type&quot;</span>]
   <span class="ruby-ivar">@location</span>     = <span class="ruby-constant">Songkickr</span><span class="ruby-operator">::</span><span class="ruby-constant">Location</span>.<span class="ruby-identifier">new</span> <span class="ruby-identifier">event_hash</span>[<span class="ruby-string">&quot;location&quot;</span>]
@@ -449,42 +393,39 @@ href="http://www.songkick.com/developer/artist-search">www.songkick.com/develope
   <span class="ruby-ivar">@id</span>           = <span class="ruby-identifier">event_hash</span>[<span class="ruby-string">&quot;id&quot;</span>]
   <span class="ruby-ivar">@tickets_uri</span>  = <span class="ruby-identifier">event_hash</span>[<span class="ruby-string">&quot;ticketsUri&quot;</span>]
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- new-source -->
-            
-          </div>
-
+          </div><!-- new-source -->
           
+        </div>
 
-          
-        </div><!-- new-method -->
+        
 
-      
-      </div><!-- public-class-method-details -->
+        
+      </div><!-- new-method -->
+
     
-      <div id="protected-instance-method-details" class="method-section section">
-        <h3 class="section-header">Protected Instance Methods</h3>
+    </section><!-- public-class-method-details -->
+  
+     <section id="protected-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Protected Instance Methods</h3>
 
-      
-        <div id="parse_performance-method" class="method-detail ">
-          <a name="method-i-parse_performance"></a>
+    
+      <div id="method-i-parse_performance" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">parse_performance</span><span
+            class="method-args">(performance_array = nil)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Builds a list of <a href="Performance.html">Performance</a> objects.</p>
+          
 
           
-          <div class="method-heading">
-            <span class="method-name">parse_performance</span><span
-              class="method-args">(performance_array = nil)</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            <p>Builds a list of <a href="Performance.html">Performance</a> objects.</p>
-            
-
-            
-            <div class="method-source-code" id="parse_performance-source">
-<pre>
-<span class="ruby-comment"># File lib/songkickr/event.rb, line 63</span>
+          <div class="method-source-code" id="parse_performance-source">
+            <pre><span class="ruby-comment"># File lib/songkickr/event.rb, line 63</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">parse_performance</span>(<span class="ruby-identifier">performance_array</span> = <span class="ruby-keyword">nil</span>)
   <span class="ruby-identifier">performances</span> = []
   <span class="ruby-keyword">if</span> <span class="ruby-identifier">performance_array</span>
@@ -495,62 +436,56 @@ href="http://www.songkick.com/developer/artist-search">www.songkick.com/develope
   
   <span class="ruby-identifier">performances</span>
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- parse_performance-source -->
-            
-          </div>
+          </div><!-- parse_performance-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- parse_performance-method -->
+
+    
+      <div id="method-i-start_hash_to_datetime" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">start_hash_to_datetime</span><span
+            class="method-args">(start_hash)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Takes the start hash and turns in into a DateTime object.</p>
           
 
           
-        </div><!-- parse_performance-method -->
-
-      
-        <div id="start_hash_to_datetime-method" class="method-detail ">
-          <a name="method-i-start_hash_to_datetime"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">start_hash_to_datetime</span><span
-              class="method-args">(start_hash)</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            <p>Takes the start hash and turns in into a DateTime object.</p>
-            
-
-            
-            <div class="method-source-code" id="start_hash_to_datetime-source">
-<pre>
-<span class="ruby-comment"># File lib/songkickr/event.rb, line 58</span>
+          <div class="method-source-code" id="start_hash_to_datetime-source">
+            <pre><span class="ruby-comment"># File lib/songkickr/event.rb, line 58</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">start_hash_to_datetime</span>(<span class="ruby-identifier">start_hash</span>)
   <span class="ruby-identifier">datetime</span> = <span class="ruby-constant">DateTime</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-node">&quot;#{start_hash[&quot;date&quot;]} #{start_hash[&quot;time&quot;]}&quot;</span>)
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- start_hash_to_datetime-source -->
-            
-          </div>
-
+          </div><!-- start_hash_to_datetime-source -->
           
+        </div>
 
-          
-        </div><!-- start_hash_to_datetime-method -->
+        
 
-      
-      </div><!-- protected-instance-method-details -->
+        
+      </div><!-- start_hash_to_datetime-method -->
+
     
-    </div><!-- 5Buntitled-5D -->
+    </section><!-- protected-instance-method-details -->
   
+  </section><!-- 5Buntitled-5D -->
 
-  </div><!-- documentation -->
+</div><!-- documentation -->
 
-  <div id="validator-badges">
-    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
-    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
-      Rdoc Generator</a> 2</small>.</p>
-  </div>
 
-</body>
-</html>
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.12.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
 
