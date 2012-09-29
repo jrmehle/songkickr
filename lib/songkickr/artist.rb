@@ -1,7 +1,7 @@
 module Songkickr
   # A single artist
   #
-  #  { 
+  #  {
   #   "uri":"http://www.songkick.com/artists/253846-radiohead",
   #   "displayName":"Radiohead",
   #   "id":253846,
@@ -10,8 +10,8 @@ module Songkickr
   #
   # http://www.songkick.com/developer/artist-search
   class Artist
-    attr_accessor :uri, :display_name, :id, :uri, :on_tour_until
-    
+    attr_accessor :uri, :display_name, :id, :on_tour_until
+
     # Accepts a hash of artist attributes.
     def initialize(artist_hash = {})
       @uri           = artist_hash["uri"]

@@ -5,11 +5,11 @@ A Ruby wrapper around the Songkick API. Visit www.songkick.com/developer for doc
 = Install Instructions
 
  gem install songkickr
- 
+
 or if your environment requires
- 
+
  sudo gem install songkickr
- 
+
 = Usage Instructions
 
     require 'songkickr'
@@ -17,8 +17,8 @@ or if your environment requires
 
 Then call events, users_events(username), or concert_setlists(event_id)
 
-    results = remote.events(:artist_name => 'Iron Maiden')
-    results = remote.events(:artist_name => 'As I Lay Dying')
+    results = remote.events(:query => 'Iron Maiden')
+    results = remote.events(:query => 'As I Lay Dying')
 
     results = remote.users_events('jrmehle')
 
@@ -27,7 +27,7 @@ Then call events, users_events(username), or concert_setlists(event_id)
 
 
 == Note on Patches/Pull Requests
- 
+
 * Fork the project.
 * Make your feature addition or bug fix.
 * Add tests for it. This is important so I don't break it in a
@@ -44,5 +44,5 @@ Copyright (c) 2010-2011 Jared Mehle. See LICENSE for details.
 
 Thanks to Akshay Dodeja and Tomasz Stachewicz for submitting code and pull requests.
 
-A special thank you to Jon Nunemaker for the httparty which is used extensively within this 
+A special thank you to Jon Nunemaker for the httparty which is used extensively within this
 gem and for the twitter gem as inspiration.
