@@ -9,9 +9,10 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Jared Mehle"]
-  s.date = "2012-03-01"
+  s.date = "2012-09-29"
   s.description = "A Ruby wrapper around the Songkick API. Visit www.songkick.com/developer for documentation on the Songkick API. "
   s.email = "jrmehle@gmail.com"
+  s.executables = ["autospec", "convert_to_should_syntax", "guard", "htmldiff", "httparty", "jeweler", "ldiff", "rake", "rake2thor", "rg", "ri", "rspec", "thor"]
   s.extra_rdoc_files = [
     "LICENSE",
     "README.rdoc"
@@ -24,9 +25,24 @@ Gem::Specification.new do |s|
     "README.rdoc",
     "Rakefile",
     "VERSION",
+    "bin/autospec",
+    "bin/convert_to_should_syntax",
+    "bin/guard",
+    "bin/htmldiff",
+    "bin/httparty",
+    "bin/jeweler",
+    "bin/ldiff",
+    "bin/rake",
+    "bin/rake2thor",
+    "bin/rg",
+    "bin/ri",
+    "bin/rspec",
+    "bin/thor",
+    "doc/APIError.html",
     "doc/APIKeyNotSet.html",
     "doc/LICENSE.html",
     "doc/README_rdoc.html",
+    "doc/ResourceNotFound.html",
     "doc/Songkickr.html",
     "doc/Songkickr/Artist.html",
     "doc/Songkickr/ArtistResult.html",
@@ -41,6 +57,7 @@ Gem::Specification.new do |s|
     "doc/Songkickr/SetlistItem.html",
     "doc/Songkickr/Venue.html",
     "doc/created.rid",
+    "doc/images/add.png",
     "doc/images/brick.png",
     "doc/images/brick_link.png",
     "doc/images/bug.png",
@@ -48,6 +65,7 @@ Gem::Specification.new do |s|
     "doc/images/bullet_toggle_minus.png",
     "doc/images/bullet_toggle_plus.png",
     "doc/images/date.png",
+    "doc/images/delete.png",
     "doc/images/find.png",
     "doc/images/loadingAnimation.gif",
     "doc/images/macFFBgHack.png",
@@ -57,14 +75,20 @@ Gem::Specification.new do |s|
     "doc/images/page_white_width.png",
     "doc/images/plugin.png",
     "doc/images/ruby.png",
+    "doc/images/tag_blue.png",
     "doc/images/tag_green.png",
+    "doc/images/transparent.png",
     "doc/images/wrench.png",
     "doc/images/wrench_orange.png",
     "doc/images/zoom.png",
     "doc/index.html",
     "doc/js/darkfish.js",
     "doc/js/jquery.js",
+    "doc/js/navigation.js",
     "doc/js/quicksearch.js",
+    "doc/js/search.js",
+    "doc/js/search_index.js",
+    "doc/js/searcher.js",
     "doc/js/thickbox-compressed.js",
     "doc/lib/songkickr/artist_rb.html",
     "doc/lib/songkickr/artist_result_rb.html",
@@ -80,6 +104,7 @@ Gem::Specification.new do |s|
     "doc/lib/songkickr/venue_rb.html",
     "doc/lib/songkickr_rb.html",
     "doc/rdoc.css",
+    "doc/table_of_contents.html",
     "lib/songkickr.rb",
     "lib/songkickr/artist.rb",
     "lib/songkickr/artist_result.rb",
@@ -101,6 +126,13 @@ Gem::Specification.new do |s|
     "test/fixtures/locations_bar.json",
     "test/fixtures/no_events.json",
     "test/fixtures/resource_not_found.json",
+    "test/fixtures/vcr/invalid_api_key.yml",
+    "test/fixtures/vcr/invalid_event_id.yml",
+    "test/fixtures/vcr/invalid_user.yml",
+    "test/fixtures/vcr/invalid_venue_id.yml",
+    "test/fixtures/vcr/valid_event.yml",
+    "test/fixtures/vcr/valid_user.yml",
+    "test/fixtures/vcr/valid_venue.yml",
     "test/fixtures/venue_1276231.json",
     "test/helper.rb",
     "test/songkickr/test_artist.rb",
@@ -108,11 +140,12 @@ Gem::Specification.new do |s|
     "test/songkickr/test_location.rb",
     "test/songkickr/test_remote.rb",
     "test/songkickr/test_venue.rb",
-    "test/test_songkickr.rb"
+    "test/test_songkickr.rb",
+    "test/vcr_helper.rb"
   ]
   s.homepage = "http://github.com/jrmehle/songkickr"
   s.require_paths = ["lib"]
-  s.rubygems_version = "1.8.15"
+  s.rubygems_version = "1.8.24"
   s.summary = "A Ruby wrapper around the Songkick API."
 
   if s.respond_to? :specification_version then
@@ -137,6 +170,25 @@ Gem::Specification.new do |s|
       s.add_development_dependency(%q<shoulda>, [">= 2.11.0"])
       s.add_development_dependency(%q<fakeweb>, [">= 1.3.0"])
       s.add_development_dependency(%q<redgreen>, [">= 1.2.2"])
+      s.add_development_dependency(%q<redgreen>, [">= 1.2.2"])
+      s.add_development_dependency(%q<crack>, [">= 0"])
+      s.add_development_dependency(%q<httparty>, [">= 0"])
+      s.add_development_dependency(%q<test-unit>, [">= 0"])
+      s.add_development_dependency(%q<rake>, [">= 0"])
+      s.add_development_dependency(%q<jeweler>, [">= 0"])
+      s.add_development_dependency(%q<vcr>, [">= 0"])
+      s.add_development_dependency(%q<shoulda>, [">= 2.11.0"])
+      s.add_development_dependency(%q<fakeweb>, [">= 1.3.0"])
+      s.add_development_dependency(%q<redgreen>, [">= 1.2.2"])
+      s.add_development_dependency(%q<crack>, [">= 0"])
+      s.add_development_dependency(%q<httparty>, [">= 0"])
+      s.add_development_dependency(%q<test-unit>, [">= 0"])
+      s.add_development_dependency(%q<rake>, [">= 0"])
+      s.add_development_dependency(%q<jeweler>, [">= 0"])
+      s.add_development_dependency(%q<vcr>, [">= 0"])
+      s.add_development_dependency(%q<shoulda>, [">= 2.11.0"])
+      s.add_development_dependency(%q<fakeweb>, [">= 1.3.0"])
+      s.add_development_dependency(%q<redgreen>, [">= 1.2.2"])
     else
       s.add_dependency(%q<songkickr>, [">= 0"])
       s.add_dependency(%q<shoulda>, [">= 2.11.0"])
@@ -153,6 +205,25 @@ Gem::Specification.new do |s|
       s.add_dependency(%q<redgreen>, [">= 1.2.2"])
       s.add_dependency(%q<redgreen>, [">= 1.2.2"])
       s.add_dependency(%q<crack>, [">= 0"])
+      s.add_dependency(%q<shoulda>, [">= 2.11.0"])
+      s.add_dependency(%q<fakeweb>, [">= 1.3.0"])
+      s.add_dependency(%q<redgreen>, [">= 1.2.2"])
+      s.add_dependency(%q<redgreen>, [">= 1.2.2"])
+      s.add_dependency(%q<crack>, [">= 0"])
+      s.add_dependency(%q<httparty>, [">= 0"])
+      s.add_dependency(%q<test-unit>, [">= 0"])
+      s.add_dependency(%q<rake>, [">= 0"])
+      s.add_dependency(%q<jeweler>, [">= 0"])
+      s.add_dependency(%q<vcr>, [">= 0"])
+      s.add_dependency(%q<shoulda>, [">= 2.11.0"])
+      s.add_dependency(%q<fakeweb>, [">= 1.3.0"])
+      s.add_dependency(%q<redgreen>, [">= 1.2.2"])
+      s.add_dependency(%q<crack>, [">= 0"])
+      s.add_dependency(%q<httparty>, [">= 0"])
+      s.add_dependency(%q<test-unit>, [">= 0"])
+      s.add_dependency(%q<rake>, [">= 0"])
+      s.add_dependency(%q<jeweler>, [">= 0"])
+      s.add_dependency(%q<vcr>, [">= 0"])
       s.add_dependency(%q<shoulda>, [">= 2.11.0"])
       s.add_dependency(%q<fakeweb>, [">= 1.3.0"])
       s.add_dependency(%q<redgreen>, [">= 1.2.2"])
@@ -173,6 +244,25 @@ Gem::Specification.new do |s|
     s.add_dependency(%q<redgreen>, [">= 1.2.2"])
     s.add_dependency(%q<redgreen>, [">= 1.2.2"])
     s.add_dependency(%q<crack>, [">= 0"])
+    s.add_dependency(%q<shoulda>, [">= 2.11.0"])
+    s.add_dependency(%q<fakeweb>, [">= 1.3.0"])
+    s.add_dependency(%q<redgreen>, [">= 1.2.2"])
+    s.add_dependency(%q<redgreen>, [">= 1.2.2"])
+    s.add_dependency(%q<crack>, [">= 0"])
+    s.add_dependency(%q<httparty>, [">= 0"])
+    s.add_dependency(%q<test-unit>, [">= 0"])
+    s.add_dependency(%q<rake>, [">= 0"])
+    s.add_dependency(%q<jeweler>, [">= 0"])
+    s.add_dependency(%q<vcr>, [">= 0"])
+    s.add_dependency(%q<shoulda>, [">= 2.11.0"])
+    s.add_dependency(%q<fakeweb>, [">= 1.3.0"])
+    s.add_dependency(%q<redgreen>, [">= 1.2.2"])
+    s.add_dependency(%q<crack>, [">= 0"])
+    s.add_dependency(%q<httparty>, [">= 0"])
+    s.add_dependency(%q<test-unit>, [">= 0"])
+    s.add_dependency(%q<rake>, [">= 0"])
+    s.add_dependency(%q<jeweler>, [">= 0"])
+    s.add_dependency(%q<vcr>, [">= 0"])
     s.add_dependency(%q<shoulda>, [">= 2.11.0"])
     s.add_dependency(%q<fakeweb>, [">= 1.3.0"])
     s.add_dependency(%q<redgreen>, [">= 1.2.2"])

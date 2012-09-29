@@ -4,7 +4,6 @@ source "http://rubygems.org"
 gemspec
 
 group :development, :test do
-  gem 'redgreen', '>= 1.2.2'
   gem 'crack'
   gem 'httparty'
   gem 'test-unit'

@@ -2,7 +2,7 @@ require 'rubygems'
 require 'test/unit'
 require 'shoulda'
 require 'fakeweb'
-require 'redgreen'
+#require 'redgreen'
 require 'crack'
 
 FakeWeb.allow_net_connect = false
