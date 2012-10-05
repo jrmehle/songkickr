@@ -69,6 +69,18 @@ module Songkickr
       Songkickr::EventResult.new result
     end
 
+    # === Artist API
+    # Undocumented, but it works fine
+    #
+    # Returns an artist object
+    #
+    # === Parameters
+    #  * +artist_id+ - Songkick artist_id, use artist_search to get it
+    def artist(artist_id)
+      result = get("/artists/#{artist_id}.json")
+      Songkickr::Artist.new result["resultsPage"]["results"]["artist"]
+    end
+
     # ==== Artist Search API
     # Returns Artist objects.
     #
