@@ -1,0 +1,33 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.songkick.com/api/3.0/artists/123123123123123123123123.json?apikey=hFYxiInE4DBpH5KL
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      date:
+      - Fri, 05 Oct 2012 18:31:13 GMT
+      server:
+      - thin 1.2.4 codename Flaming Astroboy
+      content-type:
+      - application/json
+      vary:
+      - Accept-Encoding
+      connection:
+      - close
+      transfer-encoding:
+      - chunked
+    body:
+      encoding: US-ASCII
+      string: ! '{"resultsPage":{"status":"error","error":{"message":"Resource not
+        found"}}}'
+    http_version: '1.1'
+  recorded_at: Fri, 05 Oct 2012 18:31:13 GMT
+recorded_with: VCR 2.2.4

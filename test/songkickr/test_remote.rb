@@ -15,6 +15,14 @@ class TestRemote < Test::Unit::TestCase
       @remote = Songkickr::Remote.new api_key
     end
 
+    should "raise a ResourceNotFound exception when search a songkick artist id doesn't exist" do
+      VCR.use_cassette('invalid_artist_id') do
+        assert_raise ResourceNotFound do
+          @remote.artist(123123123123123123123123)
+        end
+      end
+    end
+
     should "raise a ResourceNotFound exception when search a songkick event id doesn't exist" do
       VCR.use_cassette('invalid_event_id') do
         assert_raise ResourceNotFound do
@@ -64,6 +72,13 @@ class TestRemote < Test::Unit::TestCase
   context "Given a valid resource" do
     setup do
       @remote = Songkickr::Remote.new api_key
+    end
+
+    should "return the correct artist for an existing artist id " do
+      VCR.use_cassette('valid_artist') do
+        result = @remote.artist(253846)
+        assert_equal 253846, result.id
+      end      
     end
 
     should "return the correct event for an existing event id " do
