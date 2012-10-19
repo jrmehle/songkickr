@@ -1,0 +1,36 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.songkick.com/api/3.0/artists/253846.json?apikey=hFYxiInE4DBpH5KL
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Fri, 05 Oct 2012 18:25:50 GMT
+      server:
+      - thin 1.2.4 codename Flaming Astroboy
+      content-type:
+      - application/json
+      expires:
+      - Fri, 05 Oct 2012 19:25:50 GMT
+      cache-control:
+      - private, max-age=3600
+      vary:
+      - Accept-Encoding
+      connection:
+      - close
+      transfer-encoding:
+      - chunked
+    body:
+      encoding: US-ASCII
+      string: ! '{"resultsPage":{"results":{"artist":{"uri":"http:\/\/www.songkick.com\/artists\/253846-radiohead?utm_source=4791&utm_medium=partner","displayName":"Radiohead","id":253846,"onTourUntil":"2012-11-17","identifier":[{"href":"http:\/\/api.songkick.com\/api\/3.0\/artists\/mbid:a74b1b7f-71a5-4011-9441-d0b5e4122711.json","eventsHref":"http:\/\/api.songkick.com\/api\/3.0\/artists\/mbid:a74b1b7f-71a5-4011-9441-d0b5e4122711\/calendar.json","mbid":"a74b1b7f-71a5-4011-9441-d0b5e4122711","setlistsHref":"http:\/\/api.songkick.com\/api\/3.0\/artists\/mbid:a74b1b7f-71a5-4011-9441-d0b5e4122711\/setlists.json"}]}},"status":"ok"}}'
+    http_version: '1.1'
+  recorded_at: Fri, 05 Oct 2012 18:25:50 GMT
+recorded_with: VCR 2.2.4
