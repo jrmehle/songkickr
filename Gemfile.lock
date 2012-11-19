@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    songkickr (0.2.2)
+    songkickr (0.3.1)
       songkickr
 
 GEM

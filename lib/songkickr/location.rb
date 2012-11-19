@@ -38,7 +38,7 @@ module Songkickr
         @lng  = city_hash["lng"]
       end
       
-      @metro_area = location_hash['metro_area']
+      @metro_area = location_hash['metroArea']
     end
   end
 end
