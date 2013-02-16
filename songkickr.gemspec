@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = "songkickr"
-  s.version = "0.3.1"
+  s.version = "0.3.2"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Jared Mehle"]
-  s.date = "2012-10-19"
+  s.date = "2013-02-16"
   s.description = "A Ruby wrapper around the Songkick API. Visit www.songkick.com/developer for documentation on the Songkick API. "
   s.email = "jrmehle@gmail.com"
   s.executables = ["autospec", "convert_to_should_syntax", "guard", "htmldiff", "httparty", "jeweler", "ldiff", "rake", "rake2thor", "rg", "ri", "rspec", "thor"]
@@ -147,7 +147,7 @@ Gem::Specification.new do |s|
   ]
   s.homepage = "http://github.com/jrmehle/songkickr"
   s.require_paths = ["lib"]
-  s.rubygems_version = "1.8.24"
+  s.rubygems_version = "1.8.25"
   s.summary = "A Ruby wrapper around the Songkick API."
 
   if s.respond_to? :specification_version then
@@ -172,6 +172,15 @@ Gem::Specification.new do |s|
       s.add_development_dependency(%q<shoulda>, [">= 2.11.0"])
       s.add_development_dependency(%q<fakeweb>, [">= 1.3.0"])
       s.add_development_dependency(%q<redgreen>, [">= 1.2.2"])
+      s.add_development_dependency(%q<redgreen>, [">= 1.2.2"])
+      s.add_development_dependency(%q<crack>, [">= 0"])
+      s.add_development_dependency(%q<httparty>, [">= 0"])
+      s.add_development_dependency(%q<test-unit>, [">= 0"])
+      s.add_development_dependency(%q<rake>, [">= 0"])
+      s.add_development_dependency(%q<jeweler>, [">= 0"])
+      s.add_development_dependency(%q<vcr>, [">= 0"])
+      s.add_development_dependency(%q<shoulda>, [">= 2.11.0"])
+      s.add_development_dependency(%q<fakeweb>, [">= 1.3.0"])
       s.add_development_dependency(%q<redgreen>, [">= 1.2.2"])
       s.add_development_dependency(%q<crack>, [">= 0"])
       s.add_development_dependency(%q<httparty>, [">= 0"])
@@ -247,6 +256,15 @@ Gem::Specification.new do |s|
       s.add_dependency(%q<shoulda>, [">= 2.11.0"])
       s.add_dependency(%q<fakeweb>, [">= 1.3.0"])
       s.add_dependency(%q<redgreen>, [">= 1.2.2"])
+      s.add_dependency(%q<crack>, [">= 0"])
+      s.add_dependency(%q<httparty>, [">= 0"])
+      s.add_dependency(%q<test-unit>, [">= 0"])
+      s.add_dependency(%q<rake>, [">= 0"])
+      s.add_dependency(%q<jeweler>, [">= 0"])
+      s.add_dependency(%q<vcr>, [">= 0"])
+      s.add_dependency(%q<shoulda>, [">= 2.11.0"])
+      s.add_dependency(%q<fakeweb>, [">= 1.3.0"])
+      s.add_dependency(%q<redgreen>, [">= 1.2.2"])
     end
   else
     s.add_dependency(%q<songkickr>, [">= 0"])
@@ -267,6 +285,15 @@ Gem::Specification.new do |s|
     s.add_dependency(%q<shoulda>, [">= 2.11.0"])
     s.add_dependency(%q<fakeweb>, [">= 1.3.0"])
     s.add_dependency(%q<redgreen>, [">= 1.2.2"])
+    s.add_dependency(%q<redgreen>, [">= 1.2.2"])
+    s.add_dependency(%q<crack>, [">= 0"])
+    s.add_dependency(%q<httparty>, [">= 0"])
+    s.add_dependency(%q<test-unit>, [">= 0"])
+    s.add_dependency(%q<rake>, [">= 0"])
+    s.add_dependency(%q<jeweler>, [">= 0"])
+    s.add_dependency(%q<vcr>, [">= 0"])
+    s.add_dependency(%q<shoulda>, [">= 2.11.0"])
+    s.add_dependency(%q<fakeweb>, [">= 1.3.0"])
     s.add_dependency(%q<redgreen>, [">= 1.2.2"])
     s.add_dependency(%q<crack>, [">= 0"])
     s.add_dependency(%q<httparty>, [">= 0"])

@@ -42,7 +42,7 @@ Copyright (c) 2010-2011 Jared Mehle. See LICENSE for details.
 
 == Thanks
 
-Thanks to Akshay Dodeja and Tomasz Stachewicz for submitting code and pull requests.
+Thanks to Akshay Dodeja, Tomasz Stachewicz, and Dave Knapik for submitting code and pull requests.
 
 A special thank you to Jon Nunemaker for the httparty which is used extensively within this
 gem and for the twitter gem as inspiration.
