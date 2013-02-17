@@ -2,6 +2,7 @@ require 'rubygems'
 gem 'httparty'
 require 'httparty'
 
+require "songkickr/version"
 dir = File.dirname(__FILE__)
 require dir + '/songkickr/performance'
 require dir + '/songkickr/artist'
@@ -39,9 +40,6 @@ class ResourceNotFound < APIError;
     "Resource not found"
   end
 end
-
-
-
 
 module Songkickr
   # Returns the Songkick API key
