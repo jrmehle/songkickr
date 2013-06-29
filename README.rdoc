@@ -38,11 +38,11 @@ Then call events, users_events(username), or concert_setlists(event_id)
 
 == Copyright
 
-Copyright (c) 2010-2011 Jared Mehle. See LICENSE for details.
+Copyright (c) 2010-2013 Jared Mehle. See LICENSE for details.
 
-== Thanks
+== Contributors
 
-Thanks to Akshay Dodeja, Tomasz Stachewicz, and Dave Knapik for submitting code and pull requests.
+Thanks to Andrew Chen, Akshay Dodeja, Tomasz Stachewicz, and Dave Knapik for submitting code and pull requests.
 
 A special thank you to Jon Nunemaker for the httparty which is used extensively within this
 gem and for the twitter gem as inspiration.
