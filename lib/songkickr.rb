@@ -1,21 +1,17 @@
-require 'rubygems'
-gem 'httparty'
 require 'httparty'
 
-require "songkickr/version"
-dir = File.dirname(__FILE__)
-require dir + '/songkickr/performance'
-require dir + '/songkickr/artist'
-require dir + '/songkickr/location'
-require dir + '/songkickr/location_result'
-require dir + '/songkickr/venue'
-require dir + '/songkickr/event'
-require dir + '/songkickr/setlist_item'
-require dir + '/songkickr/setlist'
-require dir + '/songkickr/event_result'
-require dir + '/songkickr/concert_setlist_result'
-require dir + '/songkickr/remote'
-require dir + '/songkickr/artist_result'
+require 'songkickr/performance'
+require 'songkickr/artist'
+require 'songkickr/location'
+require 'songkickr/location_result'
+require 'songkickr/venue'
+require 'songkickr/event'
+require 'songkickr/setlist_item'
+require 'songkickr/setlist'
+require 'songkickr/event_result'
+require 'songkickr/concert_setlist_result'
+require 'songkickr/remote'
+require 'songkickr/artist_result'
 
 class APIKeyNotSet < StandardError;
   # Warns of missing API key
@@ -61,7 +57,7 @@ module Songkickr
   # Set the API key. In the event you need to set the API key after initializing the the remote.
   # === Parameters
   #
-  # * +api_key+ - A developer key from Songkick. Get an API key for your app from http://developer.songkick.com/
+  # * +api_key+ - A developer key from Songkick. Get an API key for your app from http://www.songkick.com/developer/
   def self.api_key=(api_key)
     @api_key = api_key
   end

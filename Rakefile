@@ -1,5 +1,4 @@
-require "rubygems"
-require "rake"
+require 'rake'
 require "bundler/gem_tasks"
 
 require 'rake/testtask'
@@ -13,7 +12,7 @@ task :default => :test
 
 require 'rdoc/task'
 Rake::RDocTask.new do |rdoc|
-  version = File.exist?('VERSION') ? File.read('VERSION') : ""
+  version = Songkickr::VERSION ? Songkickr::VERSION : ""
 
   rdoc.rdoc_dir = 'rdoc'
   rdoc.title = "songkickr #{version}"

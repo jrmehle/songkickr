@@ -2,6 +2,7 @@ module Songkickr
   # Create an instance of the remote class to interact with the Songkick API.
   class Remote
     include HTTParty
+    debug_output $stderr
     base_uri 'api.songkick.com/api/3.0'
     format :json
 
@@ -64,8 +65,8 @@ module Songkickr
     # * +max_date+ - Most recent date for which you want to look for events
     # * +per_page+ - Number of items on a page
     # * +page+ - Number of page
-    def gigography(artist_id, query= {})
-      result = get("/artists/#{artist_id}/gigography.json",:query=>query)
+    def gigography(artist_id, query = {})
+      result = self.class.get("/artists/#{artist_id}/gigography.json", :query => query)
       Songkickr::EventResult.new result
     end
 
@@ -91,8 +92,8 @@ module Songkickr
     #
     # ==== Query Parameters
     # * +artist_name+ - Name of an artist. <em>Ex. 'Lady Gaga', 'Slayer', 'Atmosphere'</em>
-    def artist_search(query={})
-      result = get("/search/artists.json", :query => query)
+    def artist_search(query = {})
+      result = self.class.get("/search/artists.json", :query => query)
       Songkickr::ArtistResult.new result
     end
 
