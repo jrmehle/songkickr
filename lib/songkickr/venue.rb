@@ -9,7 +9,7 @@ module Songkickr
       @id           = venue_hash["id"]
       @lat          = venue_hash["lat"]
       @lng          = venue_hash["lng"]
-      @metro_area   = Songkickr::MetroArea.new venue_hash["metroArea"]
+      @metro_area   = Songkickr::MetroArea.new venue_hash["metroArea"] if venue_hash.include?("metroArea")
       @phone        = venue_hash["phone"]
       @street       = venue_hash["street"]
       @uri          = venue_hash["uri"]

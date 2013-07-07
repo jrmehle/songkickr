@@ -13,7 +13,7 @@ http_interactions:
       message: OK
     headers:
       date:
-      - Sat, 29 Jun 2013 03:11:49 GMT
+      - Sun, 07 Jul 2013 22:05:16 GMT
       status:
       - 200 OK
       content-type:
@@ -21,7 +21,7 @@ http_interactions:
       cache-control:
       - private, max-age=3600
       expires:
-      - Sat, 29 Jun 2013 04:11:49 GMT
+      - Sun, 07 Jul 2013 23:05:16 GMT
       vary:
       - Accept-Encoding
       connection:
@@ -32,5 +32,5 @@ http_interactions:
       encoding: US-ASCII
       string: ! '{"resultsPage":{"status":"ok","results":{"artist":{"uri":"http://www.songkick.com/artists/253846-radiohead?utm_source=4791&utm_medium=partner","displayName":"Radiohead","onTourUntil":null,"identifier":[{"mbid":"a74b1b7f-71a5-4011-9441-d0b5e4122711","href":"http://api.songkick.com/api/3.0/artists/mbid:a74b1b7f-71a5-4011-9441-d0b5e4122711.json","eventsHref":"http://api.songkick.com/api/3.0/artists/mbid:a74b1b7f-71a5-4011-9441-d0b5e4122711/calendar.json","setlistsHref":"http://api.songkick.com/api/3.0/artists/mbid:a74b1b7f-71a5-4011-9441-d0b5e4122711/setlists.json"}],"id":253846}}}}'
     http_version: '1.1'
-  recorded_at: Sat, 29 Jun 2013 03:11:50 GMT
+  recorded_at: Sun, 07 Jul 2013 22:05:18 GMT
 recorded_with: VCR 2.5.0

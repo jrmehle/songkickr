@@ -13,7 +13,7 @@ http_interactions:
       message: OK
     headers:
       date:
-      - Sat, 29 Jun 2013 03:11:52 GMT
+      - Sun, 07 Jul 2013 22:05:18 GMT
       status:
       - 200 OK
       content-type:
@@ -21,7 +21,7 @@ http_interactions:
       cache-control:
       - private, max-age=3600
       expires:
-      - Sat, 29 Jun 2013 04:11:52 GMT
+      - Sun, 07 Jul 2013 23:05:18 GMT
       vary:
       - Accept-Encoding
       connection:
@@ -49,5 +49,5 @@ http_interactions:
         by an adult.","capacity":4921,"city":{"displayName":"London","uri":"http://www.songkick.com/metro_areas/24426-uk-london?utm_source=4791&utm_medium=partner","id":24426,"country":{"displayName":"UK"}},"lat":51.4651204,"website":"http://www.o2academybrixton.co.uk/","uri":"http://www.songkick.com/venues/17522-o2-academy-brixton?utm_source=4791&utm_medium=partner","lng":-0.1148897,"street":"211
         Stockwell Road","id":17522,"phone":"020 7771 3000"}}}}'
     http_version: '1.1'
-  recorded_at: Sat, 29 Jun 2013 03:11:53 GMT
+  recorded_at: Sun, 07 Jul 2013 22:05:20 GMT
 recorded_with: VCR 2.5.0

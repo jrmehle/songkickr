@@ -12,6 +12,5 @@ class TestVenue < Test::Unit::TestCase
       assert_equal 38.558191, @event.lat
       assert_equal -122.584747, @event.lng
     end
-
   end
 end
