@@ -19,8 +19,8 @@ or if your environment requires
 
 Then call events, users_events(username), or concert_setlists(event_id)
 
-    results = remote.events(:query => 'Iron Maiden')
-    results = remote.events(:query => 'As I Lay Dying')
+    results = remote.events('Iron Maiden')
+    results = remote.events('As I Lay Dying')
 
     results = remote.users_events('jrmehle')
 

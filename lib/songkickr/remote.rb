@@ -41,8 +41,7 @@ module Songkickr
     # * +max_date+ - Most recent date for which you want to look for events
     # * +location+ - See the Songkick website for instructions on how to use the location parameter http://www.songkick.com/developer/location-search
     def events(query = {})
-      path = extract_path_from_query(query)
-      result = get("#{path}/events.json", :query => query)
+      result = get("/events.json", :query => { :query => query })
       Songkickr::EventResult.new result
     end
 
