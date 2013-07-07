@@ -78,7 +78,7 @@ class TestRemote < Test::Unit::TestCase
       VCR.use_cassette('valid_artist') do
         result = @remote.artist(253846)
         assert_equal 253846, result.id
-      end      
+      end
     end
 
     should "return the correct event for an existing event id " do
@@ -103,12 +103,16 @@ class TestRemote < Test::Unit::TestCase
       end
     end
 
-
+    should "return the correct similar artists for artist" do
+      VCR.use_cassette('similar_artists') do
+        result = @remote.similar_artists(521019)
+        assert_equal "Godsmack", result.results.first.display_name
+      end
+    end
   end
 
 
   def api_key
     'hFYxiInE4DBpH5KL'
   end
-
 end
