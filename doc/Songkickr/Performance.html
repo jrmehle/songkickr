@@ -1,143 +1,115 @@
 <!DOCTYPE html>
+<!--
 
-<html>
+  Fivefish RDoc Generator
+  $Id$
+
+  Authors:
+  - Michael Granger <ged@FaerieMUD.org>
+
+ -->
+<html lang="en">
 <head>
-<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+	<title>RDoc Documentation</title>
 
-<title>class Songkickr::Performance - RDoc Documentation</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link type="text/css" media="screen" href="../rdoc.css" rel="stylesheet">
+	<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+	<!--[if lt IE 9]>
+		<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
 
-<script type="text/javascript">
-  var rdoc_rel_prefix = "../";
-</script>
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
 
-<script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
-<script type="text/javascript" charset="utf-8" src="../js/navigation.js"></script>
-<script type="text/javascript" charset="utf-8" src="../js/search_index.js"></script>
-<script type="text/javascript" charset="utf-8" src="../js/search.js"></script>
-<script type="text/javascript" charset="utf-8" src="../js/searcher.js"></script>
-<script type="text/javascript" charset="utf-8" src="../js/darkfish.js"></script>
+	<link href=".." rel="prefix" />
 
+	<link href="../css/fivefish.min.css" rel="stylesheet" />
 
-<body id="top" class="class">
-<nav id="metadata">
-  <nav id="home-section" class="section">
-  <h3 class="section-header">
-    <a href="../index.html">Home</a>
-    <a href="../table_of_contents.html#classes">Classes</a>
-    <a href="../table_of_contents.html#methods">Methods</a>
-  </h3>
-</nav>
+	<script src="../js/jquery-1.7.1.min.js" type="text/javascript"
+		defer="defer" charset="utf-8"></script>
+	<script src="../js/bootstrap.min.js" type="text/javascript"
+		defer="defer" charset="utf-8"></script>
+	<script src="../js/searchindex.js" type="text/javascript"
+		defer="defer" charset="utf-8"></script>
+	<script src="../js/fivefish.min.js" type="text/javascript"
+		defer="defer" charset="utf-8" onload="initFivefish()"></script>
+</head>
 
+<body class="class-page">
 
-  <nav id="search-section" class="section project-section" class="initially-hidden">
-  <form action="#" method="get" accept-charset="utf-8">
-    <h3 class="section-header">
-      <input type="text" name="search" placeholder="Search" id="search-field"
-             title="Type to search, Up and Down to navigate, Enter to load">
-    </h3>
-  </form>
+	<nav class="navbar navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container">
+				<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</a>
 
-  <ul id="search-results" class="initially-hidden"></ul>
-</nav>
+				<a class="brand"
+					href="../index.html">RDoc Documentation</a>
 
+				<div class="nav-collapse">
+					<ul class="nav">
+						<li>
+							<a href="#"
+								class="dropdown-toggle"
+								data-dropdown="#class-dropdown">
+								Classes
+								<b class="caret"></b>
+							</a>
+						</li>
+						<li>
+							<a href="#"
+								class="dropdown-toggle"
+								data-dropdown="#file-dropdown">
+								Files
+								<b class="caret"></b>
+							</a>
+						</li>
+					</ul>
+				</div><!--/.nav-collapse -->
+				<span class="pull-right">
+					<form class="navbar-search">
+						<input type="hidden" id="navbar-search-target" value="" />
+						<input type="text" class="search-query" value=""
+							placeholder="Method, Class, or Filename" />
+					</form>
+				</span>
+			</div>
+		</div>
+	</nav>
 
-  <div id="file-metadata">
-    <nav id="file-list-section" class="section">
-  <h3 class="section-header">Defined In</h3>
-  <ul>
-    <li>lib/songkickr/performance.rb
-  </ul>
-</nav>
+	<div class="container">
+		
+		<header class="hero-unit">
+			<hgroup>
+								  				<h2 class="namespace">Songkickr::</h2>
+				  												<h1 class="class"
+					rel="popover"
+					data-original-title="In files"
+					data-content="lib/songkickr/performance.rb"
+					>Performance</h1>
+				</p>
+							</hgroup>
+			<span class="label">class</span>
+		</header>
 
-    
-  </div>
+		<section class="module-relations">
+			<dl>
+								<dt>Superclass</dt>
+								<dd class="superclass">Object</dd>
+								
+				
+							</dl>
+		</section>
 
-  <div id="class-metadata">
-    
-    <nav id="parent-class-section" class="section">
-  <h3 class="section-header">Parent</h3>
-  
-  <p class="link">Object
-  
-</nav>
-
-    
-    <!-- Method Quickref -->
-<nav id="method-list-section" class="section">
-  <h3 class="section-header">Methods</h3>
-
-  <ul class="link-list">
-    
-    <li><a href="#method-c-new">::new</a>
-    
-  </ul>
-</nav>
-
-  </div>
-
-  <div id="project-metadata">
-    <nav id="fileindex-section" class="section project-section">
-  <h3 class="section-header">Pages</h3>
-
-  <ul>
-  
-    <li class="file"><a href="../LICENSE.html">LICENSE</a>
-  
-    <li class="file"><a href="../README_rdoc.html">README</a>
-  
-  </ul>
-</nav>
-
-    <nav id="classindex-section" class="section project-section">
-  <h3 class="section-header">Class and Module Index</h3>
-
-  <ul class="link-list">
-  
-    <li><a href="../Songkickr.html">Songkickr</a>
-  
-    <li><a href="../Songkickr/Artist.html">Songkickr::Artist</a>
-  
-    <li><a href="../Songkickr/ArtistResult.html">Songkickr::ArtistResult</a>
-  
-    <li><a href="../Songkickr/ConcertSetlistResult.html">Songkickr::ConcertSetlistResult</a>
-  
-    <li><a href="../Songkickr/Event.html">Songkickr::Event</a>
-  
-    <li><a href="../Songkickr/EventResult.html">Songkickr::EventResult</a>
-  
-    <li><a href="../Songkickr/Location.html">Songkickr::Location</a>
-  
-    <li><a href="../Songkickr/LocationResult.html">Songkickr::LocationResult</a>
-  
-    <li><a href="../Songkickr/Performance.html">Songkickr::Performance</a>
-  
-    <li><a href="../Songkickr/Remote.html">Songkickr::Remote</a>
-  
-    <li><a href="../Songkickr/Setlist.html">Songkickr::Setlist</a>
-  
-    <li><a href="../Songkickr/SetlistItem.html">Songkickr::SetlistItem</a>
-  
-    <li><a href="../Songkickr/Venue.html">Songkickr::Venue</a>
-  
-    <li><a href="../APIError.html">APIError</a>
-  
-    <li><a href="../APIKeyNotSet.html">APIKeyNotSet</a>
-  
-    <li><a href="../ResourceNotFound.html">ResourceNotFound</a>
-  
-  </ul>
-</nav>
-
-  </div>
-</nav>
-
-<div id="documentation">
-  <h1 class="class">class Songkickr::Performance</h1>
-
-  <div id="description" class="description">
-    
+		<section class="description">
+			
 <p>A single performance by an artist.</p>
 
 <pre>{
@@ -152,144 +124,129 @@
   &quot;id&quot;: 5380281,
   &quot;billing&quot;: &quot;headline&quot;
 }</pre>
+		</section>
 
-  </div><!-- description -->
+				<section id="5Buntitled-5D" class="documentation-section">
+			
+		    
+			
+						<!-- Attributes -->
+			<section class="attributes-list">
+				<header>
+					<h3>Attributes</h3>
+				</header>
+				<dl>
+									<dt id="attribute-i-artist"><i class="icon-generic"></i>artist<span
+						class="attribute-access-type">[RW]</span></dt>
+										<dd class="description"></dd>
+														<dt id="attribute-i-billing"><i class="icon-generic"></i>billing<span
+						class="attribute-access-type">[RW]</span></dt>
+										<dd class="description"></dd>
+														<dt id="attribute-i-billing_index"><i class="icon-generic"></i>billing_index<span
+						class="attribute-access-type">[RW]</span></dt>
+										<dd class="description"></dd>
+														<dt id="attribute-i-display_name"><i class="icon-generic"></i>display_name<span
+						class="attribute-access-type">[RW]</span></dt>
+										<dd class="description"></dd>
+														<dt id="attribute-i-id"><i class="icon-generic"></i>id<span
+						class="attribute-access-type">[RW]</span></dt>
+										<dd class="description"></dd>
+													</dl>
+			</section>
+			
+			<!-- Methods -->
+						
+						<section class="public-methods class-methods methods">
+				<header>
+					<h3>Public Class Methods</h3>
+				</header>
 
-  
-  
-  
-  <section id="5Buntitled-5D" class="documentation-section">
-    
+								<a name="method-c-new">anchor</a>
+				<div id="method-c-new-doc" class="method">
 
-    
+					<header>
+											<i class="icon-generic"></i>
+						<span class="method-name">new</span><span 
+							class="method-args">(performance_hash)</span>
+										</header>
 
-    
-
-    
-    <!-- Attributes -->
-    <section id="attribute-method-details" class="method-section section">
-      <h3 class="section-header">Attributes</h3>
-
-      
-      <div id="attribute-i-artist" class="method-detail">
-        <div class="method-heading attribute-method-heading">
-          <span class="method-name">artist</span><span
-            class="attribute-access-type">[RW]</span>
-        </div>
-
-        <div class="method-description">
-        
-        
-        
-        </div>
-      </div>
-      
-      <div id="attribute-i-billing" class="method-detail">
-        <div class="method-heading attribute-method-heading">
-          <span class="method-name">billing</span><span
-            class="attribute-access-type">[RW]</span>
-        </div>
-
-        <div class="method-description">
-        
-        
-        
-        </div>
-      </div>
-      
-      <div id="attribute-i-billing_index" class="method-detail">
-        <div class="method-heading attribute-method-heading">
-          <span class="method-name">billing_index</span><span
-            class="attribute-access-type">[RW]</span>
-        </div>
-
-        <div class="method-description">
-        
-        
-        
-        </div>
-      </div>
-      
-      <div id="attribute-i-display_name" class="method-detail">
-        <div class="method-heading attribute-method-heading">
-          <span class="method-name">display_name</span><span
-            class="attribute-access-type">[RW]</span>
-        </div>
-
-        <div class="method-description">
-        
-        
-        
-        </div>
-      </div>
-      
-      <div id="attribute-i-id" class="method-detail">
-        <div class="method-heading attribute-method-heading">
-          <span class="method-name">id</span><span
-            class="attribute-access-type">[RW]</span>
-        </div>
-
-        <div class="method-description">
-        
-        
-        
-        </div>
-      </div>
-      
-    </section><!-- attribute-method-details -->
-    
-
-    <!-- Methods -->
-    
-     <section id="public-class-5Buntitled-5D-method-details" class="method-section section">
-      <h3 class="section-header">Public Class Methods</h3>
-
-    
-      <div id="method-c-new" class="method-detail ">
-        
-        <div class="method-heading">
-          <span class="method-name">new</span><span
-            class="method-args">(performance_hash)</span>
-          <span class="method-click-advice">click to toggle source</span>
-        </div>
-        
-
-        <div class="method-description">
-          
-          <p>Takes a the hash of the performance. Parses out an <a
-href="Artist.html">Artist</a> object for the artist.</p>
-          
-
-          
-          <div class="method-source-code" id="new-source">
-            <pre><span class="ruby-comment"># File lib/songkickr/performance.rb, line 19</span>
+					<div class="method-description">
+											<p>Takes a the hash of the performance. Parses out an <a
+href="Artist.html">Artist</a> object for the artist.</p>					
+											<div class="method-source-code" id="new-source">
+							<pre class="prettyprint linenums"><code 
+								class="language-ruby"><span class="ruby-comment"># File lib/songkickr/performance.rb, line 19</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">performance_hash</span>)
   <span class="ruby-ivar">@artist</span>        = <span class="ruby-constant">Songkickr</span><span class="ruby-operator">::</span><span class="ruby-constant">Artist</span>.<span class="ruby-identifier">new</span> <span class="ruby-identifier">performance_hash</span>[<span class="ruby-string">&quot;artist&quot;</span>]
   <span class="ruby-ivar">@display_name</span>  = <span class="ruby-identifier">performance_hash</span>[<span class="ruby-string">&quot;displayName&quot;</span>]
   <span class="ruby-ivar">@id</span>            = <span class="ruby-identifier">performance_hash</span>[<span class="ruby-string">&quot;id&quot;</span>]
   <span class="ruby-ivar">@billing_index</span> = <span class="ruby-identifier">performance_hash</span>[<span class="ruby-string">'billingIndex'</span>]
   <span class="ruby-ivar">@billing</span>       = <span class="ruby-identifier">performance_hash</span>[<span class="ruby-string">'billing'</span>]
-<span class="ruby-keyword">end</span></pre>
-          </div><!-- new-source -->
-          
-        </div>
+<span class="ruby-keyword">end</span></code></pre>
+						</div>
+										</div>
 
-        
+					
+									</div>
+				
+			</section>
+			
+			
+			
+			
+			
+									
+			
+			
+			
+			
+			
+						
+		</section>
+		
 
-        
-      </div><!-- new-method -->
+		<hr>
 
-    
-    </section><!-- public-class-method-details -->
-  
-  </section><!-- 5Buntitled-5D -->
+		<footer>
+			<div class="container">
+				<span id="rdoc-version">Generated by RDoc 4.0.1</span> using the
+				<a id="generator-version"
+					href="http://deveiate.org/fivefish">Fivefish RDoc 0.1.0</a> generator.
+			</div>
+		</footer>
+	</div> <!-- /container -->
 
-</div><!-- documentation -->
+	<!-- Class dropdown menu -->
+	<div id="class-dropdown" class="dropdown-menu has-scroll">
+	<ul>
+			<li><a href="../Songkickr.html">Songkickr</a></li>
+			<li><a href="../Songkickr/Artist.html">Songkickr::Artist</a></li>
+			<li><a href="../Songkickr/ArtistResult.html">Songkickr::ArtistResult</a></li>
+			<li><a href="../Songkickr/ConcertSetlistResult.html">Songkickr::ConcertSetlistResult</a></li>
+			<li><a href="../Songkickr/Event.html">Songkickr::Event</a></li>
+			<li><a href="../Songkickr/EventResult.html">Songkickr::EventResult</a></li>
+			<li><a href="../Songkickr/Location.html">Songkickr::Location</a></li>
+			<li><a href="../Songkickr/LocationResult.html">Songkickr::LocationResult</a></li>
+			<li><a href="../Songkickr/MetroArea.html">Songkickr::MetroArea</a></li>
+			<li><a href="../Songkickr/Performance.html">Songkickr::Performance</a></li>
+			<li><a href="../Songkickr/Remote.html">Songkickr::Remote</a></li>
+			<li><a href="../Songkickr/Setlist.html">Songkickr::Setlist</a></li>
+			<li><a href="../Songkickr/SetlistItem.html">Songkickr::SetlistItem</a></li>
+			<li><a href="../Songkickr/Venue.html">Songkickr::Venue</a></li>
+			<li><a href="../Songkickr/VenueResult.html">Songkickr::VenueResult</a></li>
+			<li><a href="../APIError.html">APIError</a></li>
+			<li><a href="../APIKeyNotSet.html">APIKeyNotSet</a></li>
+			<li><a href="../ResourceNotFound.html">ResourceNotFound</a></li>
+		</ul>
+	</div>
 
+	<!-- File dropdown menu -->
+	<div id="file-dropdown" class="dropdown-menu has-scroll">
+	<ul>
+			<li><a href="../LICENSE.html">LICENSE</a></li>
+			<li><a href="../README_rdoc.html">README</a></li>
+		</ul>
+	</div>
 
-<footer id="validator-badges">
-  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
-  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.12.
-  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
-</footer>
-
+</body>
+</html>
