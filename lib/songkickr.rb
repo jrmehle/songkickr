@@ -5,6 +5,7 @@ require 'songkickr/artist'
 require 'songkickr/location'
 require 'songkickr/location_result'
 require 'songkickr/venue'
+require 'songkickr/venue_result'
 require 'songkickr/event'
 require 'songkickr/setlist_item'
 require 'songkickr/setlist'
@@ -12,6 +13,7 @@ require 'songkickr/event_result'
 require 'songkickr/concert_setlist_result'
 require 'songkickr/remote'
 require 'songkickr/artist_result'
+require 'songkickr/metro_area'
 
 class APIKeyNotSet < StandardError;
   # Warns of missing API key

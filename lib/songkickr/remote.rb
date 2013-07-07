@@ -98,7 +98,7 @@ module Songkickr
     # ==== Query Parameters
     # * +artist_name+ - Name of an artist. <em>Ex. 'Lady Gaga', 'Slayer', 'Atmosphere'</em>
     def artist_search(query = {})
-      result = self.class.get("/search/artists.json", :query => query)
+      result = self.class.get("/search/artists.json", :query => { :query => query })
       Songkickr::ArtistResult.new result
     end
 
@@ -191,13 +191,28 @@ module Songkickr
     # * +query+ - A hash of query parameters, see below for options.
     #
     # ==== Query Parameters
+    # * +name+ - Metro area or city named 'location_name' string <em>Ex. 'Minneapolis, Nashville, or London'</em>
     # * +location+ - 'geo:{lat,lng}' string <em>Ex. 'geo:{-0.128,51.5078}'</em>
+    # * +ip+ - 'ip:{ip-addr}' string <em>Ex. 'ip:{123.123.123.123}'</em>
+    # * +page+ - Page number
+    # * +per_page+ - Number of results per page, max 50.
     def location_search(query = {})
-      result = get("/search/locations.json", :query => query)
+      result = get("/search/locations.json", :query => { :query => query })
       Songkickr::LocationResult.new result
     end
 
     # ==== Venue Search
+    # https://www.songkick.com/developer/venue-search
+    #
+    # === Parameters
+    #
+    # * +query+ -
+    def venue_search(query)
+      result = get("/search/venues.json", :query => { :query => query })
+      Songkickr::VenueResult.new result
+    end
+
+    # ==== Venue Details
     # http://www.songkick.com/developer/venue-details
     #
     # === Parameters
