@@ -2,19 +2,24 @@ module Songkickr
   # Create an instance of the remote class to interact with the Songkick API.
   class Remote
     include HTTParty
-    debug_output $stderr
+
+    attr_accessor :debug
+    attr_reader :api_key
+
     base_uri 'api.songkick.com/api/3.0'
     format :json
 
-    attr_reader :api_key
-
     # ==== Create a new instance of the remote class to talk to Songkick
     # Get an API key for your app from http://developer.songkick.com/
-    def initialize(api_key = nil)
+    def initialize(api_key = nil, options = {})
       @api_key = api_key
       @api_key ||= Songkickr.api_key
+      @debug = options[:debug] || false
 
       self.class.default_params :apikey => @api_key
+      if @debug
+        self.class.debug_output $stderr
+      end
     end
 
     # ==== Event Search API
