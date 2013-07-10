@@ -4,13 +4,13 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'songkickr/version'
 
 Gem::Specification.new do |gem|
-  gem.name          = "songkickr"
-  gem.version       = Songkickr::VERSION
-  gem.authors       = ["Jared Mehle"]
-  gem.email         = ["jrmehle@gmail.com"]
+  gem.name        = "songkickr"
+  gem.version     = Songkickr::VERSION
+  gem.authors     = ["Jared Mehle"]
+  gem.email       = ["jrmehle@gmail.com"]
   gem.description = "A Ruby wrapper around the Songkick API. Visit www.songkick.com/developer for documentation on the Songkick API. "
-  gem.summary = "A Ruby wrapper around the Songkick API."
-  gem.homepage = "http://github.com/jrmehle/songkickr"
+  gem.summary     = "A Ruby wrapper around the Songkick API."
+  gem.homepage    = "http://github.com/jrmehle/songkickr"
 
   gem.add_development_dependency 'shoulda',   ">= 2.11.0"
   gem.add_development_dependency 'fakeweb',   ">= 1.3.0"

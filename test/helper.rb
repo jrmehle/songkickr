@@ -27,9 +27,3 @@ end
 def fixture_hash(filename)
   Crack::JSON.parse(fixture_file(filename))
 end
-
-def stub_get(url, filename, status = nil)
-  options = {:body => fixture_file(filename)}
-  options.merge!({:status => status}) unless status.nil?
-  FakeWeb.register_uri(:get, songkick_url(url), options)
-end
