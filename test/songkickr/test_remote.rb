@@ -116,6 +116,13 @@ class TestRemote < Test::Unit::TestCase
         assert_equal "Chloe Von Massacre at Target Center (July 14, 2013)", result.results.first.display_name
       end
     end
+
+    should "return the correct setlists for a concert" do
+      VCR.use_cassette('concert_setlists') do
+        result = @remote.concert_setlists(786417)
+        assert_equal "Wilco at Troxy (25 Aug 09)", result.results.first.display_name
+      end
+    end
   end
 
 
