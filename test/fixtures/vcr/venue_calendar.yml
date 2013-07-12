@@ -1,0 +1,97 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.songkick.com/api/3.0/venues/1054/calendar.json?apikey=hFYxiInE4DBpH5KL
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Fri, 12 Jul 2013 04:45:43 GMT
+      status:
+      - 200 OK
+      content-type:
+      - application/json; charset=utf-8
+      cache-control:
+      - private, max-age=3600
+      expires:
+      - Fri, 12 Jul 2013 05:45:43 GMT
+      vary:
+      - Accept-Encoding
+      connection:
+      - close
+      transfer-encoding:
+      - chunked
+    body:
+      encoding: US-ASCII
+      string: ! '{"resultsPage":{"status":"ok","results":{"event":[{"type":"Concert","status":"ok","displayName":"Chloe
+        Von Massacre at Target Center (July 14, 2013)","start":{"time":null,"date":"2013-07-14","datetime":null},"location":{"city":"Minneapolis,
+        MN, US","lat":44.979657,"lng":-93.274889},"uri":"http://www.songkick.com/concerts/17336449-chloe-von-massacre-at-target-center?utm_source=4791&utm_medium=partner","popularity":0.0,"id":17336449,"performance":[{"billingIndex":1,"displayName":"Chloe
+        Von Massacre","billing":"headline","artist":{"identifier":[],"displayName":"Chloe
+        Von Massacre","uri":"http://www.songkick.com/artists/7069239-chloe-von-massacre?utm_source=4791&utm_medium=partner","id":7069239},"id":34308584}],"venue":{"metroArea":{"displayName":"Twin
+        Cities","uri":"http://www.songkick.com/metro_areas/35130-us-twin-cities?utm_source=4791&utm_medium=partner","id":35130,"state":{"displayName":"MN"},"country":{"displayName":"US"}},"displayName":"Target
+        Center","lat":44.979657,"lng":-93.274889,"uri":"http://www.songkick.com/venues/1054-target-center?utm_source=4791&utm_medium=partner","id":1054}},{"type":"Concert","status":"ok","displayName":"One
+        Direction with 5 Seconds of Summer at Target Center (July 18, 2013)","start":{"time":"19:30:00","date":"2013-07-18","datetime":"2013-07-18T19:30:00-0600"},"location":{"city":"Minneapolis,
+        MN, US","lat":44.979657,"lng":-93.274889},"uri":"http://www.songkick.com/concerts/12474588-one-direction-at-target-center?utm_source=4791&utm_medium=partner","popularity":0.220346,"id":12474588,"performance":[{"billingIndex":1,"billing":"headline","displayName":"One
+        Direction","artist":{"identifier":[{"mbid":"1a425bbd-cca4-4b2c-aeb7-71cb176c828a","href":"http://api.songkick.com/api/3.0/artists/mbid:1a425bbd-cca4-4b2c-aeb7-71cb176c828a.json"},{"mbid":"3fedf601-0039-4ba4-af53-7b6d1ff5b69a","href":"http://api.songkick.com/api/3.0/artists/mbid:3fedf601-0039-4ba4-af53-7b6d1ff5b69a.json"}],"displayName":"One
+        Direction","uri":"http://www.songkick.com/artists/3732956-one-direction?utm_source=4791&utm_medium=partner","id":3732956},"id":24303923},{"billingIndex":2,"billing":"support","displayName":"5
+        Seconds of Summer","artist":{"identifier":[],"displayName":"5 Seconds of Summer","uri":"http://www.songkick.com/artists/5642214-5-seconds-of-summer?utm_source=4791&utm_medium=partner","id":5642214},"id":30954474}],"venue":{"displayName":"Target
+        Center","lat":44.979657,"metroArea":{"displayName":"Twin Cities","uri":"http://www.songkick.com/metro_areas/35130-us-twin-cities?utm_source=4791&utm_medium=partner","id":35130,"state":{"displayName":"MN"},"country":{"displayName":"US"}},"lng":-93.274889,"uri":"http://www.songkick.com/venues/1054-target-center?utm_source=4791&utm_medium=partner","id":1054}},{"type":"Concert","status":"ok","displayName":"New
+        Kids On The Block with 98 Degrees and Boyz II Men at Target Center (July 20,
+        2013)","start":{"time":"18:30:00","date":"2013-07-20","datetime":"2013-07-20T18:30:00-0600"},"location":{"city":"Minneapolis,
+        MN, US","lat":44.979657,"lng":-93.274889},"uri":"http://www.songkick.com/concerts/15508004-new-kids-on-the-block-at-target-center?utm_source=4791&utm_medium=partner","popularity":0.10036,"id":15508004,"performance":[{"billingIndex":1,"billing":"headline","displayName":"New
+        Kids On The Block","artist":{"identifier":[{"mbid":"090dafe5-818c-4bba-9ebf-7e3a651a5c43","href":"http://api.songkick.com/api/3.0/artists/mbid:090dafe5-818c-4bba-9ebf-7e3a651a5c43.json"}],"displayName":"New
+        Kids On The Block","uri":"http://www.songkick.com/artists/67506-new-kids-on-the-block?utm_source=4791&utm_medium=partner","id":67506},"id":30507014},{"billingIndex":2,"billing":"support","displayName":"98
+        Degrees","artist":{"identifier":[{"mbid":"177fde26-5a95-46d9-922f-0933940d97e5","href":"http://api.songkick.com/api/3.0/artists/mbid:177fde26-5a95-46d9-922f-0933940d97e5.json"}],"displayName":"98
+        Degrees","uri":"http://www.songkick.com/artists/552829-98-degrees?utm_source=4791&utm_medium=partner","id":552829},"id":30507019},{"billingIndex":3,"billing":"support","displayName":"Boyz
+        II Men","artist":{"identifier":[{"mbid":"b42eca0f-9381-43db-badb-1cba080a7dc2","href":"http://api.songkick.com/api/3.0/artists/mbid:b42eca0f-9381-43db-badb-1cba080a7dc2.json"}],"displayName":"Boyz
+        II Men","uri":"http://www.songkick.com/artists/371884-boyz-ii-men?utm_source=4791&utm_medium=partner","id":371884},"id":30507024}],"venue":{"displayName":"Target
+        Center","lat":44.979657,"metroArea":{"displayName":"Twin Cities","uri":"http://www.songkick.com/metro_areas/35130-us-twin-cities?utm_source=4791&utm_medium=partner","id":35130,"state":{"displayName":"MN"},"country":{"displayName":"US"}},"lng":-93.274889,"uri":"http://www.songkick.com/venues/1054-target-center?utm_source=4791&utm_medium=partner","id":1054}},{"type":"Concert","status":"ok","displayName":"Big
+        Time Rush with Victoria Justice and Big Time Rush Premium Seats at Target
+        Center (August 10, 2013)","start":{"time":"19:00:00","date":"2013-08-10","datetime":"2013-08-10T19:00:00-0600"},"location":{"city":"Minneapolis,
+        MN, US","lat":44.979657,"lng":-93.274889},"uri":"http://www.songkick.com/concerts/16192669-big-time-rush-at-target-center?utm_source=4791&utm_medium=partner","popularity":0.059545,"id":16192669,"performance":[{"billingIndex":1,"displayName":"Big
+        Time Rush","billing":"headline","artist":{"identifier":[{"mbid":"94785e0f-81be-4360-a9e1-a00df5dc8bc6","href":"http://api.songkick.com/api/3.0/artists/mbid:94785e0f-81be-4360-a9e1-a00df5dc8bc6.json"}],"displayName":"Big
+        Time Rush","uri":"http://www.songkick.com/artists/3772471-big-time-rush?utm_source=4791&utm_medium=partner","id":3772471},"id":31942809},{"billingIndex":2,"displayName":"Victoria
+        Justice","billing":"support","artist":{"identifier":[{"mbid":"4ce94c22-acbc-4535-a0e4-b8a8d002887e","href":"http://api.songkick.com/api/3.0/artists/mbid:4ce94c22-acbc-4535-a0e4-b8a8d002887e.json"}],"displayName":"Victoria
+        Justice","uri":"http://www.songkick.com/artists/4575033-victoria-justice?utm_source=4791&utm_medium=partner","id":4575033},"id":31942814},{"billingIndex":3,"displayName":"Big
+        Time Rush Premium Seats","billing":"support","artist":{"identifier":[],"displayName":"Big
+        Time Rush Premium Seats","uri":"http://www.songkick.com/artists/6893624-big-time-rush-premium-seats?utm_source=4791&utm_medium=partner","id":6893624},"id":33240924}],"venue":{"metroArea":{"displayName":"Twin
+        Cities","uri":"http://www.songkick.com/metro_areas/35130-us-twin-cities?utm_source=4791&utm_medium=partner","id":35130,"state":{"displayName":"MN"},"country":{"displayName":"US"}},"displayName":"Target
+        Center","lat":44.979657,"lng":-93.274889,"uri":"http://www.songkick.com/venues/1054-target-center?utm_source=4791&utm_medium=partner","id":1054}},{"venue":{"metroArea":{"displayName":"Twin
+        Cities","uri":"http://www.songkick.com/metro_areas/35130-us-twin-cities?utm_source=4791&utm_medium=partner","id":35130,"state":{"displayName":"MN"},"country":{"displayName":"US"}},"displayName":"Target
+        Center","lat":44.979657,"lng":-93.274889,"uri":"http://www.songkick.com/venues/1054-target-center?utm_source=4791&utm_medium=partner","id":1054},"type":"Concert","status":"ok","displayName":"Eagles
+        at Target Center (September 18, 2013)","start":{"time":null,"datetime":null,"date":"2013-09-18"},"location":{"lat":44.979657,"lng":-93.274889,"city":"Minneapolis,
+        MN, US"},"popularity":0.0,"uri":"http://www.songkick.com/concerts/16679369-eagles-at-target-center?utm_source=4791&utm_medium=partner","id":16679369,"performance":[{"billingIndex":1,"artist":{"displayName":"Eagles","uri":"http://www.songkick.com/artists/556496-eagles?utm_source=4791&utm_medium=partner","id":556496,"identifier":[{"mbid":"f46bd570-5768-462e-b84c-c7c993bbf47e","href":"http://api.songkick.com/api/3.0/artists/mbid:f46bd570-5768-462e-b84c-c7c993bbf47e.json"},{"mbid":"5981f5a8-dbc1-48d3-b3c8-76058feec6b2","href":"http://api.songkick.com/api/3.0/artists/mbid:5981f5a8-dbc1-48d3-b3c8-76058feec6b2.json"},{"mbid":"a4852e21-7f09-470b-b5ae-9740d939d183","href":"http://api.songkick.com/api/3.0/artists/mbid:a4852e21-7f09-470b-b5ae-9740d939d183.json"},{"mbid":"c7fe8416-6a18-41dd-b636-3827503c34ea","href":"http://api.songkick.com/api/3.0/artists/mbid:c7fe8416-6a18-41dd-b636-3827503c34ea.json"}]},"displayName":"Eagles","billing":"headline","id":32960604}]},{"type":"Concert","status":"ok","displayName":"Drake
+        with Drake Miguel and Future at Target Center (October 5, 2013)","start":{"time":"19:00:00","date":"2013-10-05","datetime":"2013-10-05T19:00:00-0600"},"location":{"city":"Minneapolis,
+        MN, US","lat":44.979657,"lng":-93.274889},"uri":"http://www.songkick.com/concerts/17086964-drake-at-target-center?utm_source=4791&utm_medium=partner","popularity":0.0,"id":17086964,"performance":[{"billingIndex":1,"displayName":"Drake","billing":"headline","artist":{"identifier":[{"mbid":"9fff2f8a-21e6-47de-a2b8-7f449929d43f","href":"http://api.songkick.com/api/3.0/artists/mbid:9fff2f8a-21e6-47de-a2b8-7f449929d43f.json"}],"displayName":"Drake","uri":"http://www.songkick.com/artists/556955-drake?utm_source=4791&utm_medium=partner","id":556955},"id":33800524},{"billingIndex":2,"displayName":"Drake
+        Miguel","billing":"support","artist":{"identifier":[],"displayName":"Drake
+        Miguel","uri":"http://www.songkick.com/artists/6989349-drake-miguel?utm_source=4791&utm_medium=partner","id":6989349},"id":33814269},{"billingIndex":3,"displayName":"Future","billing":"support","artist":{"identifier":[{"mbid":"f59267df-61fa-48d8-a8ac-237e74f9c22b","href":"http://api.songkick.com/api/3.0/artists/mbid:f59267df-61fa-48d8-a8ac-237e74f9c22b.json"},{"mbid":"768b4363-8448-4a5b-a5ef-b1f727300a6c","href":"http://api.songkick.com/api/3.0/artists/mbid:768b4363-8448-4a5b-a5ef-b1f727300a6c.json"},{"mbid":"dfcc700c-5a9a-4e24-9f96-d8302aee2962","href":"http://api.songkick.com/api/3.0/artists/mbid:dfcc700c-5a9a-4e24-9f96-d8302aee2962.json"},{"mbid":"9f1195cf-9900-45db-bf9c-21c205672ae0","href":"http://api.songkick.com/api/3.0/artists/mbid:9f1195cf-9900-45db-bf9c-21c205672ae0.json"},{"mbid":"1631fed1-5225-4889-8cb8-9ea2d5b00ad1","href":"http://api.songkick.com/api/3.0/artists/mbid:1631fed1-5225-4889-8cb8-9ea2d5b00ad1.json"},{"mbid":"8ea794cb-ec82-41fc-bc30-a68c833251e8","href":"http://api.songkick.com/api/3.0/artists/mbid:8ea794cb-ec82-41fc-bc30-a68c833251e8.json"}],"displayName":"Future","uri":"http://www.songkick.com/artists/178809-future?utm_source=4791&utm_medium=partner","id":178809},"id":33814274}],"venue":{"metroArea":{"displayName":"Twin
+        Cities","uri":"http://www.songkick.com/metro_areas/35130-us-twin-cities?utm_source=4791&utm_medium=partner","id":35130,"state":{"displayName":"MN"},"country":{"displayName":"US"}},"displayName":"Target
+        Center","lat":44.979657,"lng":-93.274889,"uri":"http://www.songkick.com/venues/1054-target-center?utm_source=4791&utm_medium=partner","id":1054}},{"type":"Concert","status":"ok","displayName":"Josh
+        Groban with Josh Groban Premium Seats at Target Center (October 19, 2013)","start":{"time":"19:00:00","date":"2013-10-19","datetime":"2013-10-19T19:00:00-0600"},"location":{"city":"Minneapolis,
+        MN, US","lat":44.979657,"lng":-93.274889},"uri":"http://www.songkick.com/concerts/16611829-josh-groban-at-target-center?utm_source=4791&utm_medium=partner","popularity":0.066713,"id":16611829,"performance":[{"billingIndex":1,"billing":"headline","displayName":"Josh
+        Groban","artist":{"identifier":[{"mbid":"12be5b16-915f-44bc-978a-8ddfab235b79","href":"http://api.songkick.com/api/3.0/artists/mbid:12be5b16-915f-44bc-978a-8ddfab235b79.json"}],"displayName":"Josh
+        Groban","uri":"http://www.songkick.com/artists/474091-josh-groban?utm_source=4791&utm_medium=partner","id":474091},"id":32820669},{"billingIndex":2,"billing":"support","displayName":"Josh
+        Groban Premium Seats","artist":{"identifier":[],"displayName":"Josh Groban
+        Premium Seats","uri":"http://www.songkick.com/artists/6827779-josh-groban-premium-seats?utm_source=4791&utm_medium=partner","id":6827779},"id":32855344}],"venue":{"displayName":"Target
+        Center","lat":44.979657,"metroArea":{"displayName":"Twin Cities","uri":"http://www.songkick.com/metro_areas/35130-us-twin-cities?utm_source=4791&utm_medium=partner","id":35130,"state":{"displayName":"MN"},"country":{"displayName":"US"}},"lng":-93.274889,"uri":"http://www.songkick.com/venues/1054-target-center?utm_source=4791&utm_medium=partner","id":1054}},{"type":"Concert","status":"ok","displayName":"Pink
+        with P!nk Premium Seats at Target Center (November 2, 2013)","start":{"time":"20:00:00","date":"2013-11-02","datetime":"2013-11-02T20:00:00-0600"},"location":{"city":"Minneapolis,
+        MN, US","lat":44.979657,"lng":-93.274889},"uri":"http://www.songkick.com/concerts/16062059-pink-at-target-center?utm_source=4791&utm_medium=partner","popularity":0.369957,"id":16062059,"performance":[{"billingIndex":1,"displayName":"Pink","billing":"headline","artist":{"identifier":[{"mbid":"ee231388-c32f-4848-9c19-5730a7f049f6","href":"http://api.songkick.com/api/3.0/artists/mbid:ee231388-c32f-4848-9c19-5730a7f049f6.json"},{"mbid":"8d53ba6e-968c-4f72-9571-4a4f3ed4b3f0","href":"http://api.songkick.com/api/3.0/artists/mbid:8d53ba6e-968c-4f72-9571-4a4f3ed4b3f0.json"},{"mbid":"f4d5cc07-3bc9-4836-9b15-88a08359bc63","href":"http://api.songkick.com/api/3.0/artists/mbid:f4d5cc07-3bc9-4836-9b15-88a08359bc63.json"},{"mbid":"fa7e521b-79c6-40f1-ab5f-fcc69827ab66","href":"http://api.songkick.com/api/3.0/artists/mbid:fa7e521b-79c6-40f1-ab5f-fcc69827ab66.json"}],"displayName":"Pink","uri":"http://www.songkick.com/artists/3314881-pink?utm_source=4791&utm_medium=partner","id":3314881},"id":31658189},{"billingIndex":2,"displayName":"P!nk
+        Premium Seats","billing":"support","artist":{"identifier":[],"displayName":"P!nk
+        Premium Seats","uri":"http://www.songkick.com/artists/6684279-pnk-premium-seats?utm_source=4791&utm_medium=partner","id":6684279},"id":33242119}],"venue":{"metroArea":{"displayName":"Twin
+        Cities","uri":"http://www.songkick.com/metro_areas/35130-us-twin-cities?utm_source=4791&utm_medium=partner","id":35130,"state":{"displayName":"MN"},"country":{"displayName":"US"}},"displayName":"Target
+        Center","lat":44.979657,"lng":-93.274889,"uri":"http://www.songkick.com/venues/1054-target-center?utm_source=4791&utm_medium=partner","id":1054}},{"type":"Concert","performance":[{"billingIndex":1,"billing":"headline","artist":{"displayName":"Selena
+        Gomez","uri":"http://www.songkick.com/artists/1059348-selena-gomez?utm_source=4791&utm_medium=partner","id":1059348,"identifier":[{"href":"http://api.songkick.com/api/3.0/artists/mbid:e4bc69e2-a064-4f93-ada1-f7f209cc1cc3.json","mbid":"e4bc69e2-a064-4f93-ada1-f7f209cc1cc3"}]},"displayName":"Selena
+        Gomez","id":32319204}],"venue":{"metroArea":{"displayName":"Twin Cities","uri":"http://www.songkick.com/metro_areas/35130-us-twin-cities?utm_source=4791&utm_medium=partner","id":35130,"state":{"displayName":"MN"},"country":{"displayName":"US"}},"lat":44.979657,"displayName":"Target
+        Center","lng":-93.274889,"uri":"http://www.songkick.com/venues/1054-target-center?utm_source=4791&utm_medium=partner","id":1054},"status":"ok","popularity":0.0,"start":{"time":null,"datetime":null,"date":"2013-11-21"},"displayName":"Selena
+        Gomez at Target Center (November 21, 2013)","location":{"city":"Minneapolis,
+        MN, US","lat":44.979657,"lng":-93.274889},"uri":"http://www.songkick.com/concerts/16370159-selena-gomez-at-target-center?utm_source=4791&utm_medium=partner","id":16370159}]},"perPage":50,"page":1,"totalEntries":9}}'
+    http_version: '1.1'
+  recorded_at: Fri, 12 Jul 2013 04:45:46 GMT
+recorded_with: VCR 2.5.0

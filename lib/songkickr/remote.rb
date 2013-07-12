@@ -231,6 +231,17 @@ module Songkickr
       Songkickr::Venue.new result['resultsPage']['results']['venue']
     end
 
+    # ==== Venue Calendar
+    # https://www.songkick.com/developer/upcoming-events-for-venue
+    #
+    # === Parameters
+    #
+    # * +venue_id+ - Songkick venue ID.
+    def venue_calendar(venue_id)
+      result = get("/venues/#{venue_id}/calendar.json")
+      Songkickr::EventResult.new result
+    end
+
     def get(location, query_params = {})
       result = self.class.get(location, query_params)
       # FIXME: this is shit. should be based on on http response.
@@ -241,14 +252,5 @@ module Songkickr
       end
       result
     end
-
-
-    private
-
-      # Given a query, look for an mbid key and return a path to access it.
-      def extract_path_from_query(query = {})
-        mbid = query.delete :mbid
-        "/artists/mbid:#{mbid}" if mbid
-      end
   end
 end

@@ -109,6 +109,13 @@ class TestRemote < Test::Unit::TestCase
         assert_equal "Godsmack", result.results.first.display_name
       end
     end
+
+    should "return the correct venue calendar" do
+      VCR.use_cassette('venue_calendar') do
+        result = @remote.venue_calendar(1054)
+        assert_equal "Chloe Von Massacre at Target Center (July 14, 2013)", result.results.first.display_name
+      end
+    end
   end
 
 
