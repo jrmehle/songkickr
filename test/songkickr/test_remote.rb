@@ -78,7 +78,7 @@ class TestRemote < Test::Unit::TestCase
       VCR.use_cassette('valid_artist') do
         result = @remote.artist(253846)
         assert_equal 253846, result.id
-      end      
+      end
     end
 
     should "return the correct event for an existing event id " do
@@ -103,7 +103,12 @@ class TestRemote < Test::Unit::TestCase
       end
     end
 
-
+    should "return the correct tracked artists for an existing user" do
+      VCR.use_cassette('concert_setlists') do
+        result = @remote.concert_setlists(786417)
+        assert_equal "Wilco at Troxy (25 Aug 09)", result.results.first.display_name
+      end
+    end
   end
 
 
