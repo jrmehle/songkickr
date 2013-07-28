@@ -13,7 +13,7 @@ http_interactions:
       message: Forbidden
     headers:
       date:
-      - Sun, 07 Jul 2013 22:05:15 GMT
+      - Sun, 21 Jul 2013 15:47:06 GMT
       status:
       - 403 Forbidden
       content-type:
@@ -29,5 +29,5 @@ http_interactions:
       string: ! '{"resultsPage":{"status":"error","error":{"message":"Invalid or missing
         apikey"}}}'
     http_version: '1.1'
-  recorded_at: Sun, 07 Jul 2013 22:05:18 GMT
+  recorded_at: Sun, 21 Jul 2013 15:47:10 GMT
 recorded_with: VCR 2.5.0

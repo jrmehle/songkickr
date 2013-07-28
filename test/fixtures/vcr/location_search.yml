@@ -1,0 +1,42 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.songkick.com/api/3.0/search/locations.json?apikey=hFYxiInE4DBpH5KL&query=St.%20Paul%2C%20MN
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Sun, 21 Jul 2013 15:57:28 GMT
+      status:
+      - 200 OK
+      content-type:
+      - application/json; charset=utf-8
+      cache-control:
+      - private, max-age=3600
+      expires:
+      - Sun, 21 Jul 2013 16:57:28 GMT
+      vary:
+      - Accept-Encoding
+      connection:
+      - close
+      transfer-encoding:
+      - chunked
+    body:
+      encoding: US-ASCII
+      string: ! '{"resultsPage":{"status":"ok","results":{"location":[{"city":{"lat":44.9444,"lng":-93.0931,"country":{"displayName":"US"},"state":{"displayName":"MN"},"displayName":"St.
+        Paul"},"metroArea":{"lat":44.9801,"lng":-93.2519,"country":{"displayName":"US"},"uri":"http://www.songkick.com/metro_areas/35130-us-twin-cities?utm_source=4791&utm_medium=partner","state":{"displayName":"MN"},"displayName":"Twin
+        Cities","id":35130}},{"city":{"lat":null,"lng":null,"country":{"displayName":"US"},"state":{"displayName":"MN"},"displayName":"South
+        St. Paul"},"metroArea":{"lat":44.9801,"lng":-93.2519,"country":{"displayName":"US"},"uri":"http://www.songkick.com/metro_areas/35130-us-twin-cities?utm_source=4791&utm_medium=partner","state":{"displayName":"MN"},"displayName":"Twin
+        Cities","id":35130}},{"metroArea":{"state":{"displayName":"MN"},"country":{"displayName":"US"},"lat":45.01149,"lng":-92.993538,"displayName":"North
+        Saint Paul","uri":"http://www.songkick.com/metro_areas/88071-us-north-saint-paul?utm_source=4791&utm_medium=partner","id":88071},"city":{"state":{"displayName":"MN"},"country":{"displayName":"US"},"lat":45.01149,"lng":-92.993538,"displayName":"North
+        Saint Paul"}}]},"perPage":50,"page":1,"totalEntries":3}}'
+    http_version: '1.1'
+  recorded_at: Sun, 21 Jul 2013 15:57:31 GMT
+recorded_with: VCR 2.5.0

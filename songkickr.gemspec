@@ -18,6 +18,7 @@ Gem::Specification.new do |gem|
   gem.add_development_dependency 'rake',      "~> 10.0.0"
   gem.add_development_dependency 'test-unit', "~> 2.5.5"
   gem.add_development_dependency 'vcr',       "~> 2.5.0"
+  gem.add_development_dependency 'pry'
 
   gem.add_dependency 'httparty', '~> 0.8.3'
 

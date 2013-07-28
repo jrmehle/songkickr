@@ -8,10 +8,12 @@ module Songkickr
   #   },
   #   country: {
   #     displayName: "US"
-  #   }
+  #   },
+  #   lat: 44.9801,
+  #   lng: -93.2519
   # }
   class MetroArea
-    attr_accessor :display_name, :uri, :id, :state, :country
+    attr_accessor :display_name, :uri, :id, :state, :country, :lat, :lng
 
     def initialize(metro_area_hash)
       @display_name = metro_area_hash["displayName"]
@@ -19,6 +21,8 @@ module Songkickr
       @uri          = metro_area_hash["uri"]
       @state        = metro_area_hash["state"]["displayName"] if metro_area_hash.include?("state") && metro_area_hash["state"].include?("displayName")
       @country      = metro_area_hash["country"]["displayName"] if metro_area_hash.include?("country") && metro_area_hash["country"].include?("displayName")
+      @lat          = metro_area_hash["lat"] if metro_area_hash.include? "lat"
+      @lng          = metro_area_hash["lng"] if metro_area_hash.include? "lng"
     end
   end
 end
