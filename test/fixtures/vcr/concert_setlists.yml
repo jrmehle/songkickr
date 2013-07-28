@@ -13,7 +13,7 @@ http_interactions:
       message: OK
     headers:
       date:
-      - Fri, 12 Jul 2013 04:57:31 GMT
+      - Sun, 21 Jul 2013 15:47:08 GMT
       status:
       - 200 OK
       content-type:
@@ -21,7 +21,7 @@ http_interactions:
       cache-control:
       - private, max-age=3600
       expires:
-      - Fri, 12 Jul 2013 05:57:31 GMT
+      - Sun, 21 Jul 2013 16:47:08 GMT
       vary:
       - Accept-Encoding
       connection:
@@ -30,7 +30,7 @@ http_interactions:
       - chunked
     body:
       encoding: US-ASCII
-      string: ! '{"resultsPage":{"status":"ok","results":{"setlist":[{"performance":{"id":1127982},"artist":{"identifier":[{"mbid":"9e53f84d-ef44-4c16-9677-5fd4d78cbd7d","href":"http://api.songkick.com/api/3.0/artists/mbid:9e53f84d-ef44-4c16-9677-5fd4d78cbd7d.json","eventsHref":"http://api.songkick.com/api/3.0/artists/mbid:9e53f84d-ef44-4c16-9677-5fd4d78cbd7d/calendar.json","setlistsHref":"http://api.songkick.com/api/3.0/artists/mbid:9e53f84d-ef44-4c16-9677-5fd4d78cbd7d/setlists.json"}],"displayName":"Wilco","uri":"http://www.songkick.com/artists/61494-wilco?utm_source=4791&utm_medium=partner","onTourUntil":"2013-10-11","id":61494},"id":15061,"setlistItem":[{"encore":0,"name":"Wilco
+      string: ! '{"resultsPage":{"status":"ok","results":{"setlist":[{"performance":{"id":1127982},"artist":{"identifier":[{"eventsHref":"http://api.songkick.com/api/3.0/artists/mbid:9e53f84d-ef44-4c16-9677-5fd4d78cbd7d/calendar.json","setlistsHref":"http://api.songkick.com/api/3.0/artists/mbid:9e53f84d-ef44-4c16-9677-5fd4d78cbd7d/setlists.json","href":"http://api.songkick.com/api/3.0/artists/mbid:9e53f84d-ef44-4c16-9677-5fd4d78cbd7d.json","mbid":"9e53f84d-ef44-4c16-9677-5fd4d78cbd7d"}],"displayName":"Wilco","onTourUntil":"2013-10-11","uri":"http://www.songkick.com/artists/61494-wilco?utm_source=4791&utm_medium=partner","id":61494},"id":15061,"setlistItem":[{"encore":0,"name":"Wilco
         (The Song)"},{"encore":0,"name":"I Am Trying To Break Your Heart"},{"encore":0,"name":"Company
         In My Back"},{"encore":0,"name":"Bull Black Nova"},{"encore":0,"name":"You
         Are My Face"},{"encore":0,"name":"One Wing"},{"encore":0,"name":"A Shot in
@@ -43,5 +43,5 @@ http_interactions:
         (Kidsmoke) [We Are The Champions]"},{"encore":1,"name":"I''m A Wheel"},{"encore":1,"name":"Hoodoo
         Voodoo"}],"displayName":"Wilco at Troxy (25 Aug 09)"}]}}}'
     http_version: '1.1'
-  recorded_at: Fri, 12 Jul 2013 04:57:33 GMT
-recorded_with: VCR 2.2.4
+  recorded_at: Sun, 21 Jul 2013 15:47:12 GMT
+recorded_with: VCR 2.5.0

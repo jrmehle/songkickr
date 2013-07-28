@@ -1,0 +1,110 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.songkick.com/api/3.0/events.json?apikey=hFYxiInE4DBpH5KL&Counterparts
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      date:
+      - Sun, 21 Jul 2013 15:53:49 GMT
+      status:
+      - 400 Bad Request
+      content-type:
+      - application/json; charset=utf-8
+      vary:
+      - Accept-Encoding
+      connection:
+      - close
+      transfer-encoding:
+      - chunked
+    body:
+      encoding: US-ASCII
+      string: ! '{"resultsPage":{"status":"error","error":{"message":"This resource
+        must be given a filter, such as ''artist_name'' or ''location''."}}}'
+    http_version: '1.1'
+  recorded_at: Sun, 21 Jul 2013 15:53:53 GMT
+- request:
+    method: get
+    uri: http://api.songkick.com/api/3.0/events.json?apikey=hFYxiInE4DBpH5KL&artist_name=Counterparts
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Sun, 21 Jul 2013 15:54:40 GMT
+      status:
+      - 200 OK
+      content-type:
+      - application/json; charset=utf-8
+      cache-control:
+      - private, max-age=3600
+      expires:
+      - Sun, 21 Jul 2013 16:54:40 GMT
+      vary:
+      - Accept-Encoding
+      connection:
+      - close
+      transfer-encoding:
+      - chunked
+    body:
+      encoding: US-ASCII
+      string: ! '{"resultsPage":{"status":"ok","results":{"event":[{"type":"Festival","performance":[{"billingIndex":1,"billing":"headline","artist":{"displayName":"The
+        Ghost Inside","uri":"http://www.songkick.com/artists/595055-ghost-inside?utm_source=4791&utm_medium=partner","id":595055,"identifier":[{"href":"http://api.songkick.com/api/3.0/artists/mbid:6fbd58c3-e9b3-4419-a197-0a0f22baed94.json","mbid":"6fbd58c3-e9b3-4419-a197-0a0f22baed94"}]},"displayName":"The
+        Ghost Inside","id":32282854},{"billingIndex":2,"billing":"headline","artist":{"displayName":"Bane","uri":"http://www.songkick.com/artists/456837-bane?utm_source=4791&utm_medium=partner","id":456837,"identifier":[{"href":"http://api.songkick.com/api/3.0/artists/mbid:adf5ac61-4d7b-4cbc-95ce-ee2dc486f884.json","mbid":"adf5ac61-4d7b-4cbc-95ce-ee2dc486f884"}]},"displayName":"Bane","id":32282849},{"billingIndex":3,"billing":"headline","artist":{"displayName":"Counterparts","uri":"http://www.songkick.com/artists/231185-counterparts?utm_source=4791&utm_medium=partner","id":231185,"identifier":[{"href":"http://api.songkick.com/api/3.0/artists/mbid:4b0dd5e7-c795-42bd-8311-bc9f71fabd0a.json","mbid":"4b0dd5e7-c795-42bd-8311-bc9f71fabd0a"}]},"displayName":"Counterparts","id":32282904},{"billingIndex":4,"billing":"headline","artist":{"displayName":"Hundredth","uri":"http://www.songkick.com/artists/974040-hundredth?utm_source=4791&utm_medium=partner","id":974040,"identifier":[{"href":"http://api.songkick.com/api/3.0/artists/mbid:4e56bf61-306f-4e47-8f2d-931a26ce555d.json","mbid":"4e56bf61-306f-4e47-8f2d-931a26ce555d"},{"href":"http://api.songkick.com/api/3.0/artists/mbid:66b2f925-e924-4cde-b09f-27ec21d29564.json","mbid":"66b2f925-e924-4cde-b09f-27ec21d29564"}]},"displayName":"Hundredth","id":32282939},{"billingIndex":5,"billing":"headline","artist":{"displayName":"Cruel
+        Hand","uri":"http://www.songkick.com/artists/608635-cruel-hand?utm_source=4791&utm_medium=partner","id":608635,"identifier":[{"href":"http://api.songkick.com/api/3.0/artists/mbid:29f50e16-0b84-4d0a-a72f-e4f1bb5ad48f.json","mbid":"29f50e16-0b84-4d0a-a72f-e4f1bb5ad48f"}]},"displayName":"Cruel
+        Hand","id":32282909},{"billingIndex":6,"billing":"headline","artist":{"displayName":"The
+        Nomads","uri":"http://www.songkick.com/artists/476065-nomads?utm_source=4791&utm_medium=partner","id":476065,"identifier":[{"href":"http://api.songkick.com/api/3.0/artists/mbid:23da7d16-4daa-4326-a5fe-b8182ae0c5fa.json","mbid":"23da7d16-4daa-4326-a5fe-b8182ae0c5fa"},{"href":"http://api.songkick.com/api/3.0/artists/mbid:6173fc1e-9335-4c96-9b6a-fea30e3f41df.json","mbid":"6173fc1e-9335-4c96-9b6a-fea30e3f41df"},{"href":"http://api.songkick.com/api/3.0/artists/mbid:6b7b2a04-2faa-4c09-821a-0aa7731a86ff.json","mbid":"6b7b2a04-2faa-4c09-821a-0aa7731a86ff"},{"href":"http://api.songkick.com/api/3.0/artists/mbid:f2a8d597-c4b2-41a8-b040-db1441293a8d.json","mbid":"f2a8d597-c4b2-41a8-b040-db1441293a8d"},{"href":"http://api.songkick.com/api/3.0/artists/mbid:776cbff8-072f-406d-ae58-69e9dcde8201.json","mbid":"776cbff8-072f-406d-ae58-69e9dcde8201"},{"href":"http://api.songkick.com/api/3.0/artists/mbid:48f22a51-fa64-43f4-9eaa-a8c2364c4ae9.json","mbid":"48f22a51-fa64-43f4-9eaa-a8c2364c4ae9"},{"href":"http://api.songkick.com/api/3.0/artists/mbid:dea545d3-0631-4f2e-8e71-8b9bf45037d0.json","mbid":"dea545d3-0631-4f2e-8e71-8b9bf45037d0"},{"href":"http://api.songkick.com/api/3.0/artists/mbid:beeaa03a-65b1-40da-a33f-e92b8ff972d1.json","mbid":"beeaa03a-65b1-40da-a33f-e92b8ff972d1"},{"href":"http://api.songkick.com/api/3.0/artists/mbid:6ad841a3-d2e0-42bc-9580-894cf340655c.json","mbid":"6ad841a3-d2e0-42bc-9580-894cf340655c"},{"href":"http://api.songkick.com/api/3.0/artists/mbid:e0b72319-01f2-4c55-ae84-5398801f107b.json","mbid":"e0b72319-01f2-4c55-ae84-5398801f107b"},{"href":"http://api.songkick.com/api/3.0/artists/mbid:11107e82-ff0b-4a72-b0a0-a3d505f38c81.json","mbid":"11107e82-ff0b-4a72-b0a0-a3d505f38c81"},{"href":"http://api.songkick.com/api/3.0/artists/mbid:a7c497df-e5a6-46db-9c8a-f259ba8290ab.json","mbid":"a7c497df-e5a6-46db-9c8a-f259ba8290ab"},{"href":"http://api.songkick.com/api/3.0/artists/mbid:8725964a-98d5-402e-aed4-05c1be7a6488.json","mbid":"8725964a-98d5-402e-aed4-05c1be7a6488"}]},"displayName":"The
+        Nomads","id":32282889},{"billingIndex":7,"billing":"headline","artist":{"displayName":"Tragedy","uri":"http://www.songkick.com/artists/479109-tragedy?utm_source=4791&utm_medium=partner","id":479109,"identifier":[{"href":"http://api.songkick.com/api/3.0/artists/mbid:633f7917-3872-4088-8371-1a11031e5062.json","mbid":"633f7917-3872-4088-8371-1a11031e5062"},{"href":"http://api.songkick.com/api/3.0/artists/mbid:efa0c09f-b0a1-4f21-abd6-a1f2c3d97ab1.json","mbid":"efa0c09f-b0a1-4f21-abd6-a1f2c3d97ab1"},{"href":"http://api.songkick.com/api/3.0/artists/mbid:0255b7f5-8f9d-4b8d-bfa9-6d3e88385b3f.json","mbid":"0255b7f5-8f9d-4b8d-bfa9-6d3e88385b3f"}]},"displayName":"Tragedy","id":32282844},{"billingIndex":8,"billing":"headline","artist":{"displayName":"Alpha
+        & Omega","uri":"http://www.songkick.com/artists/144387-alpha-and-omega?utm_source=4791&utm_medium=partner","id":144387,"identifier":[{"href":"http://api.songkick.com/api/3.0/artists/mbid:0ac81a92-b119-40be-875d-e091071588f8.json","mbid":"0ac81a92-b119-40be-875d-e091071588f8"}]},"displayName":"Alpha
+        & Omega","id":32282864},{"billingIndex":9,"billing":"headline","artist":{"displayName":"Lionheart","uri":"http://www.songkick.com/artists/209307-lionheart?utm_source=4791&utm_medium=partner","id":209307,"identifier":[{"href":"http://api.songkick.com/api/3.0/artists/mbid:e4ed94f9-f757-419f-b05e-7b524b3ce421.json","mbid":"e4ed94f9-f757-419f-b05e-7b524b3ce421"}]},"displayName":"Lionheart","id":32282949},{"billingIndex":10,"billing":"headline","artist":{"displayName":"Reign
+        Supreme","uri":"http://www.songkick.com/artists/577599-reign-supreme?utm_source=4791&utm_medium=partner","id":577599,"identifier":[{"href":"http://api.songkick.com/api/3.0/artists/mbid:21eadc1d-d67f-4a44-9fd8-6f583a162c9a.json","mbid":"21eadc1d-d67f-4a44-9fd8-6f583a162c9a"}]},"displayName":"Reign
+        Supreme","id":32282959},{"billingIndex":11,"billing":"headline","artist":{"displayName":"Loma
+        Prieta","uri":"http://www.songkick.com/artists/1990148-loma-prieta?utm_source=4791&utm_medium=partner","id":1990148,"identifier":[{"href":"http://api.songkick.com/api/3.0/artists/mbid:d6d553f5-53d4-4d51-9875-1722b7a4c88c.json","mbid":"d6d553f5-53d4-4d51-9875-1722b7a4c88c"}]},"displayName":"Loma
+        Prieta","id":32282944},{"billingIndex":12,"billing":"headline","artist":{"displayName":"Rotting
+        Out","uri":"http://www.songkick.com/artists/802107-rotting-out?utm_source=4791&utm_medium=partner","id":802107,"identifier":[]},"displayName":"Rotting
+        Out","id":32282874},{"billingIndex":13,"billing":"headline","artist":{"displayName":"Cold
+        World","uri":"http://www.songkick.com/artists/198727-cold-world?utm_source=4791&utm_medium=partner","id":198727,"identifier":[{"href":"http://api.songkick.com/api/3.0/artists/mbid:04a0351c-6100-469d-b458-66ede40881f3.json","mbid":"04a0351c-6100-469d-b458-66ede40881f3"}]},"displayName":"Cold
+        World","id":32282899},{"billingIndex":14,"billing":"headline","artist":{"displayName":"Wisdom
+        In Chains","uri":"http://www.songkick.com/artists/339188-wisdom-in-chains?utm_source=4791&utm_medium=partner","id":339188,"identifier":[{"href":"http://api.songkick.com/api/3.0/artists/mbid:e6024269-8a9f-423d-ad53-de7a7b698b89.json","mbid":"e6024269-8a9f-423d-ad53-de7a7b698b89"}]},"displayName":"Wisdom
+        In Chains","id":32282869},{"billingIndex":15,"billing":"headline","artist":{"displayName":"Bitter
+        End","uri":"http://www.songkick.com/artists/110844-bitter-end?utm_source=4791&utm_medium=partner","id":110844,"identifier":[{"href":"http://api.songkick.com/api/3.0/artists/mbid:a29cc48a-fff5-423b-b5e6-dca4c8d879fe.json","mbid":"a29cc48a-fff5-423b-b5e6-dca4c8d879fe"}]},"displayName":"Bitter
+        End","id":32282894},{"billingIndex":16,"billing":"headline","artist":{"displayName":"Xibalba","uri":"http://www.songkick.com/artists/65181-xibalba?utm_source=4791&utm_medium=partner","id":65181,"identifier":[{"href":"http://api.songkick.com/api/3.0/artists/mbid:76caaf47-2b92-48b5-b0d2-d1ad147f3986.json","mbid":"76caaf47-2b92-48b5-b0d2-d1ad147f3986"},{"href":"http://api.songkick.com/api/3.0/artists/mbid:c35d1e7a-7d87-4140-a3fc-26c9dffc0db4.json","mbid":"c35d1e7a-7d87-4140-a3fc-26c9dffc0db4"},{"href":"http://api.songkick.com/api/3.0/artists/mbid:783a1486-d5d0-4658-bc8a-6747bfe09791.json","mbid":"783a1486-d5d0-4658-bc8a-6747bfe09791"}]},"displayName":"Xibalba","id":32282974},{"billingIndex":17,"billing":"headline","artist":{"displayName":"Expire","uri":"http://www.songkick.com/artists/1300477-expire?utm_source=4791&utm_medium=partner","id":1300477,"identifier":[{"href":"http://api.songkick.com/api/3.0/artists/mbid:498e46e2-59c9-4320-8ccf-12c67a29b125.json","mbid":"498e46e2-59c9-4320-8ccf-12c67a29b125"}]},"displayName":"Expire","id":32282919},{"billingIndex":18,"billing":"headline","artist":{"displayName":"Left
+        For Dead","uri":"http://www.songkick.com/artists/466938-left-for-dead?utm_source=4791&utm_medium=partner","id":466938,"identifier":[{"href":"http://api.songkick.com/api/3.0/artists/mbid:2600539b-8481-4583-af66-4394267069e7.json","mbid":"2600539b-8481-4583-af66-4394267069e7"},{"href":"http://api.songkick.com/api/3.0/artists/mbid:cd47905f-3117-4bb2-9291-c258b240ef7d.json","mbid":"cd47905f-3117-4bb2-9291-c258b240ef7d"},{"href":"http://api.songkick.com/api/3.0/artists/mbid:b5d9b78d-abb3-4728-866e-73a358a97fa2.json","mbid":"b5d9b78d-abb3-4728-866e-73a358a97fa2"}]},"displayName":"Left
+        For Dead","id":32282859},{"billingIndex":19,"billing":"headline","artist":{"displayName":"ACxDC","uri":"http://www.songkick.com/artists/635370-acxdc?utm_source=4791&utm_medium=partner","id":635370,"identifier":[{"href":"http://api.songkick.com/api/3.0/artists/mbid:024d960f-4170-4885-8a98-a2cca4d69566.json","mbid":"024d960f-4170-4885-8a98-a2cca4d69566"}]},"displayName":"ACxDC","id":32282879},{"billingIndex":20,"billing":"headline","artist":{"displayName":"Downpresser","uri":"http://www.songkick.com/artists/709313-downpresser?utm_source=4791&utm_medium=partner","id":709313,"identifier":[]},"displayName":"Downpresser","id":32282914},{"billingIndex":21,"billing":"headline","artist":{"displayName":"Homewrecker","uri":"http://www.songkick.com/artists/394976-homewrecker?utm_source=4791&utm_medium=partner","id":394976,"identifier":[{"href":"http://api.songkick.com/api/3.0/artists/mbid:ca29383b-0b95-44ac-934a-b9ceaf2609df.json","mbid":"ca29383b-0b95-44ac-934a-b9ceaf2609df"}]},"displayName":"Homewrecker","id":32282934},{"billingIndex":22,"billing":"headline","artist":{"displayName":"The
+        Beautiful Ones","uri":"http://www.songkick.com/artists/4252111-beautiful-ones?utm_source=4791&utm_medium=partner","id":4252111,"identifier":[]},"displayName":"The
+        Beautiful Ones","id":32282964},{"billingIndex":23,"billing":"headline","artist":{"displayName":"Harness","uri":"http://www.songkick.com/artists/235070-harness?utm_source=4791&utm_medium=partner","id":235070,"identifier":[]},"displayName":"Harness","id":32282924},{"billingIndex":24,"billing":"headline","artist":{"displayName":"Malfunction","uri":"http://www.songkick.com/artists/475584-malfunction?utm_source=4791&utm_medium=partner","id":475584,"identifier":[{"href":"http://api.songkick.com/api/3.0/artists/mbid:0d04a89d-f7c4-4551-8465-9d3610e4d29d.json","mbid":"0d04a89d-f7c4-4551-8465-9d3610e4d29d"}]},"displayName":"Malfunction","id":32282954},{"billingIndex":25,"billing":"headline","artist":{"displayName":"Life
+        for a Life","uri":"http://www.songkick.com/artists/4563283-life-for-a-life?utm_source=4791&utm_medium=partner","id":4563283,"identifier":[]},"displayName":"Life
+        for a Life","id":32282884},{"billingIndex":26,"billing":"headline","artist":{"displayName":"Tough
+        Luck","uri":"http://www.songkick.com/artists/1165721-tough-luck?utm_source=4791&utm_medium=partner","id":1165721,"identifier":[]},"displayName":"Tough
+        Luck","id":32282969},{"billingIndex":27,"billing":"headline","artist":{"displayName":"Hesitation
+        Wounds","uri":"http://www.songkick.com/artists/4444118-hesitation-wounds?utm_source=4791&utm_medium=partner","id":4444118,"identifier":[]},"displayName":"Hesitation
+        Wounds","id":32282929}],"venue":{"metroArea":{"displayName":"Los Angeles","uri":"http://www.songkick.com/metro_areas/17835-us-los-angeles?utm_source=4791&utm_medium=partner","id":17835,"state":{"displayName":"CA"},"country":{"displayName":"US"}},"lat":34.4306906,"displayName":"Earl
+        Warren Showgrounds","lng":-119.7357202,"uri":"http://www.songkick.com/venues/30538-earl-warren-showgrounds?utm_source=4791&utm_medium=partner","id":30538},"status":"ok","popularity":0.0,"start":{"time":null,"datetime":null,"date":"2013-07-26"},"end":{"time":null,"datetime":null,"date":"2013-07-28"},"displayName":"Sound
+        and Fury 2013","location":{"city":"Santa Barbara, CA, US","lat":34.4306906,"lng":-119.7357202},"series":{"displayName":"Sound
+        and Fury"},"uri":"http://www.songkick.com/festivals/126061/id/16353739-sound-and-fury-2013?utm_source=4791&utm_medium=partner","id":16353739},{"venue":{"metroArea":{"displayName":"Los
+        Angeles","uri":"http://www.songkick.com/metro_areas/17835-us-los-angeles?utm_source=4791&utm_medium=partner","id":17835,"state":{"displayName":"CA"},"country":{"displayName":"US"}},"displayName":"Chain
+        Reaction","lat":33.8324875,"lng":-117.9395867,"uri":"http://www.songkick.com/venues/1299-chain-reaction?utm_source=4791&utm_medium=partner","id":1299},"type":"Concert","status":"ok","displayName":"Hundredth
+        with Counterparts and Being As an Ocean at Chain Reaction (July 26, 2013)","start":{"time":null,"datetime":null,"date":"2013-07-26"},"location":{"lat":33.8324875,"lng":-117.9395867,"city":"Anaheim,
+        CA, US"},"popularity":0.0,"uri":"http://www.songkick.com/concerts/16665104-hundredth-at-chain-reaction?utm_source=4791&utm_medium=partner","id":16665104,"performance":[{"billingIndex":1,"artist":{"displayName":"Hundredth","uri":"http://www.songkick.com/artists/974040-hundredth?utm_source=4791&utm_medium=partner","id":974040,"identifier":[{"mbid":"4e56bf61-306f-4e47-8f2d-931a26ce555d","href":"http://api.songkick.com/api/3.0/artists/mbid:4e56bf61-306f-4e47-8f2d-931a26ce555d.json"},{"mbid":"66b2f925-e924-4cde-b09f-27ec21d29564","href":"http://api.songkick.com/api/3.0/artists/mbid:66b2f925-e924-4cde-b09f-27ec21d29564.json"}]},"displayName":"Hundredth","billing":"headline","id":32932674},{"billingIndex":2,"artist":{"displayName":"Counterparts","uri":"http://www.songkick.com/artists/231185-counterparts?utm_source=4791&utm_medium=partner","id":231185,"identifier":[{"mbid":"4b0dd5e7-c795-42bd-8311-bc9f71fabd0a","href":"http://api.songkick.com/api/3.0/artists/mbid:4b0dd5e7-c795-42bd-8311-bc9f71fabd0a.json"}]},"displayName":"Counterparts","billing":"support","id":32932679},{"billingIndex":3,"artist":{"displayName":"Being
+        As an Ocean","uri":"http://www.songkick.com/artists/5131333-being-as-an-ocean?utm_source=4791&utm_medium=partner","id":5131333,"identifier":[]},"displayName":"Being
+        As an Ocean","billing":"support","id":32932684}]},{"type":"Concert","status":"ok","performance":[{"billingIndex":1,"artist":{"displayName":"August
+        Burns Red","uri":"http://www.songkick.com/artists/468456-august-burns-red?utm_source=4791&utm_medium=partner","id":468456,"identifier":[{"href":"http://api.songkick.com/api/3.0/artists/mbid:5bac9b4f-2f1c-4d39-8d11-231d5b6650ce.json","mbid":"5bac9b4f-2f1c-4d39-8d11-231d5b6650ce"}]},"billing":"headline","displayName":"August
+        Burns Red","id":32649769},{"billingIndex":2,"artist":{"displayName":"blessthefall","uri":"http://www.songkick.com/artists/582704-blessthefall?utm_source=4791&utm_medium=partner","id":582704,"identifier":[{"href":"http://api.songkick.com/api/3.0/artists/mbid:aafa70a4-2f06-4975-935e-b283fc87de7e.json","mbid":"aafa70a4-2f06-4975-935e-b283fc87de7e"}]},"billing":"support","displayName":"blessthefall","id":32649774},{"billingIndex":3,"artist":{"displayName":"Counterparts","uri":"http://www.songkick.com/artists/231185-counterparts?utm_source=4791&utm_medium=partner","id":231185,"identifier":[{"href":"http://api.songkick.com/api/3.0/artists/mbid:4b0dd5e7-c795-42bd-8311-bc9f71fabd0a.json","mbid":"4b0dd5e7-c795-42bd-8311-bc9f71fabd0a"}]},"billing":"support","displayName":"Counterparts","id":32649779}],"venue":{"displayName":"Vienna
+        Arena","lat":48.1878256,"uri":"http://www.songkick.com/venues/29983-vienna-arena?utm_source=4791&utm_medium=partner","metroArea":{"displayName":"Vienna","uri":"http://www.songkick.com/metro_areas/26771-austria-vienna?utm_source=4791&utm_medium=partner","id":26771,"country":{"displayName":"Austria"}},"id":29983,"lng":16.4128698},"popularity":0.0,"start":{"time":"19:00:00","datetime":"2013-09-25T19:00:00+0100","date":"2013-09-25"},"location":{"city":"Vienna,
+        Austria","lat":48.1878256,"lng":16.4128698},"displayName":"August Burns Red
+        with blessthefall and Counterparts at Vienna Arena (September 25, 2013)","uri":"http://www.songkick.com/concerts/16528149-august-burns-red-at-vienna-arena?utm_source=4791&utm_medium=partner","id":16528149}]},"perPage":50,"page":1,"totalEntries":3}}'
+    http_version: '1.1'
+  recorded_at: Sun, 21 Jul 2013 15:54:44 GMT
+recorded_with: VCR 2.5.0

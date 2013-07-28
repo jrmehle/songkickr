@@ -13,7 +13,7 @@ http_interactions:
       message: OK
     headers:
       date:
-      - Sun, 07 Jul 2013 22:05:18 GMT
+      - Sun, 21 Jul 2013 15:47:11 GMT
       status:
       - 200 OK
       content-type:
@@ -21,7 +21,7 @@ http_interactions:
       cache-control:
       - private, max-age=3600
       expires:
-      - Sun, 07 Jul 2013 23:05:18 GMT
+      - Sun, 21 Jul 2013 16:47:11 GMT
       vary:
       - Accept-Encoding
       connection:
@@ -30,24 +30,23 @@ http_interactions:
       - chunked
     body:
       encoding: US-ASCII
-      string: ! '{"resultsPage":{"status":"ok","results":{"venue":{"metroArea":{"displayName":"London","uri":"http://www.songkick.com/metro_areas/24426-uk-london?utm_source=4791&utm_medium=partner","id":24426,"country":{"displayName":"UK"}},"displayName":"O2
-        Academy Brixton","zip":"SW9 9SL","description":"Brixton Academy is an award
-        winning music venue situated in the heart of Brixton, South London. The venue
-        has played host to many notable shows and reunions, welcoming a wide variety
-        of artists, from Bob Dylan to Eminem, to the stage. It attracts over half
-        a million visitors per year, accommodating over one hundred events.\n\nBuilt
-        in 1929, the site started life as one of the four state of the art\n Astoria
-        Theaters, screening a variety of motion pictures and shows. In 1972 the venue
-        was transformed into a rock venue and re-branded as The Sundown Centre. With
-        limited success the venue closed it''s doors in 1974 and was not re-opened
-        as a music venue again until 1983, when it became The Brixton Academy.\n\nFeaturing
-        a beautiful Art Deco interior, the venue is now known as the 02 Academy Brixton,
-        and hosts a diverse range of club nights and live performances, as well as
-        seated events. The venue has an upstairs balcony as well as the main floor
-        downstairs. There is disabled access and facilities, a bar and a cloakroom.
-        Club night events are for over 18s, for live music under 14s must be accompanied
-        by an adult.","capacity":4921,"city":{"displayName":"London","uri":"http://www.songkick.com/metro_areas/24426-uk-london?utm_source=4791&utm_medium=partner","id":24426,"country":{"displayName":"UK"}},"lat":51.4651204,"website":"http://www.o2academybrixton.co.uk/","uri":"http://www.songkick.com/venues/17522-o2-academy-brixton?utm_source=4791&utm_medium=partner","lng":-0.1148897,"street":"211
-        Stockwell Road","id":17522,"phone":"020 7771 3000"}}}}'
+      string: ! '{"resultsPage":{"status":"ok","results":{"venue":{"website":"http://www.o2academybrixton.co.uk/","street":"211
+        Stockwell Road","displayName":"O2 Academy Brixton","zip":"SW9 9SL","phone":"020
+        7771 3000","description":"Brixton Academy is an award winning music venue
+        situated in the heart of Brixton, South London. The venue has played host
+        to many notable shows and reunions, welcoming a wide variety of artists, from
+        Bob Dylan to Eminem, to the stage. It attracts over half a million visitors
+        per year, accommodating over one hundred events.\n\nBuilt in 1929, the site
+        started life as one of the four state of the art\n Astoria Theaters, screening
+        a variety of motion pictures and shows. In 1972 the venue was transformed
+        into a rock venue and re-branded as The Sundown Centre. With limited success
+        the venue closed it''s doors in 1974 and was not re-opened as a music venue
+        again until 1983, when it became The Brixton Academy.\n\nFeaturing a beautiful
+        Art Deco interior, the venue is now known as the 02 Academy Brixton, and hosts
+        a diverse range of club nights and live performances, as well as seated events.
+        The venue has an upstairs balcony as well as the main floor downstairs. There
+        is disabled access and facilities, a bar and a cloakroom. Club night events
+        are for over 18s, for live music under 14s must be accompanied by an adult.","capacity":4921,"city":{"displayName":"London","uri":"http://www.songkick.com/metro_areas/24426-uk-london?utm_source=4791&utm_medium=partner","id":24426,"country":{"displayName":"UK"}},"metroArea":{"displayName":"London","uri":"http://www.songkick.com/metro_areas/24426-uk-london?utm_source=4791&utm_medium=partner","id":24426,"country":{"displayName":"UK"}},"lat":51.4651204,"uri":"http://www.songkick.com/venues/17522-o2-academy-brixton?utm_source=4791&utm_medium=partner","lng":-0.1148897,"id":17522}}}}'
     http_version: '1.1'
-  recorded_at: Sun, 07 Jul 2013 22:05:20 GMT
+  recorded_at: Sun, 21 Jul 2013 15:47:15 GMT
 recorded_with: VCR 2.5.0

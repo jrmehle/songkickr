@@ -13,7 +13,7 @@ http_interactions:
       message: Not Found
     headers:
       date:
-      - Sun, 07 Jul 2013 22:05:19 GMT
+      - Sun, 21 Jul 2013 15:47:13 GMT
       status:
       - 404 Not Found
       content-type:
@@ -29,5 +29,5 @@ http_interactions:
       string: ! '{"resultsPage":{"status":"error","error":{"message":"Resource not
         found"}}}'
     http_version: '1.1'
-  recorded_at: Sun, 07 Jul 2013 22:05:21 GMT
+  recorded_at: Sun, 21 Jul 2013 15:47:17 GMT
 recorded_with: VCR 2.5.0

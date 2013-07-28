@@ -6,17 +6,10 @@ require 'crack'
 
 FakeWeb.allow_net_connect = false
 
-
 $LOAD_PATH.unshift(File.join(File.dirname(__FILE__), '..', 'lib'))
 $LOAD_PATH.unshift(File.dirname(__FILE__))
 require 'songkickr'
 
-class Test::Unit::TestCase
-end
-
-def songkick_url(url)
-  url =~ /^http/ ? url : "http://api.songkick.com/api/3.0#{url}"
-end
 
 def fixture_file(filename)
   return "" if filename == ""

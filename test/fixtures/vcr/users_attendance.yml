@@ -1,0 +1,66 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.songkick.com/api/3.0/users/jrmehle/trackings/event:17522.json?apikey=hFYxiInE4DBpH5KL
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      date:
+      - Sun, 28 Jul 2013 06:06:13 GMT
+      status:
+      - 404 Not Found
+      content-type:
+      - application/json; charset=utf-8
+      vary:
+      - Accept-Encoding
+      connection:
+      - close
+      transfer-encoding:
+      - chunked
+    body:
+      encoding: US-ASCII
+      string: ! '{"resultsPage":{"status":"error","error":{"message":"Tracking not
+        found"}}}'
+    http_version: '1.1'
+  recorded_at: Sun, 28 Jul 2013 06:06:13 GMT
+- request:
+    method: get
+    uri: http://api.songkick.com/api/3.0/users/michelle/trackings/event:15789464.json?apikey=hFYxiInE4DBpH5KL
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Sun, 28 Jul 2013 06:20:45 GMT
+      status:
+      - 200 OK
+      content-type:
+      - application/json; charset=utf-8
+      cache-control:
+      - private, max-age=600
+      expires:
+      - Sun, 28 Jul 2013 06:30:45 GMT
+      vary:
+      - Accept-Encoding
+      connection:
+      - close
+      transfer-encoding:
+      - chunked
+    body:
+      encoding: US-ASCII
+      string: ! '{"resultsPage":{"status":"ok","results":{"tracking":{"attendance":"im_going","username":"michelle","id":"event:15789464","createdAt":"2013-07-28T07:20:45Z"}}}}'
+    http_version: '1.1'
+  recorded_at: Sun, 28 Jul 2013 06:20:45 GMT
+recorded_with: VCR 2.5.0
