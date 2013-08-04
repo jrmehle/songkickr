@@ -17,15 +17,18 @@ or if your environment requires
     require 'songkickr'
     remote = Songkickr::Remote.new API_KEY
 
-Then call events, users_events(username), or concert_setlists(event_id)
+Then call one of the remote methods such as events, users_events(username), or concert_setlists(event_id)
 
+Get an artists events by name:
     results = remote.events('Iron Maiden')
-    results = remote.events('As I Lay Dying')
 
+Get a users events by username:
     results = remote.users_events('jrmehle')
 
+Get a the setlists of a concert by event ID:
     results = remote.concert_setlists(2680726)
-    results = remote.concert_setlists(2894471)
+
+More: As of v0.4.0 songkickr supports all of Songkick's APIs. Check the RDocs for the Songkickr::RemoteApi classes.
 
 
 == Note on Patches/Pull Requests
@@ -34,7 +37,7 @@ Then call events, users_events(username), or concert_setlists(event_id)
 * Make your feature addition or bug fix.
 * Add tests for it. This is important so I don't break it in a
   future version unintentionally.
-* Commit, do not mess with rakefile, version, or history.
+* Commit, do not mess with Rakefile, version, or history.
   (if you want to have your own version, that is fine but bump version in a commit by itself I can ignore when I pull)
 * Send me a pull request. Bonus points for topic branches.
 
