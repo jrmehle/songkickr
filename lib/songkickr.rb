@@ -1,22 +1,26 @@
 require 'httparty'
 
+require 'songkickr/remote'
+
 require 'songkickr/performance'
 require 'songkickr/artist'
 require 'songkickr/location'
-require 'songkickr/location_result'
 require 'songkickr/venue'
-require 'songkickr/venue_result'
 require 'songkickr/event'
 require 'songkickr/setlist_item'
 require 'songkickr/setlist'
-require 'songkickr/event_result'
-require 'songkickr/concert_setlist_result'
-require 'songkickr/remote'
-require 'songkickr/artist_result'
 require 'songkickr/metro_area'
-require 'songkickr/metro_area_result'
 require 'songkickr/tracking'
+
+require 'songkickr/result_set'
+require 'songkickr/artist_result'
+require 'songkickr/concert_setlist_result'
+require 'songkickr/event_result'
+require 'songkickr/location_result'
+require 'songkickr/metro_area_result'
 require 'songkickr/tracking_result'
+require 'songkickr/venue_result'
+
 
 class APIKeyNotSet < StandardError;
   # Warns of missing API key
