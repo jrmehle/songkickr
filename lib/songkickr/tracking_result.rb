@@ -14,11 +14,11 @@ module Songkickr
 
     protected
 
-    # Take the results hash directly and parse the tracking into Tracking objects.
-    #
-    # Returns an array of Trackings.
-    def parse_results(results = {})
-      Songkickr::Tracking.new(results["tracking"])
-    end
+      # Take the results hash directly and parse the tracking into Tracking objects.
+      #
+      # Returns an array of Trackings.
+      def parse_results(results = {})
+        Songkickr::Tracking.new(results["tracking"])
+      end
   end
 end

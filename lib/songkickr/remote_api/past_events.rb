@@ -9,10 +9,9 @@ module Songkickr
       # * +query+ - A hash of query parameters, see below for options.
       #
       # ==== Query Parameters
-      # * +min_date+ - Oldest date for which you want to look for events
-      # * +max_date+ - Most recent date for which you want to look for events
       # * +per_page+ - Number of items on a page
       # * +page+ - Number of page
+      # * +order+ - 'asc' or 'desc', 'asc' by default
       def artists_gigography(artist_id, query = {})
         result = self.class.get("/artists/#{artist_id}/gigography.json", :query => query)
         Songkickr::EventResult.new result
@@ -26,10 +25,9 @@ module Songkickr
       # * +query+ - A hash of query parameters, see below for options.
       #
       # ==== Query Parameters
-      # * +min_date+ - Oldest date for which you want to look for events
-      # * +max_date+ - Most recent date for which you want to look for events
       # * +per_page+ - Number of items on a page
       # * +page+ - Number of page
+      # * +order+ - 'asc' or 'desc', 'asc' by default
       def users_gigography(username, query = {})
         result = self.class.get("/users/#{username}/gigography.json", :query => query)
         Songkickr::EventResult.new result

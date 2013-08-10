@@ -10,15 +10,15 @@ module Songkickr
   #
   # http://www.songkick.com/developer/artist-search
   class Artist
-    attr_accessor :uri, :display_name, :id, :on_tour_until
+    attr_accessor :uri, :display_name, :id, :on_tour_until, :identifier
 
     # Accepts a hash of artist attributes.
     def initialize(artist_hash = {})
-      @uri           = artist_hash["uri"]
       @display_name  = artist_hash["displayName"]
       @id            = artist_hash["id"]
       @uri           = artist_hash["uri"]
       @on_tour_until = artist_hash["onTourUntil"]
+      @identifier    = artist_hash["identifier"]
     end
   end
 end

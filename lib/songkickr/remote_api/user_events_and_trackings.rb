@@ -4,16 +4,32 @@ module Songkickr
       # ==== Users Tracked Events Calendar
       # Returns a list of calendar entries with events for a user's tracked artists in her tracked metro areas.
       # /users/#{username}/calendar.json?reason=tracked_artist
-      def users_tracked_events_calendar(username)
-        result = get("/users/#{username}/calendar.json?reason=tracked_artist")
+      #
+      # === Parameters
+      # * +username+ - A Songkick username.
+      # * +query+ - A hash of query parameters, see below for options.
+      #
+      # ==== Query Parameters
+      # * +page+ - Page number
+      # * +per_page+ - Number of results per page, max 50.
+      def users_tracked_events_calendar(username, query = {})
+        result = get("/users/#{username}/calendar.json?reason=tracked_artist", :query => query)
         Songkickr::CalendarResult.new result
       end
 
       # ==== User Attendance Calendar
       # Returns a list of calendar entries with events that a user is planning to attend.
       # /users/#{username}/calendar.json?reason=attendance
-      def users_attendance_calendar(username)
-        result = get("/users/#{username}/calendar.json?reason=attendance")
+      #
+      # === Parameters
+      # * +username+ - A Songkick username.
+      # * +query+ - A hash of query parameters, see below for options.
+      #
+      # ==== Query Parameters
+      # * +page+ - Page number
+      # * +per_page+ - Number of results per page, max 50.
+      def users_attendance_calendar(username, query = {})
+        result = get("/users/#{username}/calendar.json?reason=attendance", :query => query)
         Songkickr::CalendarResult.new result
       end
 
@@ -66,9 +82,8 @@ module Songkickr
       # === Parameters
       # * +username+ - A Songkick username.
       # * +artist_id+ - A Songkick artist ID.
-      # * +query+ - A hash of query parameters, see below for options.
-      def users_artist_tracking(username, artist_id, query = {})
-        result = get("/users/#{username}/trackings/artist:#{artist_id}.json", :query => query)
+      def users_artist_tracking(username, artist_id)
+        result = get("/users/#{username}/trackings/artist:#{artist_id}.json")
         Songkickr::ArtistResult.new result
       end
 
@@ -95,6 +110,8 @@ module Songkickr
       # * +query+ - A hash of query parameters, see below for options.
       #
       # ==== Query Parameters
+      # * +page+ - Page number
+      # * +per_page+ - Number of results per page, max 50.
       # * +attendance+ (all, im_going, i_might_go) - defaults to im_going
       # * +type+ (concert or festival)
       # * +artists+ (events by any of the artists, comma-separated)
@@ -104,6 +121,8 @@ module Songkickr
       # * +min_date+ - Oldest date for which you want to look for events
       # * +max_date+ - Most recent date for which you want to look for events
       # * +location+ - see the Songkick website for instructions on how to use the location parameter
+      # * +order+ - 'asc' or 'desc', 'asc' by default
+      # * +created_after+ - timestamp using ISO8601 format, e.g. 2012-02-29T13:37:00Z
       def users_events(username, query = {})
         result = get("/users/#{username}/events.json", :query => query)
         Songkickr::EventResult.new result
@@ -115,9 +134,8 @@ module Songkickr
       # === Parameters
       # * +username+ - A Songkick username.
       # * +event_id+ - A Songkick event/concert ID.
-      # * +query+ - A hash of query parameters, see below for options.
-      def users_attendance(username, event_id, query = {})
-        result = get("/users/#{username}/trackings/event:#{event_id}.json", :query => query)
+      def users_attendance(username, event_id)
+        result = get("/users/#{username}/trackings/event:#{event_id}.json")
         Songkickr::TrackingResult.new result
       end
     end

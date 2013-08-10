@@ -4,17 +4,26 @@ module Songkickr
       # ==== Artist calendar (Upcoming)
       # Returns an array of Events.
       #
+      # ex. remote.artist_events('mbid:5bac9b4f-2f1c-4d39-8d11-231d5b6650ce', :page => 1, :per_page => 5, :order => 'desc')
+      #
       # http://www.songkick.com/developer/upcoming-events-for-artist
       #
       # === Parameters
-      # * +artist_id+ - Songkick unique ID for artist. Use artist_search to find an artist ID.
+      # * +artist_id_or_music_brainz_id+ - Songkick unique ID for artist. Use artist_search to find an artist ID. Or a MusicBrainz.org id string. ex. mbid:5bac9b4f-2f1c-4d39-8d11-231d5b6650ce
       # * +query+ - A hash of query parameters, see below for options.
       #
       # ==== Query Parameters
       # * +page+ - Page number
       # * +per_page+ - Number of results per page, max 50.
-      def artist_events(artist_id, query = {})
-        result = get("/artists/#{artist_id}/calendar.json", :query => query)
+      # * +order+ - Results are sorted by date. The order can be specified with: order ('asc' or 'desc', 'asc' by default).
+      def artist_events(artist_id_or_music_brainz_id, query = {})
+        if artist_id_or_music_brainz_id.to_s.match /^mbid\:\d+$/
+          url = "/artists/mbid:#{artist_id_or_music_brainz_id}/calendar.json"
+        else
+          url = "/artists/#{artist_id_or_music_brainz_id}/calendar.json"
+        end
+
+        result = get(url, :query => query)
         Songkickr::EventResult.new result
       end
 
