@@ -1,5 +1,7 @@
 = songkickr
 
+{<img src="https://travis-ci.org/jrmehle/songkickr.png?branch=master" alt="Build Status" />}[https://travis-ci.org/jrmehle/songkickr]
+
 A Ruby wrapper around the Songkick API. Visit www.songkick.com/developer for documentation on the Songkick API.
 
 = Install Instructions
@@ -15,15 +17,18 @@ or if your environment requires
     require 'songkickr'
     remote = Songkickr::Remote.new API_KEY
 
-Then call events, users_events(username), or concert_setlists(event_id)
+Then call one of the remote methods such as events, users_events(username), or concert_setlists(event_id)
 
-    results = remote.events(:query => 'Iron Maiden')
-    results = remote.events(:query => 'As I Lay Dying')
+Get an artists events by name:
+    results = remote.events('Iron Maiden')
 
+Get a users events by username:
     results = remote.users_events('jrmehle')
 
+Get a the setlists of a concert by event ID:
     results = remote.concert_setlists(2680726)
-    results = remote.concert_setlists(2894471)
+
+More: As of v0.4.0 songkickr supports all of Songkick's APIs. Check the RDocs for the Songkickr::RemoteApi classes.
 
 
 == Note on Patches/Pull Requests
@@ -32,17 +37,17 @@ Then call events, users_events(username), or concert_setlists(event_id)
 * Make your feature addition or bug fix.
 * Add tests for it. This is important so I don't break it in a
   future version unintentionally.
-* Commit, do not mess with rakefile, version, or history.
+* Commit, do not mess with Rakefile, version, or history.
   (if you want to have your own version, that is fine but bump version in a commit by itself I can ignore when I pull)
 * Send me a pull request. Bonus points for topic branches.
 
 == Copyright
 
-Copyright (c) 2010-2011 Jared Mehle. See LICENSE for details.
+Copyright (c) 2010-2013 Jared Mehle. See LICENSE for details.
 
-== Thanks
+== Contributors
 
-Thanks to Akshay Dodeja, Tomasz Stachewicz, and Dave Knapik for submitting code and pull requests.
+Thanks to Andrew Chen, Akshay Dodeja, Tomasz Stachewicz, and Dave Knapik for submitting code and pull requests.
 
-A special thank you to Jon Nunemaker for the httparty which is used extensively within this
+A special thank you to Jon Nunemaker for httparty which is used extensively within this
 gem and for the twitter gem as inspiration.

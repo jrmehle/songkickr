@@ -1,0 +1,38 @@
+{
+    "resultsPage": {
+        "status": "ok",
+        "results": {
+            "location": [
+                {
+                    "city": {
+                        "lat": 44.9801,
+                        "lng": -93.2519,
+                        "country": {
+                            "displayName": "US"
+                        },
+                        "state": {
+                            "displayName": "MN"
+                        },
+                        "displayName": "Twin Cities"
+                    },
+                    "metroArea": {
+                        "lat": 44.9801,
+                        "lng": -93.2519,
+                        "country": {
+                            "displayName": "US"
+                        },
+                        "uri": "http://www.songkick.com/metro_areas/35130-us-twin-cities?utm_source=4791&utm_medium=partner",
+                        "state": {
+                            "displayName": "MN"
+                        },
+                        "displayName": "Twin Cities",
+                        "id": 35130
+                    }
+                }
+            ]
+        },
+        "perPage": 50,
+        "page": 1,
+        "totalEntries": 1
+    }
+}

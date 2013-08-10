@@ -1,0 +1,99 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.songkick.com/api/3.0users/jrmehle/trackings/artist:109675.json?apikey=hFYxiInE4DBpH5KL
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      date:
+      - Sun, 28 Jul 2013 06:01:05 GMT
+      status:
+      - 404 Not Found
+      content-type:
+      - application/json; charset=utf-8
+      x-cascade:
+      - pass
+      connection:
+      - close
+      transfer-encoding:
+      - chunked
+    body:
+      encoding: US-ASCII
+      string: ! '{"resultsPage":{"status":"error","error":{"message":"Resource not
+        found"}}}'
+    http_version: '1.1'
+  recorded_at: Sun, 28 Jul 2013 06:01:05 GMT
+- request:
+    method: get
+    uri: http://api.songkick.com/api/3.0/users/jrmehle/trackings/artist:109675.json?apikey=hFYxiInE4DBpH5KL
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Sun, 28 Jul 2013 06:01:25 GMT
+      status:
+      - 200 OK
+      content-type:
+      - application/json; charset=utf-8
+      cache-control:
+      - private, max-age=600
+      expires:
+      - Sun, 28 Jul 2013 06:11:25 GMT
+      vary:
+      - Accept-Encoding
+      connection:
+      - close
+      transfer-encoding:
+      - chunked
+    body:
+      encoding: US-ASCII
+      string: ! '{"resultsPage":{"status":"ok","results":{"tracking":{"username":"jrmehle","id":"artist:109675","createdAt":"2011-05-12T00:30:07Z"}}}}'
+    http_version: '1.1'
+  recorded_at: Sun, 28 Jul 2013 06:01:25 GMT
+- request:
+    method: get
+    uri: http://api.songkick.com/api/3.0/users/jrmehle/trackings/artist:231185.json?apikey=hFYxiInE4DBpH5KL
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Sun, 28 Jul 2013 06:03:06 GMT
+      status:
+      - 200 OK
+      content-type:
+      - application/json; charset=utf-8
+      cache-control:
+      - private, max-age=600
+      expires:
+      - Sun, 28 Jul 2013 06:13:06 GMT
+      vary:
+      - Accept-Encoding
+      connection:
+      - close
+      transfer-encoding:
+      - chunked
+    body:
+      encoding: US-ASCII
+      string: ! '{"resultsPage":{"status":"ok","results":{"tracking":{"username":"jrmehle","id":"artist:231185","createdAt":"2010-04-17T17:27:45Z"}}}}'
+    http_version: '1.1'
+  recorded_at: Sun, 28 Jul 2013 06:03:06 GMT
+recorded_with: VCR 2.5.0

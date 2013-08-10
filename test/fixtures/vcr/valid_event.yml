@@ -10,43 +10,108 @@ http_interactions:
   response:
     status:
       code: 200
-      message: OK
+      message: !binary |-
+        T0s=
     headers:
-      date:
-      - Mon, 20 Aug 2012 17:39:30 GMT
-      server:
-      - thin 1.2.4 codename Flaming Astroboy
-      content-type:
-      - application/json
-      expires:
-      - Mon, 20 Aug 2012 18:39:30 GMT
-      cache-control:
-      - private, max-age=3600
-      vary:
-      - Accept-Encoding
-      connection:
-      - close
-      transfer-encoding:
-      - chunked
+      !binary "ZGF0ZQ==":
+      - !binary |-
+        U3VuLCAyMSBKdWwgMjAxMyAxNTo0NzowOCBHTVQ=
+      !binary "c3RhdHVz":
+      - !binary |-
+        MjAwIE9L
+      !binary "Y29udGVudC10eXBl":
+      - !binary |-
+        YXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOA==
+      !binary "Y2FjaGUtY29udHJvbA==":
+      - !binary |-
+        cHJpdmF0ZSwgbWF4LWFnZT0zNjAw
+      !binary "ZXhwaXJlcw==":
+      - !binary |-
+        U3VuLCAyMSBKdWwgMjAxMyAxNjo0NzowOCBHTVQ=
+      !binary "dmFyeQ==":
+      - !binary |-
+        QWNjZXB0LUVuY29kaW5n
+      !binary "Y29ubmVjdGlvbg==":
+      - !binary |-
+        Y2xvc2U=
+      !binary "dHJhbnNmZXItZW5jb2Rpbmc=":
+      - !binary |-
+        Y2h1bmtlZA==
     body:
-      encoding: US-ASCII
-      string: ! '{"resultsPage":{"results":{"event":{"location":{"city":"Chicago,
-        IL, US","lng":-87.7137611,"lat":41.9501484},"popularity":0.008473,"uri":"http:\/\/www.songkick.com\/concerts\/17522-bang-bang-at-abbey-pub?utm_source=4791&utm_medium=partner","displayName":"Bang
-        Bang with Imperial Teen at Abbey Pub (October 4, 2007)","id":17522,"type":"Concert","start":{"time":"21:00:00","date":"2007-10-04","datetime":"2007-10-04T21:00:00-0600"},"performance":[{"artist":{"uri":"http:\/\/www.songkick.com\/artists\/495332-bang-bang?utm_source=4791&utm_medium=partner","displayName":"Bang
-        Bang","id":495332,"identifier":[{"href":"http:\/\/api.songkick.com\/api\/3.0\/artists\/mbid:c888d780-565c-4719-ab20-a1da73796228.json","mbid":"c888d780-565c-4719-ab20-a1da73796228"},{"href":"http:\/\/api.songkick.com\/api\/3.0\/artists\/mbid:4f4d6d1e-dd8f-4b4b-a4a5-4a324c7512ec.json","mbid":"4f4d6d1e-dd8f-4b4b-a4a5-4a324c7512ec"},{"href":"http:\/\/api.songkick.com\/api\/3.0\/artists\/mbid:a7f8b3ad-d0e0-4f95-85e1-9e73dd55bd49.json","mbid":"a7f8b3ad-d0e0-4f95-85e1-9e73dd55bd49"},{"href":"http:\/\/api.songkick.com\/api\/3.0\/artists\/mbid:4cba75fd-de31-4a38-aa50-9b1f5bacdd4d.json","mbid":"4cba75fd-de31-4a38-aa50-9b1f5bacdd4d"},{"href":"http:\/\/api.songkick.com\/api\/3.0\/artists\/mbid:a5b03e5e-4eb3-44cd-b0c0-cb93d5acf107.json","mbid":"a5b03e5e-4eb3-44cd-b0c0-cb93d5acf107"}]},"displayName":"Bang
-        Bang","billingIndex":1,"id":5768921,"billing":"headline"},{"artist":{"uri":"http:\/\/www.songkick.com\/artists\/397631-imperial-teen?utm_source=4791&utm_medium=partner","displayName":"Imperial
-        Teen","id":397631,"identifier":[{"href":"http:\/\/api.songkick.com\/api\/3.0\/artists\/mbid:7d478bd2-d228-46a8-8a7c-ef68a61fd339.json","mbid":"7d478bd2-d228-46a8-8a7c-ef68a61fd339"}]},"displayName":"Imperial
-        Teen","billingIndex":2,"id":22526,"billing":"support"}],"venue":{"city":{"uri":"http:\/\/www.songkick.com\/metro_areas\/9426-us-chicago?utm_source=4791&utm_medium=partner","displayName":"Chicago","country":{"displayName":"US"},"id":9426,"state":{"displayName":"IL"}},"zip":"60618","uri":"http:\/\/www.songkick.com\/venues\/546756-abbey-pub?utm_source=4791&utm_medium=partner","displayName":"Abbey
-        Pub","street":"3420 W. Grace St.","lng":-87.7137611,"id":546756,"website":"http:\/\/www.abbeypub.com","phone":"773
-        478 4408","capacity":550,"description":"Since 1973, The Abbey has been Chicago\u2019s
-        home for live music, good food and great times.  The Abbey has live music
-        most nights, featuring local, regional and national acts from indie rock to
-        traditional Irish music.  The Abbey serves  dinner nightly and brunch on Saturday
-        and Sunday featuring Irish and American food.  Make a dinner reservation before
-        any show and get preferred VIP seating!  Watch all major sporting events on
-        our 15-foot projector and on 14 flat screens. We feature live international
-        sports telecasts (rugby, soccer, Gaelic) as well as all major American sporting
-        events.\r\n\r\nCall 773.478.4408 today to make your reservation!","metroArea":{"uri":"http:\/\/www.songkick.com\/metro_areas\/9426-us-chicago?utm_source=4791&utm_medium=partner","displayName":"Chicago","country":{"displayName":"US"},"id":9426,"state":{"displayName":"IL"}},"lat":41.9501484},"status":"ok"}},"status":"ok"}}'
-    http_version: '1.1'
-  recorded_at: Mon, 20 Aug 2012 17:39:30 GMT
-recorded_with: VCR 2.2.4
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJyZXN1bHRzUGFnZSI6eyJzdGF0dXMiOiJvayIsInJlc3VsdHMiOnsiZXZl
+        bnQiOnsiZGlzcGxheU5hbWUiOiJCYW5nIEJhbmcgd2l0aCBJbXBlcmlhbCBU
+        ZWVuIGF0IEFiYmV5IFB1YiAoT2N0b2JlciA0LCAyMDA3KSIsInR5cGUiOiJD
+        b25jZXJ0Iiwic3RhdHVzIjoib2siLCJ2ZW51ZSI6eyJ3ZWJzaXRlIjoiaHR0
+        cDovL3d3dy5hYmJleXB1Yi5jb20iLCJzdHJlZXQiOiIzNDIwIFcuIEdyYWNl
+        IFN0LiIsImRpc3BsYXlOYW1lIjoiQWJiZXkgUHViIiwiemlwIjoiNjA2MTgi
+        LCJwaG9uZSI6Ijc3MyA0NzggNDQwOCIsImRlc2NyaXB0aW9uIjoiU2luY2Ug
+        MTk3MywgVGhlIEFiYmV5IGhhcyBiZWVuIENoaWNhZ2/igJlzIGhvbWUgZm9y
+        IGxpdmUgbXVzaWMsIGdvb2QgZm9vZCBhbmQgZ3JlYXQgdGltZXMuICBUaGUg
+        QWJiZXkgaGFzIGxpdmUgbXVzaWMgbW9zdCBuaWdodHMsIGZlYXR1cmluZyBs
+        b2NhbCwgcmVnaW9uYWwgYW5kIG5hdGlvbmFsIGFjdHMgZnJvbSBpbmRpZSBy
+        b2NrIHRvIHRyYWRpdGlvbmFsIElyaXNoIG11c2ljLiAgVGhlIEFiYmV5IHNl
+        cnZlcyAgZGlubmVyIG5pZ2h0bHkgYW5kIGJydW5jaCBvbiBTYXR1cmRheSBh
+        bmQgU3VuZGF5IGZlYXR1cmluZyBJcmlzaCBhbmQgQW1lcmljYW4gZm9vZC4g
+        IE1ha2UgYSBkaW5uZXIgcmVzZXJ2YXRpb24gYmVmb3JlIGFueSBzaG93IGFu
+        ZCBnZXQgcHJlZmVycmVkIFZJUCBzZWF0aW5nISAgV2F0Y2ggYWxsIG1ham9y
+        IHNwb3J0aW5nIGV2ZW50cyBvbiBvdXIgMTUtZm9vdCBwcm9qZWN0b3IgYW5k
+        IG9uIDE0IGZsYXQgc2NyZWVucy4gV2UgZmVhdHVyZSBsaXZlIGludGVybmF0
+        aW9uYWwgc3BvcnRzIHRlbGVjYXN0cyAocnVnYnksIHNvY2NlciwgR2FlbGlj
+        KSBhcyB3ZWxsIGFzIGFsbCBtYWpvciBBbWVyaWNhbiBzcG9ydGluZyBldmVu
+        dHMuXHJcblxyXG5DYWxsIDc3My40NzguNDQwOCB0b2RheSB0byBtYWtlIHlv
+        dXIgcmVzZXJ2YXRpb24hIiwiY2FwYWNpdHkiOjU1MCwiY2l0eSI6eyJkaXNw
+        bGF5TmFtZSI6IkNoaWNhZ28iLCJ1cmkiOiJodHRwOi8vd3d3LnNvbmdraWNr
+        LmNvbS9tZXRyb19hcmVhcy85NDI2LXVzLWNoaWNhZ28/dXRtX3NvdXJjZT00
+        NzkxJnV0bV9tZWRpdW09cGFydG5lciIsImlkIjo5NDI2LCJzdGF0ZSI6eyJk
+        aXNwbGF5TmFtZSI6IklMIn0sImNvdW50cnkiOnsiZGlzcGxheU5hbWUiOiJV
+        UyJ9fSwibWV0cm9BcmVhIjp7ImRpc3BsYXlOYW1lIjoiQ2hpY2FnbyIsInVy
+        aSI6Imh0dHA6Ly93d3cuc29uZ2tpY2suY29tL21ldHJvX2FyZWFzLzk0MjYt
+        dXMtY2hpY2Fnbz91dG1fc291cmNlPTQ3OTEmdXRtX21lZGl1bT1wYXJ0bmVy
+        IiwiaWQiOjk0MjYsInN0YXRlIjp7ImRpc3BsYXlOYW1lIjoiSUwifSwiY291
+        bnRyeSI6eyJkaXNwbGF5TmFtZSI6IlVTIn19LCJsYXQiOjQxLjk1MDE0ODQs
+        InVyaSI6Imh0dHA6Ly93d3cuc29uZ2tpY2suY29tL3ZlbnVlcy81NDY3NTYt
+        YWJiZXktcHViP3V0bV9zb3VyY2U9NDc5MSZ1dG1fbWVkaXVtPXBhcnRuZXIi
+        LCJsbmciOi04Ny43MTM3NjExLCJpZCI6NTQ2NzU2fSwicGVyZm9ybWFuY2Ui
+        Olt7ImFydGlzdCI6eyJkaXNwbGF5TmFtZSI6IkJhbmcgQmFuZyIsImlkZW50
+        aWZpZXIiOlt7Im1iaWQiOiJjODg4ZDc4MC01NjVjLTQ3MTktYWIyMC1hMWRh
+        NzM3OTYyMjgiLCJocmVmIjoiaHR0cDovL2FwaS5zb25na2ljay5jb20vYXBp
+        LzMuMC9hcnRpc3RzL21iaWQ6Yzg4OGQ3ODAtNTY1Yy00NzE5LWFiMjAtYTFk
+        YTczNzk2MjI4Lmpzb24ifSx7Im1iaWQiOiI0ZjRkNmQxZS1kZDhmLTRiNGIt
+        YTRhNS00YTMyNGM3NTEyZWMiLCJocmVmIjoiaHR0cDovL2FwaS5zb25na2lj
+        ay5jb20vYXBpLzMuMC9hcnRpc3RzL21iaWQ6NGY0ZDZkMWUtZGQ4Zi00YjRi
+        LWE0YTUtNGEzMjRjNzUxMmVjLmpzb24ifSx7Im1iaWQiOiJhN2Y4YjNhZC1k
+        MGUwLTRmOTUtODVlMS05ZTczZGQ1NWJkNDkiLCJocmVmIjoiaHR0cDovL2Fw
+        aS5zb25na2ljay5jb20vYXBpLzMuMC9hcnRpc3RzL21iaWQ6YTdmOGIzYWQt
+        ZDBlMC00Zjk1LTg1ZTEtOWU3M2RkNTViZDQ5Lmpzb24ifSx7Im1iaWQiOiI0
+        Y2JhNzVmZC1kZTMxLTRhMzgtYWE1MC05YjFmNWJhY2RkNGQiLCJocmVmIjoi
+        aHR0cDovL2FwaS5zb25na2ljay5jb20vYXBpLzMuMC9hcnRpc3RzL21iaWQ6
+        NGNiYTc1ZmQtZGUzMS00YTM4LWFhNTAtOWIxZjViYWNkZDRkLmpzb24ifSx7
+        Im1iaWQiOiJhNWIwM2U1ZS00ZWIzLTQ0Y2QtYjBjMC1jYjkzZDVhY2YxMDci
+        LCJocmVmIjoiaHR0cDovL2FwaS5zb25na2ljay5jb20vYXBpLzMuMC9hcnRp
+        c3RzL21iaWQ6YTViMDNlNWUtNGViMy00NGNkLWIwYzAtY2I5M2Q1YWNmMTA3
+        Lmpzb24ifV0sInVyaSI6Imh0dHA6Ly93d3cuc29uZ2tpY2suY29tL2FydGlz
+        dHMvNDk1MzMyLWJhbmctYmFuZz91dG1fc291cmNlPTQ3OTEmdXRtX21lZGl1
+        bT1wYXJ0bmVyIiwiaWQiOjQ5NTMzMn0sImRpc3BsYXlOYW1lIjoiQmFuZyBC
+        YW5nIiwiYmlsbGluZ0luZGV4IjoxLCJiaWxsaW5nIjoiaGVhZGxpbmUiLCJp
+        ZCI6NTc2ODkyMX0seyJhcnRpc3QiOnsiZGlzcGxheU5hbWUiOiJJbXBlcmlh
+        bCBUZWVuIiwiaWRlbnRpZmllciI6W3sibWJpZCI6IjdkNDc4YmQyLWQyMjgt
+        NDZhOC04YTdjLWVmNjhhNjFmZDMzOSIsImhyZWYiOiJodHRwOi8vYXBpLnNv
+        bmdraWNrLmNvbS9hcGkvMy4wL2FydGlzdHMvbWJpZDo3ZDQ3OGJkMi1kMjI4
+        LTQ2YTgtOGE3Yy1lZjY4YTYxZmQzMzkuanNvbiJ9XSwidXJpIjoiaHR0cDov
+        L3d3dy5zb25na2ljay5jb20vYXJ0aXN0cy8zOTc2MzEtaW1wZXJpYWwtdGVl
+        bj91dG1fc291cmNlPTQ3OTEmdXRtX21lZGl1bT1wYXJ0bmVyIiwiaWQiOjM5
+        NzYzMX0sImRpc3BsYXlOYW1lIjoiSW1wZXJpYWwgVGVlbiIsImJpbGxpbmdJ
+        bmRleCI6MiwiYmlsbGluZyI6InN1cHBvcnQiLCJpZCI6MjI1MjZ9XSwibG9j
+        YXRpb24iOnsibGF0Ijo0MS45NTAxNDg0LCJsbmciOi04Ny43MTM3NjExLCJj
+        aXR5IjoiQ2hpY2FnbywgSUwsIFVTIn0sInBvcHVsYXJpdHkiOjAuMDA4NDcz
+        LCJzdGFydCI6eyJkYXRldGltZSI6IjIwMDctMTAtMDRUMjE6MDA6MDAtMDYw
+        MCIsInRpbWUiOiIyMTowMDowMCIsImRhdGUiOiIyMDA3LTEwLTA0In0sInVy
+        aSI6Imh0dHA6Ly93d3cuc29uZ2tpY2suY29tL2NvbmNlcnRzLzE3NTIyLWJh
+        bmctYmFuZy1hdC1hYmJleS1wdWI/dXRtX3NvdXJjZT00NzkxJnV0bV9tZWRp
+        dW09cGFydG5lciIsImlkIjoxNzUyMn19fX0=
+    http_version: !binary |-
+      MS4x
+  recorded_at: Sun, 21 Jul 2013 15:47:11 GMT
+recorded_with: VCR 2.5.0

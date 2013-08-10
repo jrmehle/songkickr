@@ -13,11 +13,11 @@ http_interactions:
       message: Not Found
     headers:
       date:
-      - Mon, 20 Aug 2012 17:27:42 GMT
-      server:
-      - thin 1.2.4 codename Flaming Astroboy
+      - Sun, 21 Jul 2013 15:47:13 GMT
+      status:
+      - 404 Not Found
       content-type:
-      - application/json
+      - application/json; charset=utf-8
       vary:
       - Accept-Encoding
       connection:
@@ -29,5 +29,5 @@ http_interactions:
       string: ! '{"resultsPage":{"status":"error","error":{"message":"Resource not
         found"}}}'
     http_version: '1.1'
-  recorded_at: Mon, 20 Aug 2012 17:27:42 GMT
-recorded_with: VCR 2.2.4
+  recorded_at: Sun, 21 Jul 2013 15:47:17 GMT
+recorded_with: VCR 2.5.0

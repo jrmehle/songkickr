@@ -1,0 +1,42 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.songkick.com/api/3.0/search/venues.json?apikey=hFYxiInE4DBpH5KL&query=Xcel%20Energy%20Center
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Sun, 28 Jul 2013 05:50:32 GMT
+      status:
+      - 200 OK
+      content-type:
+      - application/json; charset=utf-8
+      cache-control:
+      - private, max-age=3600
+      expires:
+      - Sun, 28 Jul 2013 06:50:32 GMT
+      vary:
+      - Accept-Encoding
+      connection:
+      - close
+      transfer-encoding:
+      - chunked
+    body:
+      encoding: US-ASCII
+      string: ! '{"resultsPage":{"status":"ok","results":{"venue":[{"metroArea":{"uri":"http://www.songkick.com/metro_areas/35130-us-twin-cities?utm_source=4791&utm_medium=partner","id":35130,"state":{"displayName":"MN"},"country":{"displayName":"US"},"displayName":"Twin
+        Cities"},"lat":44.9434383,"lng":-93.1001467,"zip":"55102","description":"","website":"http://xcelenergycenter.tumblr.com","uri":"http://www.songkick.com/venues/624-xcel-energy-center?utm_source=4791&utm_medium=partner","street":"175
+        Kellogg Blvd. W.","id":624,"displayName":"Xcel Energy Center","phone":"651-726-8240","capacity":null,"city":{"state":{"displayName":"MN"},"country":{"displayName":"US"},"displayName":"St.
+        Paul"}},{"street":"175 Kellogg Blvd W","description":"","phone":null,"city":{"country":{"displayName":"US"},"displayName":"North
+        Saint Paul","state":{"displayName":"MN"},"uri":"http://www.songkick.com/metro_areas/88071-us-north-saint-paul?utm_source=4791&utm_medium=partner","id":88071},"metroArea":{"country":{"displayName":"US"},"displayName":"North
+        Saint Paul","state":{"displayName":"MN"},"uri":"http://www.songkick.com/metro_areas/88071-us-north-saint-paul?utm_source=4791&utm_medium=partner","id":88071},"zip":"55102","displayName":"Xcel
+        Energy Center","lat":44.9440098,"capacity":null,"lng":-93.0995822,"website":null,"uri":"http://www.songkick.com/venues/2114344-xcel-energy-center?utm_source=4791&utm_medium=partner","id":2114344}]},"perPage":50,"page":1,"totalEntries":2}}'
+    http_version: '1.1'
+  recorded_at: Sun, 28 Jul 2013 05:50:33 GMT
+recorded_with: VCR 2.5.0

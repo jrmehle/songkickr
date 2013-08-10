@@ -1,0 +1,38 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.songkick.com/api/3.0/search/artists.json?apikey=hFYxiInE4DBpH5KL&query=Counterparts
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Sun, 21 Jul 2013 15:47:07 GMT
+      status:
+      - 200 OK
+      content-type:
+      - application/json; charset=utf-8
+      cache-control:
+      - private, max-age=3600
+      expires:
+      - Sun, 21 Jul 2013 16:47:07 GMT
+      vary:
+      - Accept-Encoding
+      connection:
+      - close
+      transfer-encoding:
+      - chunked
+    body:
+      encoding: US-ASCII
+      string: ! '{"resultsPage":{"status":"ok","results":{"artist":[{"onTourUntil":"2013-09-25","identifier":[{"eventsHref":"http://api.songkick.com/api/3.0/artists/mbid:4b0dd5e7-c795-42bd-8311-bc9f71fabd0a/calendar.json","setlistsHref":"http://api.songkick.com/api/3.0/artists/mbid:4b0dd5e7-c795-42bd-8311-bc9f71fabd0a/setlists.json","mbid":"4b0dd5e7-c795-42bd-8311-bc9f71fabd0a","href":"http://api.songkick.com/api/3.0/artists/mbid:4b0dd5e7-c795-42bd-8311-bc9f71fabd0a.json"}],"displayName":"Counterparts","uri":"http://www.songkick.com/artists/231185-counterparts?utm_source=4791&utm_medium=partner","id":231185},{"uri":"http://www.songkick.com/artists/6061844-counterparts-facts?utm_source=4791&utm_medium=partner","displayName":"Counterparts
+        Facts","onTourUntil":null,"identifier":[],"id":6061844},{"identifier":[],"displayName":"Hundredth!
+        Counterparts. Being As an Ocean. Heart to Heart","uri":"http://www.songkick.com/artists/7085559-hundredth-counterparts-being-as-an-ocean-heart-to-heart?utm_source=4791&utm_medium=partner","onTourUntil":"2013-07-25","id":7085559}]},"perPage":50,"page":1,"totalEntries":3}}'
+    http_version: '1.1'
+  recorded_at: Sun, 21 Jul 2013 15:47:10 GMT
+recorded_with: VCR 2.5.0

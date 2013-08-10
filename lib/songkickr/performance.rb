@@ -1,17 +1,22 @@
 module Songkickr
   # A single performance by an artist.
-  #   {
-  #     "artist": {
-  #       "uri": "http://www.songkick.com/artists/288696-vampire-weekend",
-  #       "displayName": "Vampire Weekend",
-  #       "id": 288696,
-  #       "identifier": [{"mbid": "af37c51c-0790-4a29-b995-456f98a6b8c9"}]
-  #     }
-  #     "displayName": "Vampire Weekend",
-  #     "billingIndex": 1,
-  #     "id": 5380281,
-  #     "billing": "headline"
-  #   }
+  # {
+  #   billingIndex: 2,
+  #   billing: "headline",
+  #   displayName: "A Day to Remember",
+  #   artist: {
+  #     identifier: [
+  #       {
+  #         href: "http://api.songkick.com/api/3.0/artists/mbid:db008806-16f6-48fc-8521-3d953709689d.json",
+  #         mbid: "db008806-16f6-48fc-8521-3d953709689d"
+  #       }
+  #     ],
+  #     displayName: "A Day to Remember",
+  #     uri: "http://www.songkick.com/artists/470482-a-day-to-remember?utm_source=4791&utm_medium=partner",
+  #     id: 470482
+  #   },
+  #   id: 34045929
+  # }
   class Performance
     attr_accessor :artist, :display_name, :id, :billing_index, :billing
 

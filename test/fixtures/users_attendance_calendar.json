@@ -1,0 +1,243 @@
+{
+    "resultsPage": {
+        "status": "ok",
+        "results": {
+            "calendarEntry": [
+                {
+                    "reason": {
+                        "attendance": "i_might_go"
+                    },
+                    "event": {
+                        "type": "Concert",
+                        "status": "ok",
+                        "displayName": "Oceano with Reflections, Sworn In, and Adestria at The Garage (August 19, 2013)",
+                        "popularity": 0,
+                        "start": {
+                            "time": "17:30:00",
+                            "date": "2013-08-19",
+                            "datetime": "2013-08-19T17:30:00-0600"
+                        },
+                        "location": {
+                            "city": "Burnsville, MN, US",
+                            "lat": 44.7657691,
+                            "lng": -93.2743603
+                        },
+                        "uri": "http://www.songkick.com/concerts/17472154-oceano-at-garage?utm_source=4791&utm_medium=partner",
+                        "id": 17472154,
+                        "performance": [
+                            {
+                                "billingIndex": 1,
+                                "billing": "headline",
+                                "displayName": "Oceano",
+                                "artist": {
+                                    "identifier": [
+                                        {
+                                            "href": "http://api.songkick.com/api/3.0/artists/mbid:d2ad541b-55d1-48bf-bdf1-ef0c3d3518e2.json",
+                                            "mbid": "d2ad541b-55d1-48bf-bdf1-ef0c3d3518e2"
+                                        },
+                                        {
+                                            "href": "http://api.songkick.com/api/3.0/artists/mbid:06c2da57-090e-46b8-a671-0e085618ab61.json",
+                                            "mbid": "06c2da57-090e-46b8-a671-0e085618ab61"
+                                        }
+                                    ],
+                                    "displayName": "Oceano",
+                                    "uri": "http://www.songkick.com/artists/2050016-oceano?utm_source=4791&utm_medium=partner",
+                                    "id": 2050016
+                                },
+                                "id": 34584889
+                            },
+                            {
+                                "billingIndex": 2,
+                                "billing": "support",
+                                "displayName": "Reflections",
+                                "artist": {
+                                    "identifier": [
+                                        {
+                                            "href": "http://api.songkick.com/api/3.0/artists/mbid:c03e760f-c289-45c2-b5b3-d8cd2138f71c.json",
+                                            "mbid": "c03e760f-c289-45c2-b5b3-d8cd2138f71c"
+                                        },
+                                        {
+                                            "href": "http://api.songkick.com/api/3.0/artists/mbid:b19805cd-83ba-43f0-894f-ccf858668eca.json",
+                                            "mbid": "b19805cd-83ba-43f0-894f-ccf858668eca"
+                                        },
+                                        {
+                                            "href": "http://api.songkick.com/api/3.0/artists/mbid:8f6f6b87-4415-42d9-9da6-fb6b00a1bb7d.json",
+                                            "mbid": "8f6f6b87-4415-42d9-9da6-fb6b00a1bb7d"
+                                        }
+                                    ],
+                                    "displayName": "Reflections",
+                                    "uri": "http://www.songkick.com/artists/139272-reflections?utm_source=4791&utm_medium=partner",
+                                    "id": 139272
+                                },
+                                "id": 34584894
+                            },
+                            {
+                                "billingIndex": 3,
+                                "billing": "support",
+                                "displayName": "Sworn In",
+                                "artist": {
+                                    "identifier": [
+                                        {
+                                            "href": "http://api.songkick.com/api/3.0/artists/mbid:02d1a7e3-abd8-4908-bbff-e53da5881407.json",
+                                            "mbid": "02d1a7e3-abd8-4908-bbff-e53da5881407"
+                                        }
+                                    ],
+                                    "displayName": "Sworn In",
+                                    "uri": "http://www.songkick.com/artists/434303-sworn-in?utm_source=4791&utm_medium=partner",
+                                    "id": 434303
+                                },
+                                "id": 34584899
+                            },
+                            {
+                                "billingIndex": 4,
+                                "billing": "support",
+                                "displayName": "Adestria",
+                                "artist": {
+                                    "identifier": [
+                                        {
+                                            "href": "http://api.songkick.com/api/3.0/artists/mbid:d142cc73-95da-4cb2-b59b-a5958a4b84bd.json",
+                                            "mbid": "d142cc73-95da-4cb2-b59b-a5958a4b84bd"
+                                        }
+                                    ],
+                                    "displayName": "Adestria",
+                                    "uri": "http://www.songkick.com/artists/3453296-adestria?utm_source=4791&utm_medium=partner",
+                                    "id": 3453296
+                                },
+                                "id": 34584904
+                            }
+                        ],
+                        "venue": {
+                            "displayName": "The Garage",
+                            "metroArea": {
+                                "displayName": "Twin Cities",
+                                "uri": "http://www.songkick.com/metro_areas/35130-us-twin-cities?utm_source=4791&utm_medium=partner",
+                                "id": 35130,
+                                "state": {
+                                    "displayName": "MN"
+                                },
+                                "country": {
+                                    "displayName": "US"
+                                }
+                            },
+                            "lat": 44.7657691,
+                            "lng": -93.2743603,
+                            "uri": "http://www.songkick.com/venues/68388-garage?utm_source=4791&utm_medium=partner",
+                            "id": 68388
+                        }
+                    },
+                    "createdAt": "2013-07-28T07:08:44+0100"
+                },
+                {
+                    "reason": {
+                        "attendance": "i_might_go"
+                    },
+                    "event": {
+                        "type": "Concert",
+                        "status": "ok",
+                        "performance": [
+                            {
+                                "artist": {
+                                    "identifier": [
+                                        {
+                                            "mbid": "b4946461-dacb-4aa9-a77c-7b3231317794",
+                                            "href": "http://api.songkick.com/api/3.0/artists/mbid:b4946461-dacb-4aa9-a77c-7b3231317794.json"
+                                        }
+                                    ],
+                                    "displayName": "Senses Fail",
+                                    "uri": "http://www.songkick.com/artists/109675-senses-fail?utm_source=4791&utm_medium=partner",
+                                    "id": 109675
+                                },
+                                "billingIndex": 1,
+                                "billing": "headline",
+                                "displayName": "Senses Fail",
+                                "id": 34361339
+                            },
+                            {
+                                "artist": {
+                                    "identifier": [
+                                        {
+                                            "mbid": "498e46e2-59c9-4320-8ccf-12c67a29b125",
+                                            "href": "http://api.songkick.com/api/3.0/artists/mbid:498e46e2-59c9-4320-8ccf-12c67a29b125.json"
+                                        }
+                                    ],
+                                    "displayName": "Expire",
+                                    "uri": "http://www.songkick.com/artists/1300477-expire?utm_source=4791&utm_medium=partner",
+                                    "id": 1300477
+                                },
+                                "billingIndex": 2,
+                                "billing": "headline",
+                                "displayName": "Expire",
+                                "id": 34361349
+                            },
+                            {
+                                "artist": {
+                                    "identifier": [
+                                        {
+                                            "mbid": "6fca6647-1dce-4028-8348-68238b8d2237",
+                                            "href": "http://api.songkick.com/api/3.0/artists/mbid:6fca6647-1dce-4028-8348-68238b8d2237.json"
+                                        }
+                                    ],
+                                    "displayName": "For the Fallen Dreams",
+                                    "uri": "http://www.songkick.com/artists/1791519-for-the-fallen-dreams?utm_source=4791&utm_medium=partner",
+                                    "id": 1791519
+                                },
+                                "billingIndex": 3,
+                                "billing": "support",
+                                "displayName": "For the Fallen Dreams",
+                                "id": 34361344
+                            },
+                            {
+                                "artist": {
+                                    "identifier": [],
+                                    "displayName": "Being As an Ocean",
+                                    "uri": "http://www.songkick.com/artists/5131333-being-as-an-ocean?utm_source=4791&utm_medium=partner",
+                                    "id": 5131333
+                                },
+                                "billingIndex": 4,
+                                "billing": "support",
+                                "displayName": "Being As an Ocean",
+                                "id": 34361354
+                            }
+                        ],
+                        "venue": {
+                            "lng": -93.2743603,
+                            "metroArea": {
+                                "displayName": "Twin Cities",
+                                "uri": "http://www.songkick.com/metro_areas/35130-us-twin-cities?utm_source=4791&utm_medium=partner",
+                                "id": 35130,
+                                "state": {
+                                    "displayName": "MN"
+                                },
+                                "country": {
+                                    "displayName": "US"
+                                }
+                            },
+                            "displayName": "The Garage",
+                            "uri": "http://www.songkick.com/venues/68388-garage?utm_source=4791&utm_medium=partner",
+                            "id": 68388,
+                            "lat": 44.7657691
+                        },
+                        "start": {
+                            "time": "17:00:00",
+                            "date": "2013-10-11",
+                            "datetime": "2013-10-11T17:00:00-0600"
+                        },
+                        "location": {
+                            "lng": -93.2743603,
+                            "city": "Burnsville, MN, US",
+                            "lat": 44.7657691
+                        },
+                        "displayName": "Senses Fail and Expire with For the Fallen Dreams and Being As an Ocean at The Garage (October 11, 2013)",
+                        "uri": "http://www.songkick.com/concerts/17361884-senses-fail-at-garage?utm_source=4791&utm_medium=partner",
+                        "popularity": 0,
+                        "id": 17361884
+                    },
+                    "createdAt": "2013-07-21T02:51:32+0100"
+                }
+            ]
+        },
+        "perPage": 50,
+        "page": 1,
+        "totalEntries": 2
+    }
+}

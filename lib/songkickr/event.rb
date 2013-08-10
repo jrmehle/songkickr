@@ -37,10 +37,10 @@ module Songkickr
   #
   # http://www.songkick.com/developer/artist-search
   class Event
-    attr_accessor :popularity, :type, :display_name, :location, :start, :uri, :id, :lat, :lng, :performances, :status, :venue, :tickets_uri
-    
+    attr_accessor :popularity, :type, :display_name, :location, :start, :uri, :id, :performances, :status, :venue, :tickets_uri
+
     def initialize(event_hash)
-      @popularity   = event_hash["popularity"]
+      @popularity   = event_hash["popularity"].to_f
       @type         = event_hash["type"]
       @location     = Songkickr::Location.new event_hash["location"]
       @status       = event_hash["status"]
@@ -52,24 +52,17 @@ module Songkickr
       @id           = event_hash["id"]
       @tickets_uri  = event_hash["ticketsUri"]
     end
-    
+
     protected
-      
+
       # Takes the start hash and turns in into a DateTime object.
       def start_hash_to_datetime(start_hash)
         datetime = DateTime.parse("#{start_hash["date"]} #{start_hash["time"]}")
       end
-      
+
       # Builds a list of Performance objects.
-      def parse_performance(performance_array = nil)
-        performances = []
-        if performance_array
-          performance_array.each do |performance|
-            performances << Songkickr::Performance.new(performance)
-          end
-        end
-        
-        performances
+      def parse_performance(performances = [])
+        performances.map { |performance| Songkickr::Performance.new performance }
       end
   end
 end

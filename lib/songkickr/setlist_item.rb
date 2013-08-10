@@ -9,7 +9,7 @@ module Songkickr
     
     # Takes the set list item hash and parses a boolean out for encore.
     def initialize(setlist_item_hash)
-      @encore = !!setlist_item_hash["encore"]
+      @encore = !setlist_item_hash["encore"].zero?
       @name   = setlist_item_hash["name"]
     end
   end
