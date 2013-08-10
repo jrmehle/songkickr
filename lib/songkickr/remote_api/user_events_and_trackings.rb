@@ -1,6 +1,23 @@
 module Songkickr
   module RemoteApi
     module UserEventsAndTrackings
+      # ==== Users Tracked Events Calendar
+      # Returns a list of calendar entries with events for a user's tracked artists in her tracked metro areas.
+      # /users/#{username}/calendar.json?reason=tracked_artist
+      def users_tracked_events_calendar(username)
+        result = get("/users/#{username}/calendar.json?reason=tracked_artist")
+        Songkickr::CalendarResult.new result
+      end
+
+      # ==== User Attendance Calendar
+      # Returns a list of calendar entries with events that a user is planning to attend.
+      # /users/#{username}/calendar.json?reason=attendance
+      def users_attendance_calendar(username)
+        result = get("/users/#{username}/calendar.json?reason=attendance")
+        Songkickr::CalendarResult.new result
+      end
+
+
       # ==== User Tracked Metro Areas
       # http://www.songkick.com/developer/trackings
       #

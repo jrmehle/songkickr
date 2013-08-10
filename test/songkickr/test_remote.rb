@@ -237,6 +237,21 @@ class TestRemote < Test::Unit::TestCase
         assert_equal "Deltron 3030 at Irving Plaza (November 6, 2000)", result.results.first.display_name
       end
     end
+
+    should "return the users tracked events calendar" do
+      VCR.use_cassette('users_tracked_events_calendar') do
+        result = @remote.users_tracked_events_calendar('jrmehle')
+        assert_equal 1, result.results.first.reason.count
+        assert_equal Songkickr::Artist, result.results.first.reason.first.class
+      end
+    end
+
+    should "return the users attendance calendar" do
+      VCR.use_cassette('users_attendance_calendar') do
+        result = @remote.users_attendance_calendar('jrmehle')
+        assert_equal "i_might_go", result.results.first.reason
+      end
+    end
   end
 
   def api_key
