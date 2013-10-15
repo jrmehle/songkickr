@@ -37,7 +37,7 @@ module Songkickr
   #
   # http://www.songkick.com/developer/artist-search
   class Event
-    attr_accessor :popularity, :type, :display_name, :location, :start, :uri, :id, :performances, :status, :venue, :tickets_uri
+    attr_accessor :popularity, :type, :display_name, :location, :start, :uri, :id, :performances, :status, :venue, :tickets_uri, :series
 
     def initialize(event_hash)
       @popularity   = event_hash["popularity"].to_f
@@ -51,6 +51,7 @@ module Songkickr
       @performances = parse_performance event_hash["performance"]
       @id           = event_hash["id"]
       @tickets_uri  = event_hash["ticketsUri"]
+      @series       = event_hash["series"]["displayName"] if event_hash["series"] && event_hash["series"]["displayName"]
     end
 
     protected
