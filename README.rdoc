@@ -47,7 +47,7 @@ Copyright (c) 2010-2013 Jared Mehle. See LICENSE for details.
 
 == Contributors
 
-Thanks to Andrew Chen, Akshay Dodeja, Tomasz Stachewicz, and Dave Knapik for submitting code and pull requests.
+Thanks to Andrew Chen, Akshay Dodeja, Tomasz Stachewicz, Dave Knapik, and Matt Ruzicka for submitting code and pull requests.
 
 A special thank you to Jon Nunemaker for httparty which is used extensively within this
 gem and for the twitter gem as inspiration.
