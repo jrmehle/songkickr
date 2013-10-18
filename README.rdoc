@@ -28,7 +28,7 @@ Get a users events by username:
 Get a the setlists of a concert by event ID:
     results = remote.concert_setlists(2680726)
 
-More: As of v0.4.0 songkickr supports all of Songkick's APIs. Check the RDocs for the Songkickr::RemoteApi classes.
+*More*: As of v0.4.0 songkickr supports all of Songkick's APIs. Check the RDocs for the Songkickr::RemoteApi classes.
 
 
 == Note on Patches/Pull Requests
@@ -37,9 +37,9 @@ More: As of v0.4.0 songkickr supports all of Songkick's APIs. Check the RDocs fo
 * Make your feature addition or bug fix.
 * Add tests for it. This is important so I don't break it in a
   future version unintentionally.
-* Commit, do not mess with Rakefile, version, or history.
+* Commit and please do not mess with version or history.
   (if you want to have your own version, that is fine but bump version in a commit by itself I can ignore when I pull)
-* Send me a pull request. Bonus points for topic branches.
+* Send me a pull request against the *develop* branch.
 
 == Copyright
 
@@ -47,7 +47,7 @@ Copyright (c) 2010-2013 Jared Mehle. See LICENSE for details.
 
 == Contributors
 
-Thanks to Andrew Chen, Akshay Dodeja, Tomasz Stachewicz, Dave Knapik, and Matt Ruzicka for submitting code and pull requests.
+Thanks to Andrew Chen, Akshay Dodeja, Tomasz Stachewicz, Dave Knapik, Matt Ruzicka, and Alex Beregszaszi for submitting code and pull requests.
 
 A special thank you to Jon Nunemaker for httparty which is used extensively within this
 gem and for the twitter gem as inspiration.
