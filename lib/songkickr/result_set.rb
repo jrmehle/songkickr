@@ -3,7 +3,6 @@ module Songkickr
     attr_accessor :page, :per_page, :total_entries, :results, :result_type, :result_key_string, :status
 
     def initialize(result_hash = {})
-      # @result_type = "Event" or "MetroArea"
       results_page = result_hash["resultsPage"]
 
       if results_page

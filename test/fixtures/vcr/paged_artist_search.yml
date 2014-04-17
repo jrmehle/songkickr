@@ -1,0 +1,37 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.songkick.com/api/3.0/search/artists.json?apikey=hFYxiInE4DBpH5KL&per_page=2&query=Counterparts
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Thu, 17 Apr 2014 02:06:49 GMT
+      status:
+      - 200 OK
+      content-type:
+      - application/json; charset=utf-8
+      cache-control:
+      - private, max-age=3600
+      expires:
+      - Thu, 17 Apr 2014 03:06:49 GMT
+      vary:
+      - Accept-Encoding
+      connection:
+      - close
+      transfer-encoding:
+      - chunked
+    body:
+      encoding: US-ASCII
+      string: ! '{"resultsPage":{"status":"ok","results":{"artist":[{"onTourUntil":"2014-06-20","identifier":[{"eventsHref":"http://api.songkick.com/api/3.0/artists/mbid:4b0dd5e7-c795-42bd-8311-bc9f71fabd0a/calendar.json","setlistsHref":"http://api.songkick.com/api/3.0/artists/mbid:4b0dd5e7-c795-42bd-8311-bc9f71fabd0a/setlists.json","mbid":"4b0dd5e7-c795-42bd-8311-bc9f71fabd0a","href":"http://api.songkick.com/api/3.0/artists/mbid:4b0dd5e7-c795-42bd-8311-bc9f71fabd0a.json"}],"uri":"http://www.songkick.com/artists/231185-counterparts?utm_source=4791&utm_medium=partner","displayName":"Counterparts","id":231185},{"uri":"http://www.songkick.com/artists/6061844-counterparts-facts?utm_source=4791&utm_medium=partner","displayName":"Counterparts
+        Facts","onTourUntil":null,"identifier":[],"id":6061844}]},"perPage":2,"page":1,"totalEntries":4}}'
+    http_version: '1.1'
+  recorded_at: Thu, 17 Apr 2014 02:06:48 GMT
+recorded_with: VCR 2.5.0

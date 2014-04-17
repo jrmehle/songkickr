@@ -131,9 +131,23 @@ class TestRemote < Test::Unit::TestCase
       end
     end
 
-    should "return the artist when searched" do
-      VCR.use_cassette('artist_search') do
+    should "return the artist when searched as a string" do
+      VCR.use_cassette('artist_search_string') do
         result = @remote.artist_search('Counterparts')
+        assert_equal "Counterparts", result.results.first.display_name
+      end
+    end
+
+    should "return the artist with paged results when searched as a hash" do
+      VCR.use_cassette('paged_artist_search') do
+        result = @remote.artist_search(:artist_name => 'Counterparts', :per_page => 2)
+        assert_equal 2, result.results.size
+      end
+    end
+
+    should "return the artist when searched as a hash" do
+      VCR.use_cassette('artist_search_hash') do
+        result = @remote.artist_search(:artist_name => 'Counterparts')
         assert_equal "Counterparts", result.results.first.display_name
       end
     end
