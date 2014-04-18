@@ -90,6 +90,34 @@ module Songkickr
         Songkickr::LocationResult.new result
       end
 
+      # Location Search by geographic coordinates
+      #
+      # === Parameters
+      # * +latitude+ - float <em>Ex. 44.67</em>
+      # * +longitude+ - float <em>Ex. -19.35</em>
+      # * +options+ - hash of additional options such as page and per_page
+      def location_search_geo(latitude, longitude, options = {})
+        location_search(options.merge(:location => "geo:#{latitude},#{longitude}"))
+      end
+
+      # Location Search by IP address
+      #
+      # === Parameters
+      # * +ip_address+ string <em>Ex. '123.123.123.123'</em>
+      # * +options+ - hash of additional options such as page and per_page
+      def location_search_ip(ip_address, options)
+        location_search(options.merge(:location => "geo:#{latitude},#{longitude}"))
+      end
+
+      # Location Search by metro area name
+      #
+      # === Parameters
+      # * +metro_area_name+ - Metro area or city named 'location_name' string <em>Ex. 'Minneapolis', 'Nashville', or 'London'</em>.
+      # * +options+ - hash of additional options such as page and per_page
+      def location_search_metro_area_name(metro_area_name)
+        location_search(options.merge(:query => metro_area_name))
+      end
+
       # ==== Metro Area Events (Upcoming)
       # Returns an array of Events.
       #
@@ -125,6 +153,7 @@ module Songkickr
       #
       # * +query+ -
       def venue_search(query)
+        venue_name = query.delete(:venue_name)
         result = get("/search/venues.json", :query => { :query => query })
         Songkickr::VenueResult.new result
       end

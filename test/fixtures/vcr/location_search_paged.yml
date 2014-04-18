@@ -1,0 +1,40 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.songkick.com/api/3.0/search/locations.json?apikey=hFYxiInE4DBpH5KL&query=St.%20Paul%2C%20MN&per_page=2
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Fri, 18 Apr 2014 02:08:15 GMT
+      status:
+      - 200 OK
+      content-type:
+      - application/json; charset=utf-8
+      cache-control:
+      - private, max-age=3600
+      expires:
+      - Fri, 18 Apr 2014 03:08:15 GMT
+      vary:
+      - Accept-Encoding
+      connection:
+      - close
+      transfer-encoding:
+      - chunked
+    body:
+      encoding: US-ASCII
+      string: ! '{"resultsPage":{"status":"ok","results":{"location":[{"city":{"lat":44.9444,"lng":-93.0931,"country":{"displayName":"US"},"state":{"displayName":"MN"},"displayName":"St.
+        Paul"},"metroArea":{"lat":44.9801,"lng":-93.2519,"country":{"displayName":"US"},"uri":"http://www.songkick.com/metro_areas/35130-us-twin-cities?utm_source=4791&utm_medium=partner","state":{"displayName":"MN"},"displayName":"Twin
+        Cities","id":35130}},{"city":{"lat":null,"lng":null,"country":{"displayName":"US"},"state":{"displayName":"MN"},"displayName":"South
+        St. Paul"},"metroArea":{"lat":44.9801,"lng":-93.2519,"country":{"displayName":"US"},"uri":"http://www.songkick.com/metro_areas/35130-us-twin-cities?utm_source=4791&utm_medium=partner","state":{"displayName":"MN"},"displayName":"Twin
+        Cities","id":35130}}]},"perPage":2,"page":1,"totalEntries":4}}'
+    http_version: '1.1'
+  recorded_at: Fri, 18 Apr 2014 02:08:14 GMT
+recorded_with: VCR 2.5.0

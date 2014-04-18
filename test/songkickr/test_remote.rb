@@ -167,6 +167,23 @@ class TestRemote < Test::Unit::TestCase
       end
     end
 
+    should "return the locations when searched with pagination" do
+      VCR.use_cassette('location_search_paged') do
+        result = @remote.location_search(:query => 'St. Paul, MN', :per_page => 2)
+        assert_equal "St. Paul", result.results.first.city
+        assert_equal Songkickr::MetroArea, result.results.first.metro_area.class
+        assert_equal 2, result.results.size
+      end
+    end
+
+    should "return the locations when searching by geographic location" do
+      VCR.use_cassette('location_search_geo') do
+        result = @remote.location_search_geo(51.5078, -0.128)
+        assert_equal "London", result.results.first.city
+        assert_equal Songkickr::MetroArea, result.results.first.metro_area.class
+      end
+    end
+
     should "return the metro area events when searched" do
       VCR.use_cassette('metro_areas_events') do
         result = @remote.metro_areas_events(35130)
