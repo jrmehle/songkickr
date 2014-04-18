@@ -151,10 +151,14 @@ module Songkickr
       #
       # === Parameters
       #
-      # * +query+ -
+      # * +query+ - A hash of query parameters, see below for options.
+      #
+      # ==== Query Parameters
+      # * +query+ - Venue name search string
+      # * +page+ - Page number
+      # * +per_page+ - Number of results per page, max 50.
       def venue_search(query)
-        venue_name = query.delete(:venue_name)
-        result = get("/search/venues.json", :query => { :query => query })
+        result = get("/search/venues.json", :query => query)
         Songkickr::VenueResult.new result
       end
     end

@@ -200,8 +200,16 @@ class TestRemote < Test::Unit::TestCase
 
     should "return the search venue" do
       VCR.use_cassette('venue_search') do
-        result = @remote.venue_search('Xcel Energy Center')
+        result = @remote.venue_search(:query => 'Xcel Energy Center')
         assert_equal "Xcel Energy Center", result.results.first.display_name
+      end
+    end
+
+    should "return the searched venue with paged results" do
+      VCR.use_cassette('venue_search_paged') do
+        result = @remote.venue_search(:query => 'Xcel Energy Center', :per_page => 2)
+        assert_equal "Xcel Energy Center", result.results.first.display_name
+        assert_equal 2, result.results.size
       end
     end
 

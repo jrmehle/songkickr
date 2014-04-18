@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://api.songkick.com/api/3.0/search/venues.json?apikey=hFYxiInE4DBpH5KL&query=Xcel%20Energy%20Center
+    uri: http://api.songkick.com/api/3.0/search/venues.json?apikey=hFYxiInE4DBpH5KL&query=Xcel%20Energy%20Center&per_page=2
     body:
       encoding: US-ASCII
       string: ''
@@ -13,7 +13,7 @@ http_interactions:
       message: OK
     headers:
       date:
-      - Fri, 18 Apr 2014 04:08:27 GMT
+      - Fri, 18 Apr 2014 04:05:12 GMT
       status:
       - 200 OK
       content-type:
@@ -21,7 +21,7 @@ http_interactions:
       cache-control:
       - private, max-age=3600
       expires:
-      - Fri, 18 Apr 2014 05:08:27 GMT
+      - Fri, 18 Apr 2014 05:05:12 GMT
       vary:
       - Accept-Encoding
       connection:
@@ -37,7 +37,7 @@ http_interactions:
         Kellogg Blvd W","description":"","phone":null,"city":{"country":{"displayName":"US"},"displayName":"North
         Saint Paul","state":{"displayName":"MN"},"uri":"http://www.songkick.com/metro_areas/88071-us-north-saint-paul?utm_source=4791&utm_medium=partner","id":88071},"metroArea":{"country":{"displayName":"US"},"displayName":"North
         Saint Paul","state":{"displayName":"MN"},"uri":"http://www.songkick.com/metro_areas/88071-us-north-saint-paul?utm_source=4791&utm_medium=partner","id":88071},"zip":"55102","displayName":"Xcel
-        Energy Center","lat":44.9440098,"capacity":null,"lng":-93.0995822,"website":null,"uri":"http://www.songkick.com/venues/2114344-xcel-energy-center?utm_source=4791&utm_medium=partner","id":2114344}]},"perPage":50,"page":1,"totalEntries":2}}'
+        Energy Center","lat":44.9440098,"capacity":null,"lng":-93.0995822,"website":null,"uri":"http://www.songkick.com/venues/2114344-xcel-energy-center?utm_source=4791&utm_medium=partner","id":2114344}]},"perPage":2,"page":1,"totalEntries":2}}'
     http_version: '1.1'
-  recorded_at: Fri, 18 Apr 2014 04:08:25 GMT
+  recorded_at: Fri, 18 Apr 2014 04:05:11 GMT
 recorded_with: VCR 2.5.0
