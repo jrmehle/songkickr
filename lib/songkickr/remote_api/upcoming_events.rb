@@ -77,16 +77,16 @@ module Songkickr
       # http://www.songkick.com/developer/location-search
       #
       # === Parameters
-      # * +query+ - A hash of query parameters, see below for options.
+      # * +query+ - A hash of query parameters, see below for options. Note: Only one of name, location, or ip may be used at a time.
       #
       # ==== Query Parameters
-      # * +name+ - Metro area or city named 'location_name' string <em>Ex. 'Minneapolis, Nashville, or London'</em>
+      # * +name+ - Metro area or city named 'location_name' string <em>Ex. 'Minneapolis', 'Nashville', or 'London'</em>.
       # * +location+ - 'geo:{lat,lng}' string <em>Ex. 'geo:{-0.128,51.5078}'</em>
       # * +ip+ - 'ip:{ip-addr}' string <em>Ex. 'ip:{123.123.123.123}'</em>
       # * +page+ - Page number
       # * +per_page+ - Number of results per page, max 50.
       def location_search(query = {})
-        result = get("/search/locations.json", :query => { :query => query })
+        result = get("/search/locations.json", :query => query)
         Songkickr::LocationResult.new result
       end
 

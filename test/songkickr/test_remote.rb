@@ -161,7 +161,7 @@ class TestRemote < Test::Unit::TestCase
 
     should "return the location when searched" do
       VCR.use_cassette('location_search') do
-        result = @remote.location_search('St. Paul, MN')
+        result = @remote.location_search(:query => 'St. Paul, MN')
         assert_equal "St. Paul", result.results.first.city
         assert_equal Songkickr::MetroArea, result.results.first.metro_area.class
       end
