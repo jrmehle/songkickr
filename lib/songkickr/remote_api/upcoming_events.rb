@@ -106,7 +106,7 @@ module Songkickr
       # * +ip_address+ string <em>Ex. '123.123.123.123'</em>
       # * +options+ - hash of additional options such as page and per_page
       def location_search_ip(ip_address, options)
-        location_search(options.merge(:location => "geo:#{latitude},#{longitude}"))
+        location_search(options.merge(:location => "ip:#{ip_address}"))
       end
 
       # Location Search by metro area name
