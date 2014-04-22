@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    songkickr (0.5.1)
+    songkickr (0.5.2)
       httparty (>= 0.5.0)
 
 GEM
