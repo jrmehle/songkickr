@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://api.songkick.com/api/3.0/search/locations.json?apikey=hFYxiInE4DBpH5KL&query=St.%20Paul%2C%20MN
+    uri: http://api.songkick.com/api/3.0/search/locations.json?apikey=hFYxiInE4DBpH5KL&query=St.%20Paul%2C%20MN&per_page=2
     body:
       encoding: US-ASCII
       string: ''
@@ -34,11 +34,7 @@ http_interactions:
         Paul"},"metroArea":{"lat":44.9801,"lng":-93.2519,"country":{"displayName":"US"},"uri":"http://www.songkick.com/metro_areas/35130-us-twin-cities?utm_source=4791&utm_medium=partner","state":{"displayName":"MN"},"displayName":"Twin
         Cities","id":35130}},{"city":{"lat":null,"lng":null,"country":{"displayName":"US"},"state":{"displayName":"MN"},"displayName":"South
         St. Paul"},"metroArea":{"lat":44.9801,"lng":-93.2519,"country":{"displayName":"US"},"uri":"http://www.songkick.com/metro_areas/35130-us-twin-cities?utm_source=4791&utm_medium=partner","state":{"displayName":"MN"},"displayName":"Twin
-        Cities","id":35130}},{"metroArea":{"state":{"displayName":"MN"},"country":{"displayName":"US"},"lat":45.01149,"lng":-92.993538,"displayName":"North
-        Saint Paul","uri":"http://www.songkick.com/metro_areas/88071-us-north-saint-paul?utm_source=4791&utm_medium=partner","id":88071},"city":{"state":{"displayName":"MN"},"country":{"displayName":"US"},"lat":45.01149,"lng":-92.993538,"displayName":"North
-        Saint Paul"}},{"metroArea":{"lat":44.9801,"lng":-93.2519,"country":{"displayName":"US"},"uri":"http://www.songkick.com/metro_areas/35130-us-twin-cities?utm_source=4791&utm_medium=partner","displayName":"Twin
-        Cities","state":{"displayName":"MN"},"id":35130},"city":{"lat":null,"lng":null,"country":{"displayName":"US"},"displayName":"St
-        Paul Park","state":{"displayName":"MN"}}}]},"perPage":50,"page":1,"totalEntries":4}}'
+        Cities","id":35130}}]},"perPage":2,"page":1,"totalEntries":4}}'
     http_version: '1.1'
-  recorded_at: Fri, 18 Apr 2014 02:08:13 GMT
+  recorded_at: Fri, 18 Apr 2014 02:08:14 GMT
 recorded_with: VCR 2.5.0

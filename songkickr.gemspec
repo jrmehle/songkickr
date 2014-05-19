@@ -21,7 +21,7 @@ Gem::Specification.new do |gem|
   gem.add_development_dependency 'vcr',       "~> 2.5.0"
   gem.add_development_dependency 'pry'
 
-  gem.add_dependency 'httparty', '~> 0.8.3'
+  gem.add_dependency 'httparty', '>= 0.5.0'
 
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
