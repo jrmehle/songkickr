@@ -41,10 +41,10 @@ module Songkickr
       # * +per_page+ - Number of results per page, max 50.
       def artist_search(query = {})
         if query.is_a? String
-          result = self.class.get("/search/artists.json", :query => { :query => query })
+          result = get("/search/artists.json", :query => { :query => query })
         elsif query.is_a? Hash
           artist_name = query.delete(:artist_name)
-          result      = self.class.get("/search/artists.json", :query => query.merge(:query => artist_name))
+          result      = get("/search/artists.json", :query => query.merge(:query => artist_name))
         end
 
         Songkickr::ArtistResult.new result

@@ -13,7 +13,7 @@ module Songkickr
       # * +page+ - Number of page
       # * +order+ - 'asc' or 'desc', 'asc' by default
       def artists_gigography(artist_id, query = {})
-        result = self.class.get("/artists/#{artist_id}/gigography.json", :query => query)
+        result = get("/artists/#{artist_id}/gigography.json", :query => query)
         Songkickr::EventResult.new result
       end
 
@@ -29,7 +29,7 @@ module Songkickr
       # * +page+ - Number of page
       # * +order+ - 'asc' or 'desc', 'asc' by default
       def users_gigography(username, query = {})
-        result = self.class.get("/users/#{username}/gigography.json", :query => query)
+        result = get("/users/#{username}/gigography.json", :query => query)
         Songkickr::EventResult.new result
       end
 
