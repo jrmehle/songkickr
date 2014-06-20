@@ -152,10 +152,17 @@ class TestRemote < Test::Unit::TestCase
       end
     end
 
-    should "return the event when searched" do
-      VCR.use_cassette('event_search') do
+    should "return the event when searched with an artist string" do
+      VCR.use_cassette('event_search_string') do
+        result = @remote.events('Counterparts')
+        assert_equal "Hellfest 2014", result.results.first.display_name
+      end
+    end
+
+    should "return the event when searched as a hash" do
+      VCR.use_cassette('event_search_hash') do
         result = @remote.events(:artist_name => 'Counterparts')
-        assert_equal "Sound and Fury 2013", result.results.first.display_name
+        assert_equal "Amnesia Rockfest 2014", result.results.first.display_name
       end
     end
 

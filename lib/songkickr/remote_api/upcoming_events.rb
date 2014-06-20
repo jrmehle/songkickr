@@ -69,7 +69,12 @@ module Songkickr
       # * +max_date+ - Most recent date for which you want to look for events
       # * +location+ - See the Songkick website for instructions on how to use the location parameter http://www.songkick.com/developer/location-search
       def events(query = {})
-        result = get("/events.json", :query => query)
+        if query.is_a? String
+          result = get("/events.json", :query => { :artist_name => 'Iron Maiden' })
+        elsif query.is_a? Hash
+          result = get("/events.json", :query => query)
+        end
+
         Songkickr::EventResult.new result
       end
 
