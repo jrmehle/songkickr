@@ -20,8 +20,8 @@ or if your environment requires
 Then call one of the remote methods such as events, users_events(username), or concert_setlists(event_id)
 
 Get an artists events by name:
-    results = remote.events('Iron Maiden')
-
+    results = remote.events(type: 'concert', artists: 'Iron Maiden')
+    
 Get a users events by username:
     results = remote.users_events('jrmehle')
 
