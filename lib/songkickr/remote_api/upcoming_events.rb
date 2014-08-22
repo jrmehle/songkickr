@@ -70,7 +70,7 @@ module Songkickr
       # * +location+ - See the Songkick website for instructions on how to use the location parameter http://www.songkick.com/developer/location-search
       def events(query = {})
         if query.is_a? String
-          result = get("/events.json", :query => { :artist_name => 'Iron Maiden' })
+          result = get("/events.json", :query => { :artist_name => query })
         elsif query.is_a? Hash
           result = get("/events.json", :query => query)
         end

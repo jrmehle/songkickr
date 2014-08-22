@@ -155,7 +155,7 @@ class TestRemote < Test::Unit::TestCase
     should "return the event when searched with an artist string" do
       VCR.use_cassette('event_search_string') do
         result = @remote.events('Counterparts')
-        assert_equal "Hellfest 2014", result.results.first.display_name
+        assert_equal "Stray from the Path, Counterparts, My Ticket Home, and Expire at The Loft (October 9, 2014)", result.results.first.display_name
       end
     end
 

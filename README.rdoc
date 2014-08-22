@@ -19,8 +19,11 @@ or if your environment requires
 
 Then call one of the remote methods such as events, users_events(username), or concert_setlists(event_id)
 
-Get an artists events by name:
+Get an artists events by artist name:
     results = remote.events('Iron Maiden')
+
+Get an artists events by artist name and filter to only festivals:
+    results = remote.events(artist_name: 'Metallica', type: 'festival')
 
 Get a users events by username:
     results = remote.users_events('jrmehle')
@@ -29,7 +32,6 @@ Get a the setlists of a concert by event ID:
     results = remote.concert_setlists(2680726)
 
 *More*: As of v0.4.0 songkickr supports all of Songkick's APIs. Check the RDocs for the Songkickr::RemoteApi classes.
-
 
 == Note on Patches/Pull Requests
 
