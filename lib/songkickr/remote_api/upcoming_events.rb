@@ -17,7 +17,7 @@ module Songkickr
       # * +per_page+ - Number of results per page, max 50.
       # * +order+ - Results are sorted by date. The order can be specified with: order ('asc' or 'desc', 'asc' by default).
       def artist_events(artist_id_or_music_brainz_id, query = {})
-        if artist_id_or_music_brainz_id.to_s.match /^mbid\:\d+$/
+        if artist_id_or_music_brainz_id.to_s.match(/^mbid\:\d+$/)
           url = "/artists/mbid:#{artist_id_or_music_brainz_id}/calendar.json"
         else
           url = "/artists/#{artist_id_or_music_brainz_id}/calendar.json"
