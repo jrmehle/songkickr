@@ -287,7 +287,7 @@ class TestRemote < Test::Unit::TestCase
     should "return the users tracked events calendar" do
       VCR.use_cassette('users_tracked_events_calendar') do
         result = @remote.users_tracked_events_calendar('jrmehle')
-        assert_equal 1, result.results.first.reason.count
+        assert_equal 2, result.results.first.reason.count
         assert_equal Songkickr::Artist, result.results.first.reason.first.class
       end
     end

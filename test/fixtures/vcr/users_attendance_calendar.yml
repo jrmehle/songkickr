@@ -30,7 +30,7 @@ http_interactions:
       - chunked
     body:
       encoding: US-ASCII
-      string: ! '{"resultsPage":{"status":"ok","results":{"calendarEntry":[{"reason":{"attendance":"i_might_go"},"event":{"type":"Concert","status":"ok","displayName":"Oceano
+      string: '{"resultsPage":{"status":"ok","results":{"calendarEntry":[{"reason":{"attendance":"i_might_go"},"event":{"type":"Concert","status":"ok","displayName":"Oceano
         with Reflections, Sworn In, and Adestria at The Garage (August 19, 2013)","popularity":0.0,"start":{"time":"17:30:00","date":"2013-08-19","datetime":"2013-08-19T17:30:00-0600"},"location":{"city":"Burnsville,
         MN, US","lat":44.7657691,"lng":-93.2743603},"uri":"http://www.songkick.com/concerts/17472154-oceano-at-garage?utm_source=4791&utm_medium=partner","id":17472154,"performance":[{"billingIndex":1,"billing":"headline","displayName":"Oceano","artist":{"identifier":[{"href":"http://api.songkick.com/api/3.0/artists/mbid:d2ad541b-55d1-48bf-bdf1-ef0c3d3518e2.json","mbid":"d2ad541b-55d1-48bf-bdf1-ef0c3d3518e2"},{"href":"http://api.songkick.com/api/3.0/artists/mbid:06c2da57-090e-46b8-a671-0e085618ab61.json","mbid":"06c2da57-090e-46b8-a671-0e085618ab61"}],"displayName":"Oceano","uri":"http://www.songkick.com/artists/2050016-oceano?utm_source=4791&utm_medium=partner","id":2050016},"id":34584889},{"billingIndex":2,"billing":"support","displayName":"Reflections","artist":{"identifier":[{"href":"http://api.songkick.com/api/3.0/artists/mbid:c03e760f-c289-45c2-b5b3-d8cd2138f71c.json","mbid":"c03e760f-c289-45c2-b5b3-d8cd2138f71c"},{"href":"http://api.songkick.com/api/3.0/artists/mbid:b19805cd-83ba-43f0-894f-ccf858668eca.json","mbid":"b19805cd-83ba-43f0-894f-ccf858668eca"},{"href":"http://api.songkick.com/api/3.0/artists/mbid:8f6f6b87-4415-42d9-9da6-fb6b00a1bb7d.json","mbid":"8f6f6b87-4415-42d9-9da6-fb6b00a1bb7d"}],"displayName":"Reflections","uri":"http://www.songkick.com/artists/139272-reflections?utm_source=4791&utm_medium=partner","id":139272},"id":34584894},{"billingIndex":3,"billing":"support","displayName":"Sworn
         In","artist":{"identifier":[{"href":"http://api.songkick.com/api/3.0/artists/mbid:02d1a7e3-abd8-4908-bbff-e53da5881407.json","mbid":"02d1a7e3-abd8-4908-bbff-e53da5881407"}],"displayName":"Sworn
@@ -48,4 +48,42 @@ http_interactions:
         Fallen Dreams and Being As an Ocean at The Garage (October 11, 2013)","uri":"http://www.songkick.com/concerts/17361884-senses-fail-at-garage?utm_source=4791&utm_medium=partner","popularity":0.0,"id":17361884},"createdAt":"2013-07-21T02:51:32+0100"}]},"perPage":50,"page":1,"totalEntries":2}}'
     http_version: '1.1'
   recorded_at: Sat, 10 Aug 2013 07:42:19 GMT
+- request:
+    method: get
+    uri: http://api.songkick.com/api/3.0/users/jrmehle/calendar.json?apikey=hFYxiInE4DBpH5KL&reason=attendance
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 29 Oct 2014 00:44:21 GMT
+      Status:
+      - 200 OK
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - private, max-age=600
+      Expires:
+      - Wed, 29 Oct 2014 00:54:21 GMT
+      Vary:
+      - Accept-Encoding
+      Connection:
+      - close
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"resultsPage":{"status":"ok","results":{"calendarEntry":[{"reason":{"attendance":"i_might_go"},"event":{"type":"Concert","popularity":0.019765,"displayName":"Born
+        of Osiris at Amsterdam Bar and Hall (November 9, 2014)","status":"ok","start":{"time":"18:00:00","datetime":"2014-11-09T18:00:00-0600","date":"2014-11-09"},"ageRestriction":null,"location":{"city":"St.
+        Paul, MN, US","lat":44.9463799,"lng":-93.0953755},"performance":[{"billingIndex":1,"displayName":"Born
+        of Osiris","billing":"headline","artist":{"identifier":[{"href":"http://api.songkick.com/api/3.0/artists/mbid:132ca1ea-0891-420f-b129-50247bb144b5.json","mbid":"132ca1ea-0891-420f-b129-50247bb144b5"}],"displayName":"Born
+        of Osiris","uri":"http://www.songkick.com/artists/585096-born-of-osiris?utm_source=4791&utm_medium=partner","id":585096},"id":43603353}],"venue":{"displayName":"Amsterdam
+        Bar and Hall","metroArea":{"displayName":"Twin Cities","uri":"http://www.songkick.com/metro_areas/35130-us-twin-cities?utm_source=4791&utm_medium=partner","id":35130,"state":{"displayName":"MN"},"country":{"displayName":"US"}},"lat":44.9463799,"lng":-93.0953755,"uri":"http://www.songkick.com/venues/1842483-amsterdam-bar-and-hall?utm_source=4791&utm_medium=partner","id":1842483},"uri":"http://www.songkick.com/concerts/21936188-born-of-osiris-at-amsterdam-bar-and-hall?utm_source=4791&utm_medium=partner","id":21936188},"createdAt":"2014-10-11T07:11:30+0100"}]},"perPage":50,"page":1,"totalEntries":1}}'
+    http_version: 
+  recorded_at: Wed, 29 Oct 2014 00:44:22 GMT
 recorded_with: VCR 2.5.0
