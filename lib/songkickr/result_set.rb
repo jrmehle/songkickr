@@ -19,7 +19,7 @@ module Songkickr
       def parse_results(results = {})
         return [] unless results.include? result_key_string
         results[result_key_string].inject([]) do |result_items, result_item|
-          result_items << eval("Songkickr::#{result_type}.new(#{result_item})")
+          result_items << Songkickr.const_get("#{result_type}").new(result_item)
         end
       end
   end

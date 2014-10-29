@@ -30,7 +30,7 @@ http_interactions:
       - chunked
     body:
       encoding: US-ASCII
-      string: ! '{"resultsPage":{"status":"ok","results":{"location":[{"city":{"lat":44.9444,"lng":-93.0931,"country":{"displayName":"US"},"state":{"displayName":"MN"},"displayName":"St.
+      string: '{"resultsPage":{"status":"ok","results":{"location":[{"city":{"lat":44.9444,"lng":-93.0931,"country":{"displayName":"US"},"state":{"displayName":"MN"},"displayName":"St.
         Paul"},"metroArea":{"lat":44.9801,"lng":-93.2519,"country":{"displayName":"US"},"uri":"http://www.songkick.com/metro_areas/35130-us-twin-cities?utm_source=4791&utm_medium=partner","state":{"displayName":"MN"},"displayName":"Twin
         Cities","id":35130}},{"city":{"lat":null,"lng":null,"country":{"displayName":"US"},"state":{"displayName":"MN"},"displayName":"South
         St. Paul"},"metroArea":{"lat":44.9801,"lng":-93.2519,"country":{"displayName":"US"},"uri":"http://www.songkick.com/metro_areas/35130-us-twin-cities?utm_source=4791&utm_medium=partner","state":{"displayName":"MN"},"displayName":"Twin
@@ -41,4 +41,44 @@ http_interactions:
         Paul Park","state":{"displayName":"MN"}}}]},"perPage":50,"page":1,"totalEntries":4}}'
     http_version: '1.1'
   recorded_at: Fri, 18 Apr 2014 02:08:13 GMT
+- request:
+    method: get
+    uri: http://api.songkick.com/api/3.0/search/locations.json?apikey=hFYxiInE4DBpH5KL&query=St.%20Paul,%20MN
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 29 Oct 2014 00:44:19 GMT
+      Status:
+      - 200 OK
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - private, max-age=3600
+      Expires:
+      - Wed, 29 Oct 2014 01:44:19 GMT
+      Vary:
+      - Accept-Encoding
+      Connection:
+      - close
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"resultsPage":{"status":"ok","results":{"location":[{"city":{"lat":44.9444,"lng":-93.0931,"country":{"displayName":"US"},"state":{"displayName":"MN"},"displayName":"St.
+        Paul"},"metroArea":{"lat":44.9801,"lng":-93.2519,"country":{"displayName":"US"},"uri":"http://www.songkick.com/metro_areas/35130-us-twin-cities?utm_source=4791&utm_medium=partner","state":{"displayName":"MN"},"displayName":"Twin
+        Cities","id":35130}},{"metroArea":{"displayName":"Twin Cities","lat":44.9801,"country":{"displayName":"US"},"lng":-93.2519,"uri":"http://www.songkick.com/metro_areas/35130-us-twin-cities?utm_source=4791&utm_medium=partner","state":{"displayName":"MN"},"id":35130},"city":{"displayName":"North
+        Saint Paul","lat":45.0124657,"country":{"displayName":"US"},"lng":-92.9918828,"state":{"displayName":"MN"}}},{"metroArea":{"lat":44.9801,"lng":-93.2519,"country":{"displayName":"US"},"uri":"http://www.songkick.com/metro_areas/35130-us-twin-cities?utm_source=4791&utm_medium=partner","displayName":"Twin
+        Cities","state":{"displayName":"MN"},"id":35130},"city":{"lat":null,"lng":null,"country":{"displayName":"US"},"displayName":"St
+        Paul Park","state":{"displayName":"MN"}}},{"city":{"lat":null,"lng":null,"country":{"displayName":"US"},"state":{"displayName":"MN"},"displayName":"South
+        St. Paul"},"metroArea":{"lat":44.9801,"lng":-93.2519,"country":{"displayName":"US"},"uri":"http://www.songkick.com/metro_areas/35130-us-twin-cities?utm_source=4791&utm_medium=partner","state":{"displayName":"MN"},"displayName":"Twin
+        Cities","id":35130}}]},"perPage":50,"page":1,"totalEntries":4}}'
+    http_version: 
+  recorded_at: Wed, 29 Oct 2014 00:44:19 GMT
 recorded_with: VCR 2.5.0

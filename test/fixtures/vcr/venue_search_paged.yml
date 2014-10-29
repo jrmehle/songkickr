@@ -30,7 +30,7 @@ http_interactions:
       - chunked
     body:
       encoding: US-ASCII
-      string: ! '{"resultsPage":{"status":"ok","results":{"venue":[{"lng":-93.1001467,"street":"175
+      string: '{"resultsPage":{"status":"ok","results":{"venue":[{"lng":-93.1001467,"street":"175
         Kellogg Blvd. W.","zip":"55102","website":"http://xcelenergycenter.tumblr.com","description":"","phone":"651-726-8240","displayName":"Xcel
         Energy Center","metroArea":{"displayName":"Twin Cities","uri":"http://www.songkick.com/metro_areas/35130-us-twin-cities?utm_source=4791&utm_medium=partner","id":35130,"state":{"displayName":"MN"},"country":{"displayName":"US"}},"capacity":null,"city":{"displayName":"St.
         Paul","state":{"displayName":"MN"},"country":{"displayName":"US"}},"uri":"http://www.songkick.com/venues/624-xcel-energy-center?utm_source=4791&utm_medium=partner","id":624,"lat":44.9434383},{"street":"175
@@ -40,4 +40,43 @@ http_interactions:
         Energy Center","lat":44.9440098,"capacity":null,"lng":-93.0995822,"website":null,"uri":"http://www.songkick.com/venues/2114344-xcel-energy-center?utm_source=4791&utm_medium=partner","id":2114344}]},"perPage":2,"page":1,"totalEntries":2}}'
     http_version: '1.1'
   recorded_at: Fri, 18 Apr 2014 04:05:11 GMT
+- request:
+    method: get
+    uri: http://api.songkick.com/api/3.0/search/venues.json?apikey=hFYxiInE4DBpH5KL&per_page=2&query=Xcel%20Energy%20Center
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 29 Oct 2014 00:44:21 GMT
+      Status:
+      - 200 OK
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - private, max-age=3600
+      Expires:
+      - Wed, 29 Oct 2014 01:44:21 GMT
+      Vary:
+      - Accept-Encoding
+      Connection:
+      - close
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"resultsPage":{"status":"ok","results":{"venue":[{"street":"175 Kellogg
+        Blvd. W.","city":{"state":{"displayName":"MN"},"displayName":"St. Paul","country":{"displayName":"US"}},"website":"http://xcelenergycenter.tumblr.com","lat":44.9434383,"zip":"55102","description":"","metroArea":{"uri":"http://www.songkick.com/metro_areas/35130-us-twin-cities?utm_source=4791&utm_medium=partner","id":35130,"state":{"displayName":"MN"},"displayName":"Twin
+        Cities","country":{"displayName":"US"}},"capacity":18568,"lng":-93.1001467,"phone":"651-726-8240","uri":"http://www.songkick.com/venues/624-xcel-energy-center?utm_source=4791&utm_medium=partner","id":624,"displayName":"Xcel
+        Energy Center"},{"metroArea":{"displayName":"Twin Cities","country":{"displayName":"US"},"uri":"http://www.songkick.com/metro_areas/35130-us-twin-cities?utm_source=4791&utm_medium=partner","id":35130,"state":{"displayName":"MN"}},"phone":null,"displayName":"Xcel
+        Energy Center","zip":"55102","description":"","city":{"displayName":"North
+        Saint Paul","country":{"displayName":"US"},"state":{"displayName":"MN"}},"lat":44.944335,"street":"175
+        Kellogg Blvd W","uri":"http://www.songkick.com/venues/2114344-xcel-energy-center?utm_source=4791&utm_medium=partner","lng":-93.1005215,"id":2114344,"website":null,"capacity":null}]},"perPage":2,"page":1,"totalEntries":2}}'
+    http_version: 
+  recorded_at: Wed, 29 Oct 2014 00:44:21 GMT
 recorded_with: VCR 2.5.0
