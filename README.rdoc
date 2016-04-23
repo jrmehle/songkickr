@@ -45,11 +45,11 @@ Get a the setlists of a concert by event ID:
 
 == Copyright
 
-Copyright (c) 2010-2013 Jared Mehle. See LICENSE for details.
+Copyright (c) 2010-2016 Jared Mehle. See LICENSE for details.
 
 == Contributors
 
-Thanks to Andrew Chen, Akshay Dodeja, Tomasz Stachewicz, Dave Knapik, Matt Ruzicka, and Alex Beregszaszi for submitting code and pull requests.
+Thanks to Andrew Chen, Akshay Dodeja, Tomasz Stachewicz, Dave Knapik, Matt Ruzicka, Alex Beregszaszi, and Github user bibliotechy for submitting code and pull requests.
 
 A special thank you to Jon Nunemaker for httparty which is used extensively within this
 gem and for the twitter gem as inspiration.
