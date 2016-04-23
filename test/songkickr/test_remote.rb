@@ -140,14 +140,14 @@ class TestRemote < Test::Unit::TestCase
 
     should "return the artist with paged results when searched as a hash" do
       VCR.use_cassette('paged_artist_search') do
-        result = @remote.artist_search(:artist_name => 'Counterparts', :per_page => 2)
+        result = @remote.artist_search(artist_name: 'Counterparts', per_page: 2)
         assert_equal 2, result.results.size
       end
     end
 
     should "return the artist when searched as a hash" do
       VCR.use_cassette('artist_search_hash') do
-        result = @remote.artist_search(:artist_name => 'Counterparts')
+        result = @remote.artist_search(artist_name: 'Counterparts')
         assert_equal "Counterparts", result.results.first.display_name
       end
     end
@@ -161,14 +161,14 @@ class TestRemote < Test::Unit::TestCase
 
     should "return the event when searched as a hash" do
       VCR.use_cassette('event_search_hash') do
-        result = @remote.events(:artist_name => 'Counterparts')
+        result = @remote.events(artist_name: 'Counterparts')
         assert_equal "Amnesia Rockfest 2014", result.results.first.display_name
       end
     end
 
     should "return the location when searched" do
       VCR.use_cassette('location_search') do
-        result = @remote.location_search(:query => 'St. Paul, MN')
+        result = @remote.location_search(query: 'St. Paul, MN')
         assert_equal "St. Paul", result.results.first.city
         assert_equal Songkickr::MetroArea, result.results.first.metro_area.class
       end
@@ -176,7 +176,7 @@ class TestRemote < Test::Unit::TestCase
 
     should "return the locations when searched with pagination" do
       VCR.use_cassette('location_search_paged') do
-        result = @remote.location_search(:query => 'St. Paul, MN', :per_page => 2)
+        result = @remote.location_search(query: 'St. Paul, MN', per_page: 2)
         assert_equal "St. Paul", result.results.first.city
         assert_equal Songkickr::MetroArea, result.results.first.metro_area.class
         assert_equal 2, result.results.size
@@ -207,14 +207,14 @@ class TestRemote < Test::Unit::TestCase
 
     should "return the search venue" do
       VCR.use_cassette('venue_search') do
-        result = @remote.venue_search(:query => 'Xcel Energy Center')
+        result = @remote.venue_search(query: 'Xcel Energy Center')
         assert_equal "Xcel Energy Center", result.results.first.display_name
       end
     end
 
     should "return the searched venue with paged results" do
       VCR.use_cassette('venue_search_paged') do
-        result = @remote.venue_search(:query => 'Xcel Energy Center', :per_page => 2)
+        result = @remote.venue_search(query: 'Xcel Energy Center', per_page: 2)
         assert_equal "Xcel Energy Center", result.results.first.display_name
         assert_equal 2, result.results.size
       end
