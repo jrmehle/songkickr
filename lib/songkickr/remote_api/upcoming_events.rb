@@ -119,7 +119,7 @@ module Songkickr
       # === Parameters
       # * +metro_area_name+ - Metro area or city named 'location_name' string <em>Ex. 'Minneapolis', 'Nashville', or 'London'</em>.
       # * +options+ - hash of additional options such as page and per_page
-      def location_search_metro_area_name(metro_area_name)
+      def location_search_metro_area_name(metro_area_name, options = {})
         location_search(options.merge(:query => metro_area_name))
       end
 
