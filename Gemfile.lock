@@ -18,12 +18,12 @@ GEM
     crack (0.4.2)
       safe_yaml (~> 1.0.0)
     ffi (1.9.6-java)
-    httparty (0.13.1)
+    httparty (0.13.7)
       json (~> 1.8)
       multi_xml (>= 0.5.2)
     i18n (0.6.11)
-    json (1.8.1)
-    json (1.8.1-java)
+    json (1.8.3)
+    json (1.8.3-java)
     method_source (0.8.2)
     minitest (5.4.2)
     multi_xml (0.5.5)
@@ -75,3 +75,6 @@ DEPENDENCIES
   test-unit (~> 3.0.0)
   vcr (~> 2.9.0)
   webmock (~> 1.8.0)
+
+BUNDLED WITH
+   1.11.2
