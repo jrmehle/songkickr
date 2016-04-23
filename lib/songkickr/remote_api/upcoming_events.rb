@@ -4,7 +4,7 @@ module Songkickr
       # ==== Artist calendar (Upcoming)
       # Returns an array of Events.
       #
-      # ex. remote.artist_events('mbid:5bac9b4f-2f1c-4d39-8d11-231d5b6650ce', :page => 1, :per_page => 5, :order => 'desc')
+      # ex. remote.artist_events('mbid:5bac9b4f-2f1c-4d39-8d11-231d5b6650ce', page: 1, per_page: 5, order: 'desc')
       #
       # http://www.songkick.com/developer/upcoming-events-for-artist
       #
@@ -23,7 +23,7 @@ module Songkickr
           url = "/artists/#{artist_id_or_music_brainz_id}/calendar.json"
         end
 
-        result = get(url, :query => query)
+        result = get(url, query: query)
         Songkickr::EventResult.new result
       end
 
@@ -41,10 +41,10 @@ module Songkickr
       # * +per_page+ - Number of results per page, max 50.
       def artist_search(query = {})
         if query.is_a? String
-          result = get("/search/artists.json", :query => { :query => query })
+          result = get("/search/artists.json", query: { query: query })
         elsif query.is_a? Hash
           artist_name = query.delete(:artist_name)
-          result      = get("/search/artists.json", :query => query.merge(:query => artist_name))
+          result      = get("/search/artists.json", query: query.merge(query: artist_name))
         end
 
         Songkickr::ArtistResult.new result
@@ -56,7 +56,7 @@ module Songkickr
       # === Parameters
       # * +query+ - A hash of query parameters, see below for options.
       #
-      # _Example:_ <code>{ :type => 'concert', :artists => 'Coolio' }</code>
+      # _Example:_ <code>{ type: 'concert', artists: 'Coolio' }</code>
       #
       # ==== Query Parameters
       # * +type+ - valid types: concert or festival
@@ -70,9 +70,9 @@ module Songkickr
       # * +location+ - See the Songkick website for instructions on how to use the location parameter http://www.songkick.com/developer/location-search
       def events(query = {})
         if query.is_a? String
-          result = get("/events.json", :query => { :artist_name => query })
+          result = get("/events.json", query: { artist_name: query })
         elsif query.is_a? Hash
-          result = get("/events.json", :query => query)
+          result = get("/events.json", query: query)
         end
 
         Songkickr::EventResult.new result
@@ -91,7 +91,7 @@ module Songkickr
       # * +page+ - Page number
       # * +per_page+ - Number of results per page, max 50.
       def location_search(query = {})
-        result = get("/search/locations.json", :query => query)
+        result = get("/search/locations.json", query: query)
         Songkickr::LocationResult.new result
       end
 
@@ -102,7 +102,7 @@ module Songkickr
       # * +longitude+ - float <em>Ex. -19.35</em>
       # * +options+ - hash of additional options such as page and per_page
       def location_search_geo(latitude, longitude, options = {})
-        location_search(options.merge(:location => "geo:#{latitude},#{longitude}"))
+        location_search(options.merge(location: "geo:#{latitude},#{longitude}"))
       end
 
       # Location Search by IP address
@@ -111,7 +111,7 @@ module Songkickr
       # * +ip_address+ string <em>Ex. '123.123.123.123'</em>
       # * +options+ - hash of additional options such as page and per_page
       def location_search_ip(ip_address, options = {})
-        location_search(options.merge(:location => "ip:#{ip_address}"))
+        location_search(options.merge(location: "ip:#{ip_address}"))
       end
 
       # Location Search by metro area name
@@ -120,7 +120,7 @@ module Songkickr
       # * +metro_area_name+ - Metro area or city named 'location_name' string <em>Ex. 'Minneapolis', 'Nashville', or 'London'</em>.
       # * +options+ - hash of additional options such as page and per_page
       def location_search_metro_area_name(metro_area_name, options = {})
-        location_search(options.merge(:query => metro_area_name))
+        location_search(options.merge(query: metro_area_name))
       end
 
       # ==== Metro Area Events (Upcoming)
@@ -136,7 +136,7 @@ module Songkickr
       # * +page+ - Page number
       # * +per_page+ - Number of results per page, max 50.
       def metro_areas_events(metro_area_id, query = {})
-        result = get("/metro_areas/#{metro_area_id}/calendar.json", :query => query)
+        result = get("/metro_areas/#{metro_area_id}/calendar.json", query: query)
         Songkickr::EventResult.new result
       end
 
@@ -163,7 +163,7 @@ module Songkickr
       # * +page+ - Page number
       # * +per_page+ - Number of results per page, max 50.
       def venue_search(query)
-        result = get("/search/venues.json", :query => query)
+        result = get("/search/venues.json", query: query)
         Songkickr::VenueResult.new result
       end
     end

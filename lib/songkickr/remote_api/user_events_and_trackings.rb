@@ -13,7 +13,7 @@ module Songkickr
       # * +page+ - Page number
       # * +per_page+ - Number of results per page, max 50.
       def users_tracked_events_calendar(username, query = {})
-        result = get("/users/#{username}/calendar.json?reason=tracked_artist", :query => query)
+        result = get("/users/#{username}/calendar.json?reason=tracked_artist", query: query)
         Songkickr::CalendarResult.new result
       end
 
@@ -29,7 +29,7 @@ module Songkickr
       # * +page+ - Page number
       # * +per_page+ - Number of results per page, max 50.
       def users_attendance_calendar(username, query = {})
-        result = get("/users/#{username}/calendar.json?reason=attendance", :query => query)
+        result = get("/users/#{username}/calendar.json?reason=attendance", query: query)
         Songkickr::CalendarResult.new result
       end
 
@@ -45,7 +45,7 @@ module Songkickr
       # * +page+ - Page number
       # * +per_page+ - Number of results per page, max 50.
       def users_tracked_metro_areas(username, query = {})
-        result = get("/users/#{username}/metro_areas/tracked.json", :query => query)
+        result = get("/users/#{username}/metro_areas/tracked.json", query: query)
         Songkickr::MetroAreaResult.new result
       end
 
@@ -57,7 +57,7 @@ module Songkickr
       # * +metro_area_id+ - A Songkick metro area ID.
       # * +query+ - A hash of query parameters, see below for options.
       def users_metro_area_tracking(username, metro_area_id, query = {})
-        result = get("/users/#{username}/trackings/metro_area:#{metro_area_id}.json", :query => query)
+        result = get("/users/#{username}/trackings/metro_area:#{metro_area_id}.json", query: query)
         Songkickr::MetroAreaResult.new result
       end
 
@@ -72,7 +72,7 @@ module Songkickr
       # * +page+ - Page number
       # * +per_page+ - Number of results per page, max 50.
       def users_tracked_artists(username, query = {})
-        result = get("/users/#{username}/artists/tracked.json", :query => query)
+        result = get("/users/#{username}/artists/tracked.json", query: query)
         Songkickr::ArtistResult.new result
       end
 
@@ -98,7 +98,7 @@ module Songkickr
       # * +page+ - Page number
       # * +per_page+ - Number of results per page, max 50.
       def users_muted_artists(username, query = {})
-        result = get("/users/#{username}/artists/muted.json", :query => query)
+        result = get("/users/#{username}/artists/muted.json", query: query)
         Songkickr::ArtistResult.new result
       end
 
@@ -124,7 +124,7 @@ module Songkickr
       # * +order+ - 'asc' or 'desc', 'asc' by default
       # * +created_after+ - timestamp using ISO8601 format, e.g. 2012-02-29T13:37:00Z
       def users_events(username, query = {})
-        result = get("/users/#{username}/events.json", :query => query)
+        result = get("/users/#{username}/events.json", query: query)
         Songkickr::EventResult.new result
       end
 

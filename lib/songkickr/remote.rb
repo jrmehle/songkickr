@@ -25,7 +25,7 @@ module Songkickr
       @api_key ||= Songkickr.api_key
       @debug = options[:debug] || false
 
-      self.class.default_params :apikey => @api_key
+      self.class.default_params apikey: @api_key
       if @debug
         self.class.debug_output $stderr
       end
