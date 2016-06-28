@@ -86,8 +86,8 @@ module Songkickr
       #
       # ==== Query Parameters
       # * +name+ - Metro area or city named 'location_name' string <em>Ex. 'Minneapolis', 'Nashville', or 'London'</em>.
-      # * +location+ - 'geo:{lat,lng}' string <em>Ex. 'geo:{-0.128,51.5078}'</em>
-      # * +ip+ - 'ip:{ip-addr}' string <em>Ex. 'ip:{123.123.123.123}'</em>
+      # * +location+ - 'geo:lat,lng' string <em>Ex. 'geo:-0.128,51.5078'</em>
+      # * +ip+ - 'ip:ip-addr' string <em>Ex. 'ip:123.123.123.123'</em>
       # * +page+ - Page number
       # * +per_page+ - Number of results per page, max 50.
       def location_search(query = {})
