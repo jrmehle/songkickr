@@ -31,6 +31,10 @@ Get a users events by username:
 Get a the setlists of a concert by event ID:
     results = remote.concert_setlists(2680726)
 
+Use SSL so that your API key is not sent in the clear:
+
+    Songkickr::Remote.base_uri 'https://api.songkick.com/api/3.0'
+
 *More*: As of v0.4.0 songkickr supports all of Songkick's APIs. Check the RDocs for the Songkickr::RemoteApi classes.
 
 == Note on Patches/Pull Requests
