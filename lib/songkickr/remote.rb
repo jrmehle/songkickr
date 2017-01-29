@@ -5,7 +5,6 @@ module Songkickr
   class Remote
     include HTTParty
     include Songkickr::RemoteApi::UpcomingEvents
-    include Songkickr::RemoteApi::Performances
     include Songkickr::RemoteApi::UserEventsAndTrackings
     include Songkickr::RemoteApi::PastEvents
     include Songkickr::RemoteApi::ArtistDetails
