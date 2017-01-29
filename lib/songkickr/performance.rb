@@ -15,10 +15,12 @@ module Songkickr
   #     uri: "http://www.songkick.com/artists/470482-a-day-to-remember?utm_source=4791&utm_medium=partner",
   #     id: 470482
   #   },
-  #   id: 34045929
+  #   id: 34045929,
+  #   event: {},
+  #   date: null
   # }
   class Performance
-    attr_accessor :artist, :display_name, :id, :billing_index, :billing
+    attr_accessor :artist, :display_name, :id, :billing_index, :billing, :event, :date
 
     # Takes a the hash of the performance. Parses out an Artist object for the artist.
     def initialize(performance_hash)
@@ -27,6 +29,8 @@ module Songkickr
       @id            = performance_hash["id"]
       @billing_index = performance_hash['billingIndex']
       @billing       = performance_hash['billing']
+      @event         = Songkickr::Event.new performance_hash['event'] unless performance_hash['event'].nil?
+      @date          = DateTime.parse "#{performance_hash['date']}" unless performance_hash['date'].nil?
     end
   end
 end

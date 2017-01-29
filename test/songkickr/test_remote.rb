@@ -131,6 +131,13 @@ class TestRemote < Test::Unit::TestCase
       end
     end
 
+    should "return the performances for an artist" do
+      VCR.use_cassette('artist_performances') do
+        result = @remote.artist_performances(109675)
+        assert_equal "Senses Fail with Like Pacific at The Observatory North Park (March 3, 2017)", result.results.first.event.display_name
+      end
+    end
+
     should "return the artist when searched as a string" do
       VCR.use_cassette('artist_search_string') do
         result = @remote.artist_search('Counterparts')
