@@ -13,7 +13,7 @@ Gem::Specification.new do |gem|
   gem.homepage    = "http://github.com/jrmehle/songkickr"
 
   gem.add_development_dependency 'shoulda',   ">= 3.5.0"
-  gem.add_development_dependency 'webmock',   "~> 1.8.0"
+  gem.add_development_dependency 'webmock',   "~> 3.7.0"
   gem.add_development_dependency 'rdoc',      "~> 4.1.0"
   gem.add_development_dependency 'crack',     ">= 0"
   gem.add_development_dependency 'rake',      "~> 10.3.0"
