@@ -27,7 +27,7 @@ GEM
     method_source (0.8.2)
     minitest (5.4.2)
     multi_xml (0.5.5)
-    power_assert (0.1.4)
+    power_assert (1.1.5)
     pry (0.10.1)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
@@ -50,7 +50,7 @@ GEM
     slop (3.6.0)
     spoon (0.0.4)
       ffi
-    test-unit (3.0.3)
+    test-unit (3.3.5)
       power_assert
     thread_safe (0.3.4)
     thread_safe (0.3.4-java)
@@ -72,7 +72,7 @@ DEPENDENCIES
   rdoc (~> 4.1.0)
   shoulda (>= 3.5.0)
   songkickr!
-  test-unit (~> 3.0.0)
+  test-unit (~> 3.3.5)
   vcr (~> 2.9.0)
   webmock (~> 1.8.0)
 
