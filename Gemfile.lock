@@ -13,11 +13,13 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
-    addressable (2.3.6)
+    addressable (2.7.0)
+      public_suffix (>= 2.0.2, < 5.0)
     coderay (1.1.0)
     crack (0.4.2)
       safe_yaml (~> 1.0.0)
     ffi (1.9.6-java)
+    hashdiff (1.0.1)
     httparty (0.13.7)
       json (~> 1.8)
       multi_xml (>= 0.5.2)
@@ -37,10 +39,11 @@ GEM
       method_source (~> 0.8.1)
       slop (~> 3.4)
       spoon (~> 0.0)
+    public_suffix (4.0.6)
     rake (10.3.2)
     rdoc (4.1.2)
       json (~> 1.4)
-    safe_yaml (1.0.4)
+    safe_yaml (1.0.5)
     shoulda (3.5.0)
       shoulda-context (~> 1.0, >= 1.0.1)
       shoulda-matchers (>= 1.4.1, < 3.0)
@@ -57,9 +60,10 @@ GEM
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
     vcr (2.9.3)
-    webmock (1.8.11)
-      addressable (>= 2.2.7)
-      crack (>= 0.1.7)
+    webmock (3.11.2)
+      addressable (>= 2.3.6)
+      crack (>= 0.3.2)
+      hashdiff (>= 0.4.0, < 2.0.0)
 
 PLATFORMS
   java
@@ -74,7 +78,7 @@ DEPENDENCIES
   songkickr!
   test-unit (~> 3.0.0)
   vcr (~> 2.9.0)
-  webmock (~> 1.8.0)
+  webmock (~> 3.11.2)
 
 BUNDLED WITH
    1.11.2
