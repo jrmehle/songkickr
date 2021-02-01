@@ -17,7 +17,7 @@ Gem::Specification.new do |gem|
   gem.add_development_dependency 'rdoc',      "~> 4.1.0"
   gem.add_development_dependency 'crack',     ">= 0"
   gem.add_development_dependency 'rake',      "~> 10.3.0"
-  gem.add_development_dependency 'test-unit', "~> 3.0.0"
+  gem.add_development_dependency 'test-unit', "~> 3.4.0"
   gem.add_development_dependency 'vcr',       "~> 2.9.0"
   gem.add_development_dependency 'pry',       ">= 0"
 
