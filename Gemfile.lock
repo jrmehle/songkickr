@@ -37,7 +37,7 @@ GEM
       method_source (~> 0.8.1)
       slop (~> 3.4)
       spoon (~> 0.0)
-    rake (10.3.2)
+    rake (13.0.3)
     rdoc (4.1.2)
       json (~> 1.4)
     safe_yaml (1.0.4)
@@ -68,7 +68,7 @@ PLATFORMS
 DEPENDENCIES
   crack
   pry
-  rake (~> 10.3.0)
+  rake (~> 13.0.3)
   rdoc (~> 4.1.0)
   shoulda (>= 3.5.0)
   songkickr!
