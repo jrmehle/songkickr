@@ -56,7 +56,7 @@ GEM
     thread_safe (0.3.4-java)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
-    vcr (2.9.3)
+    vcr (6.1.0)
     webmock (1.8.11)
       addressable (>= 2.2.7)
       crack (>= 0.1.7)
@@ -73,7 +73,7 @@ DEPENDENCIES
   shoulda (>= 3.5.0)
   songkickr!
   test-unit (~> 3.0.0)
-  vcr (~> 2.9.0)
+  vcr (~> 6.1.0)
   webmock (~> 1.8.0)
 
 BUNDLED WITH
