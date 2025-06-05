@@ -47,9 +47,16 @@ Use SSL so that your API key is not sent in the clear:
   (if you want to have your own version, that is fine but bump version in a commit by itself I can ignore when I pull)
 * Send me a pull request against the *develop* branch.
 
+== Releasing a new version
+
+1. Update the changelog with the new release information (`git changelog --tag <version> && cat CHANGELOG.md`)
+2. Build the new release locally for testing (`gem build songkickr.gemspec`)
+3. Tag the release (`git tag <version>`) -- version should follow semantic versioning (ex. v0.1.1)
+4. Publish the release to RubyGems (`gem signin && gem push songkickr-0.0.0.gem`)
+
 == Copyright
 
-Copyright (c) 2010-2016 Jared Mehle. See LICENSE for details.
+Copyright (c) 2010-2025 Jared Mehle. See LICENSE for details.
 
 == Contributors
 
