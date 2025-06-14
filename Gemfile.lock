@@ -1,80 +1,98 @@
 PATH
   remote: .
   specs:
-    songkickr (0.5.5)
-      httparty (>= 0.5.0)
+    songkickr (0.6.0)
+      httparty (~> 0.23, >= 0.23.1)
 
 GEM
   remote: https://rubygems.org/
   specs:
-    activesupport (4.1.6)
-      i18n (~> 0.6, >= 0.6.9)
-      json (~> 1.7, >= 1.7.7)
-      minitest (~> 5.1)
-      thread_safe (~> 0.1)
-      tzinfo (~> 1.1)
-    addressable (2.3.6)
-    coderay (1.1.0)
-    crack (0.4.2)
-      safe_yaml (~> 1.0.0)
-    ffi (1.9.6-java)
-    httparty (0.13.7)
-      json (~> 1.8)
+    activesupport (8.0.2)
+      base64
+      benchmark (>= 0.3)
+      bigdecimal
+      concurrent-ruby (~> 1.0, >= 1.3.1)
+      connection_pool (>= 2.2.5)
+      drb
+      i18n (>= 1.6, < 2)
+      logger (>= 1.4.2)
+      minitest (>= 5.1)
+      securerandom (>= 0.3)
+      tzinfo (~> 2.0, >= 2.0.5)
+      uri (>= 0.13.1)
+    addressable (2.8.7)
+      public_suffix (>= 2.0.2, < 7.0)
+    base64 (0.3.0)
+    benchmark (0.4.1)
+    bigdecimal (3.2.2)
+    coderay (1.1.3)
+    concurrent-ruby (1.3.5)
+    connection_pool (2.5.3)
+    crack (1.0.0)
+      bigdecimal
+      rexml
+    csv (3.3.5)
+    date (3.4.1)
+    drb (2.2.3)
+    erb (5.0.1)
+    hashdiff (1.2.0)
+    httparty (0.23.1)
+      csv
+      mini_mime (>= 1.0.0)
       multi_xml (>= 0.5.2)
-    i18n (0.6.11)
-    json (1.8.3)
-    json (1.8.3-java)
-    method_source (0.8.2)
-    minitest (5.4.2)
-    multi_xml (0.5.5)
-    power_assert (0.1.4)
-    pry (0.10.1)
-      coderay (~> 1.1.0)
-      method_source (~> 0.8.1)
-      slop (~> 3.4)
-    pry (0.10.1-java)
-      coderay (~> 1.1.0)
-      method_source (~> 0.8.1)
-      slop (~> 3.4)
-      spoon (~> 0.0)
-    rake (10.3.2)
-    rdoc (4.1.2)
-      json (~> 1.4)
-    safe_yaml (1.0.4)
-    shoulda (3.5.0)
-      shoulda-context (~> 1.0, >= 1.0.1)
-      shoulda-matchers (>= 1.4.1, < 3.0)
-    shoulda-context (1.2.1)
-    shoulda-matchers (2.7.0)
-      activesupport (>= 3.0.0)
-    slop (3.6.0)
-    spoon (0.0.4)
-      ffi
-    test-unit (3.0.3)
-      power_assert
-    thread_safe (0.3.4)
-    thread_safe (0.3.4-java)
-    tzinfo (1.2.2)
-      thread_safe (~> 0.1)
-    vcr (2.9.3)
-    webmock (1.8.11)
-      addressable (>= 2.2.7)
-      crack (>= 0.1.7)
+    i18n (1.14.7)
+      concurrent-ruby (~> 1.0)
+    logger (1.7.0)
+    method_source (1.1.0)
+    mini_mime (1.1.5)
+    minitest (5.25.5)
+    multi_xml (0.7.2)
+      bigdecimal (~> 3.1)
+    pry (0.15.2)
+      coderay (~> 1.1)
+      method_source (~> 1.0)
+    psych (5.2.6)
+      date
+      stringio
+    public_suffix (6.0.2)
+    rake (13.3.0)
+    rdoc (6.14.0)
+      erb
+      psych (>= 4.0.0)
+    rexml (3.4.1)
+    securerandom (0.4.1)
+    shoulda (4.0.0)
+      shoulda-context (~> 2.0)
+      shoulda-matchers (~> 4.0)
+    shoulda-context (2.0.0)
+    shoulda-matchers (4.5.1)
+      activesupport (>= 4.2.0)
+    stringio (3.1.7)
+    tzinfo (2.0.6)
+      concurrent-ruby (~> 1.0)
+    uri (1.0.3)
+    vcr (6.3.1)
+      base64
+    webmock (3.25.1)
+      addressable (>= 2.8.0)
+      crack (>= 0.3.2)
+      hashdiff (>= 0.4.0, < 2.0.0)
 
 PLATFORMS
-  java
+  arm64-darwin-24
   ruby
+  x86_64-linux
 
 DEPENDENCIES
-  crack
-  pry
-  rake (~> 10.3.0)
-  rdoc (~> 4.1.0)
-  shoulda (>= 3.5.0)
+  crack (~> 1.0, >= 1.0.0)
+  minitest (~> 5.25, >= 5.25.5)
+  pry (~> 0.15.2)
+  rake (~> 13.3, >= 13.3.0)
+  rdoc (~> 6.14)
+  shoulda (~> 4.0)
   songkickr!
-  test-unit (~> 3.0.0)
-  vcr (~> 2.9.0)
-  webmock (~> 1.8.0)
+  vcr (~> 6.3, >= 6.3.1)
+  webmock (~> 3.25, >= 3.25.1)
 
 BUNDLED WITH
-   1.11.2
+   2.6.9
