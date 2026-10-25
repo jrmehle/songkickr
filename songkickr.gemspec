@@ -8,8 +8,8 @@ Gem::Specification.new do |gem|
   gem.version     = Songkickr::VERSION
   gem.authors     = ["Jared Mehle"]
   gem.email       = ["jrmehle@gmail.com"]
-  gem.description = "A Ruby wrapper around the Songkick API. Visit www.songkick.com/developer for documentation on the Songkick API. "
-  gem.summary     = "A Ruby wrapper around the Songkick API."
+  gem.description = "DEPRECATED: This gem is no longer maintained. Songkick closed its API to hobbyists after its acquisition by Suno."
+  gem.summary     = "DEPRECATED: A Ruby wrapper around the Songkick API."
   gem.homepage    = "http://github.com/jrmehle/songkickr"
 
   gem.required_ruby_version = '>= 2.7.0', '< 4.0.0'

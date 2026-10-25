@@ -1,5 +1,7 @@
 require 'httparty'
 
+warn "[DEPRECATED] songkickr is no longer maintained. Songkick has closed its API to hobbyists. See https://github.com/jrmehle/songkickr#readme"
+
 require 'songkickr/remote'
 
 require 'songkickr/performance'

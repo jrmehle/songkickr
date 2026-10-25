@@ -1,6 +1,8 @@
 = songkickr
 
-{<img src="https://travis-ci.org/jrmehle/songkickr.png?branch=master" alt="Build Status" />}[https://travis-ci.org/jrmehle/songkickr]
+*This project is retired and no longer maintained.*
+
+Songkick was acquired by Suno and its API is no longer open. Songkick now says it is not approving API requests for student, educational, or hobbyist projects, and charges $500 per month for access. I no longer want to build on a platform that does not offer open access to its data, so I have stopped development of this gem. Existing releases will stay on RubyGems, but there will be no further updates. Feel free to fork it.
 
 A Ruby wrapper around the Songkick API. Visit www.songkick.com/developer for documentation on the Songkick API.
 
